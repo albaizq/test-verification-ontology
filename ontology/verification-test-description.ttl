@@ -51,9 +51,9 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                                                           rdfs:label "status of review"@en .
 
 
-#################################################################
+################################################################
 #    Data properties
-#################################################################
+################################################################
 
 ###  http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty .
