@@ -1,0 +1,282 @@
+@prefix : <https://w3id.org/def/verification-tests#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/def/verification-tests#> rdf:type owl:Ontology  ;
+                                                  owl:versionInfo "0.0.1" ;
+                                                  rdfs:label "Metadata test description for ontology verification" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#maxCardinality
+owl:maxCardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#minCardinality
+owl:minCardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#minQualifiedCardinality
+owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#qualifiedCardinality
+owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#hasTestResult
+:hasTestResult rdf:type owl:ObjectProperty ;
+               rdfs:label "has test result" .
+
+
+###  http://www.w3.org/2006/03/test-description#input
+<http://www.w3.org/2006/03/test-description#input> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://www.w3.org/2006/03/test-description#TestCase> ;
+                                                   rdfs:comment "Parameters or data that are needed for the test execution."@en ;
+                                                   rdfs:label "input"@en .
+
+
+###  http://www.w3.org/2006/03/test-description#reviewStatus
+<http://www.w3.org/2006/03/test-description#reviewStatus> rdf:type owl:ObjectProperty ;
+                                                          rdfs:range <http://www.w3.org/2006/03/test-description#ReviewStatus> ;
+                                                          rdfs:label "status of review"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#outputOfScenario
+:outputOfScenario rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :TestScenario ;
+                  rdfs:comment "The expected output of a test scenario" ;
+                  rdfs:label "output of a test scenario" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#testAxioms
+:testAxioms rdf:type owl:DatatypeProperty ;
+            rdfs:comment "Temporary axioms added to the ontology to verify ontology behaviour" ;
+            rdfs:label "test axioms" .
+
+
+###  http://www.w3.org/2006/03/test-description#preCondition
+<http://www.w3.org/2006/03/test-description#preCondition> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:domain <http://www.w3.org/2006/03/test-description#TestCase> ;
+                                                          rdfs:range rdfs:Literal ;
+                                                          rdfs:comment "a condition that must be met before the test is executed"@en ;
+                                                          rdfs:label "precondition"@en .
+
+
+###  http://www.w3.org/2006/03/test-description#purpose
+<http://www.w3.org/2006/03/test-description#purpose> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <http://www.w3.org/2006/03/test-description#TestCase> ;
+                                                     rdfs:range rdfs:Literal ;
+                                                     rdfs:label "purpose"@en .
+
+
+###  http://www.w3.org/2006/03/test-description#specificationReference
+<http://www.w3.org/2006/03/test-description#specificationReference> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:domain <http://www.w3.org/2006/03/test-description#TestCase> ;
+                                                                    rdfs:range rdfs:Literal ;
+                                                                    rdfs:comment "a description or a link of what part of which specification lead to the creation of this test case"@en ;
+                                                                    rdfs:label "reference in specification"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#TestPreparation
+:TestPreparation rdf:type owl:Class ;
+                 rdfs:comment "Axioms to add auxiliary terms needed to carry out the tests" ;
+                 rdfs:label "Test preparation" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#TestResult
+:TestResult rdf:type owl:Class ;
+            rdfs:label "result of the test case" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#TestScenario
+:TestScenario rdf:type owl:Class ;
+              rdfs:comment "Each of the scenarios to validate the desired behaviour of a requirement" ;
+              rdfs:label "Test scenario" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#VerifTestCase
+:VerifTestCase rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.w3.org/2006/03/test-description#TestCase> ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTestResult ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :TestResult
+                               ] ;
+               rdfs:label "Verification test case" .
+
+
+###  http://www.w3.org/2006/03/test-description#ReviewStatus
+<http://www.w3.org/2006/03/test-description#ReviewStatus> rdf:type owl:Class ;
+                                                          rdfs:comment "A particular stage in a review process" ;
+                                                          rdfs:label "Status in a review process"@en .
+
+
+###  http://www.w3.org/2006/03/test-description#SimpleReviewStatus
+<http://www.w3.org/2006/03/test-description#SimpleReviewStatus> rdf:type owl:Class ;
+                                                                owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                      owl:oneOf ( <http://www.w3.org/2006/03/test-description#accepted>
+                                                                                                  <http://www.w3.org/2006/03/test-description#approved>
+                                                                                                  <http://www.w3.org/2006/03/test-description#assigned>
+                                                                                                  <http://www.w3.org/2006/03/test-description#onhold>
+                                                                                                  <http://www.w3.org/2006/03/test-description#rejected>
+                                                                                                  <http://www.w3.org/2006/03/test-description#unreviewed>
+                                                                                                )
+                                                                                    ] ;
+                                                                rdfs:subClassOf <http://www.w3.org/2006/03/test-description#ReviewStatus> ;
+                                                                rdfs:label "A status for a simple review process containing 6 possible stages"@en .
+
+
+###  http://www.w3.org/2006/03/test-description#SpecificationTestCase
+<http://www.w3.org/2006/03/test-description#SpecificationTestCase> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.w3.org/2006/03/test-description#TestCase> ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <http://www.w3.org/2006/03/test-description#specificationReference> ;
+                                                                                     owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                                                   ] ;
+                                                                   rdfs:comment "A test case which relates to a requirement set in a specification" ;
+                                                                   rdfs:label "A Test Case based on a specification"@en .
+
+
+###  http://www.w3.org/2006/03/test-description#TestCase
+<http://www.w3.org/2006/03/test-description#TestCase> rdf:type owl:Class ;
+                                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://www.w3.org/2006/03/test-description#reviewStatus> ;
+                                                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://www.w3.org/2006/03/test-description#purpose> ;
+                                                                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://www.w3.org/2006/03/test-description#purpose> ;
+                                                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                      ] ;
+                                                      rdfs:comment "A set of test inputs, execution conditions, and expected results developed for a particular objective, such as to exercise a particular program path or to verify compliance with a specific requirement" ;
+                                                      rdfs:label "A Test Case"@en .
+
+
+###  http://www.w3.org/2006/gen/ont#InformationResource
+<http://www.w3.org/2006/gen/ont#InformationResource> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#notPassed
+:notPassed rdf:type owl:NamedIndividual ,
+                    :TestResult ;
+           rdfs:comment "the ontology does not pass the tests but pass the preconditions" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#passed
+:passed rdf:type owl:NamedIndividual ,
+                 :TestResult ;
+        rdfs:comment "the ontology passed the test" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#undefined
+:undefined rdf:type owl:NamedIndividual ,
+                    :TestResult ;
+           rdfs:comment "The ontology does not pass the preconditions" .
+
+
+###  http://www.w3.org/2006/03/test-description#accepted
+<http://www.w3.org/2006/03/test-description#accepted> rdf:type owl:NamedIndividual ,
+                                                               <http://www.w3.org/2006/03/test-description#ReviewStatus> ;
+                                                      rdfs:comment "the item has gone through a first review, which shows it as valid for further processing" ;
+                                                      rdfs:label "accepted"@en .
+
+
+###  http://www.w3.org/2006/03/test-description#approved
+<http://www.w3.org/2006/03/test-description#approved> rdf:type owl:NamedIndividual ,
+                                                               <http://www.w3.org/2006/03/test-description#ReviewStatus> ;
+                                                      rdfs:comment "the item has gone through the review process and was approved" ;
+                                                      rdfs:label "approved"@en .
+
+
+###  http://www.w3.org/2006/03/test-description#assigned
+<http://www.w3.org/2006/03/test-description#assigned> rdf:type owl:NamedIndividual ,
+                                                               <http://www.w3.org/2006/03/test-description#ReviewStatus> ;
+                                                      rdfs:comment "a more specific review of the item has been assigned to someone" ;
+                                                      rdfs:label "assigned"@en .
+
+
+###  http://www.w3.org/2006/03/test-description#onhold
+<http://www.w3.org/2006/03/test-description#onhold> rdf:type owl:NamedIndividual ,
+                                                             <http://www.w3.org/2006/03/test-description#ReviewStatus> ;
+                                                    rdfs:comment "the item had already gone through the review process, but the results of the review need to be re-assessed due to new input" ;
+                                                    rdfs:label "on hold" .
+
+
+###  http://www.w3.org/2006/03/test-description#rejected
+<http://www.w3.org/2006/03/test-description#rejected> rdf:type owl:NamedIndividual ,
+                                                               <http://www.w3.org/2006/03/test-description#ReviewStatus> ;
+                                                      rdfs:comment "the item has gone through the review process and was rejected" ;
+                                                      rdfs:label "rejected"@en .
+
+
+###  http://www.w3.org/2006/03/test-description#unreviewed
+<http://www.w3.org/2006/03/test-description#unreviewed> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.w3.org/2006/03/test-description#ReviewStatus> ;
+                                                        rdfs:comment "the item has been proposed, but hasn't been reviewed (e.g. for completeness) yet" ;
+                                                        rdfs:label "unreviewed"@en .
+
+
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://www.w3.org/2006/03/test-description> rdfs:seeAlso <http://www.w3.org/TR/2005/NOTE-test-metadata-20050914/> .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
