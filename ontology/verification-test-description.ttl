@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://w3id.org/def/verification-tests#> rdf:type owl:Ontology  ;
+<https://w3id.org/def/verification-tests#>        rdf:type owl:Ontology  ;
                                                   owl:versionInfo "0.0.1" ;
                                                   rdfs:label "Metadata test description for ontology verification" .
 
