@@ -1,27 +1,27 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "62496416ceb877d03e1814356eb94699" ":ReviewStatus" ":SimpleReviewStatus" "base:TestResult" "base:TestScenario" ":TestCase" ; /*classes style*/
+node [shape = rectangle, color="orange"]; ":ReviewStatus" ":SimpleReviewStatus" "e235ecb3ce37007ec9ec003a9d15cbfc" "base:TestResult" "base:TestScenario" ":TestCase" ; /*classes style*/
 	"http://www.w3.org/2006/03/test-description" -> "http://www.w3.org/TR/2005/NOTE-test-metadata-20050914/" [ label = "rdfs:seeAlso" ];
-	":SimpleReviewStatus" -> "62496416ceb877d03e1814356eb94699" [ label = "owl:equivalentClass" ];
+	":SimpleReviewStatus" -> "e235ecb3ce37007ec9ec003a9d15cbfc" [ label = "owl:equivalentClass" ];
 	"NULL" -> "base:TestResult" [ label = "owl:onClass" ];
+	"NULL" -> "-5e141267:1628a740815:-7ff9" [ label = "rdf:rest" ];
 	"NULL" -> ":assigned" [ label = "rdf:first" ];
-	"NULL" -> "7e331e2f:1628a6edb4d:-7ffb" [ label = "rdf:rest" ];
-	"NULL" -> "7e331e2f:1628a6edb4d:-7ffc" [ label = "owl:oneOf" ];
-	"NULL" -> "7e331e2f:1628a6edb4d:-7ff7" [ label = "rdf:rest" ];
+	"NULL" -> "-5e141267:1628a740815:-7ffc" [ label = "owl:oneOf" ];
+	"NULL" -> "-5e141267:1628a740815:-7ff8" [ label = "rdf:rest" ];
 	"NULL" -> ":accepted" [ label = "rdf:first" ];
 	"NULL" -> ":onhold" [ label = "rdf:first" ];
-	"NULL" -> "7e331e2f:1628a6edb4d:-7ffa" [ label = "rdf:rest" ];
 	"NULL" -> ":purpose" [ label = "owl:onProperty" ];
 	"NULL" -> ":specificationReference" [ label = "owl:onProperty" ];
 	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
-	"NULL" -> "7e331e2f:1628a6edb4d:-7ff9" [ label = "rdf:rest" ];
 	"NULL" -> ":approved" [ label = "rdf:first" ];
+	"NULL" -> "-5e141267:1628a740815:-7ffb" [ label = "rdf:rest" ];
 	"NULL" -> ":unreviewed" [ label = "rdf:first" ];
+	"NULL" -> "-5e141267:1628a740815:-7ff7" [ label = "rdf:rest" ];
 	"NULL" -> ":rejected" [ label = "rdf:first" ];
 	"NULL" -> "base:hasTestResult" [ label = "owl:onProperty" ];
-	"NULL" -> "7e331e2f:1628a6edb4d:-7ff8" [ label = "rdf:rest" ];
 	"NULL" -> ":reviewStatus" [ label = "owl:onProperty" ];
+	"NULL" -> "-5e141267:1628a740815:-7ffa" [ label = "rdf:rest" ];
 	"base:TestScenario" -> "owl:Thing" [ label = "base:outputOfScenario" ];
 	":TestCase" -> "owl:Thing" [ label = ":input" ];
 	":TestCase" -> "rdfs:Literal" [ label = ":preCondition" ];

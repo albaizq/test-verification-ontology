@@ -7,7 +7,8 @@
 @base <https://w3id.org/def/verification-tests#> .
 
 <https://w3id.org/def/verification-tests#> rdf:type owl:Ontology ;
-                                            rdfs:label "Metadata test description for ontology verification"^^xsd:string ;
+                                            <http://purl.org/dc/elements/1.1/title> "Verification test description"@en ;
+                                            rdfs:comment "Metadata test description for ontology verification"^^xsd:string ;
                                             owl:versionInfo "0.0.1"^^xsd:string .
 
 #################################################################
@@ -249,15 +250,6 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 [ owl:minCardinality "1"^^xsd:nonNegativeInteger
 ] .
 
-[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:minCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
 [ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
@@ -271,6 +263,15 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
  ] .
 
 [ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
 #################################################################
