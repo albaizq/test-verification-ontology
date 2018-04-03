@@ -17,7 +17,7 @@ This section provides details for each class and property defined by Metadata te
       </li>
       <li>
          <a href="#TestResult"
-            title="https://w3id.org/def/verification-tests#TestResult">result of the test case</a>
+            title="https://w3id.org/def/verification-tests#TestResult">Result of the test case</a>
       </li>
       <li>
          <a href="#http://www.w3.org/2006/03/test-description#ReviewStatus"
@@ -25,15 +25,15 @@ This section provides details for each class and property defined by Metadata te
       </li>
       <li>
          <a href="#TestPreparation"
-            title="https://w3id.org/def/verification-tests#TestPreparation">Test preparation</a>
+            title="https://w3id.org/def/verification-tests#TestPreparation">A Test preparation</a>
       </li>
       <li>
          <a href="#TestScenario"
-            title="https://w3id.org/def/verification-tests#TestScenario">Test scenario</a>
+            title="https://w3id.org/def/verification-tests#TestScenario">A Test scenario</a>
       </li>
       <li>
          <a href="#VerifTestCase"
-            title="https://w3id.org/def/verification-tests#VerifTestCase">Verification test case</a>
+            title="https://w3id.org/def/verification-tests#VerifTestCase">A Verification Test Case</a>
       </li>
    </ul>
    <div class="entity" id="http://www.w3.org/2006/03/test-description#SimpleReviewStatus">
@@ -92,7 +92,7 @@ This section provides details for each class and property defined by Metadata te
             <a href="#http://www.w3.org/2006/03/test-description#SpecificationTestCase"
                title="http://www.w3.org/2006/03/test-description#SpecificationTestCase">A Test Case based on a specification</a>
             <sup class="type-c" title="class">c</sup>, <a href="#VerifTestCase"
-               title="https://w3id.org/def/verification-tests#VerifTestCase">Verification test case</a>
+               title="https://w3id.org/def/verification-tests#VerifTestCase">A Verification Test Case</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -133,7 +133,7 @@ This section provides details for each class and property defined by Metadata te
       </dl>
    </div>
    <div class="entity" id="TestResult">
-      <h3>result of the test case<sup class="type-c" title="class">c</sup>
+      <h3>Result of the test case<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -223,12 +223,15 @@ This section provides details for each class and property defined by Metadata te
       </dl>
    </div>
    <div class="entity" id="VerifTestCase">
-      <h3>Verification test case<sup class="type-c" title="class">c</sup>
+      <h3>A Verification Test Case<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/verification-tests#VerifTestCase</p>
+          <div class="comment">
+             <span class="markdown">Test case for ontology verification. Each test has a set of test preparation, which add the auxiliary terms needed  to carry out the tests, and test scenarios, which add the axioms needed to  check the ontology behaviour</span>
+         </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -241,7 +244,7 @@ This section provides details for each class and property defined by Metadata te
                title="https://w3id.org/def/verification-tests#hasTestResult">has test result</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">exactly</span> 1 <a href="#TestResult"
-               title="https://w3id.org/def/verification-tests#TestResult">result of the test case</a>
+               title="https://w3id.org/def/verification-tests#TestResult">Result of the test case</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -340,7 +343,7 @@ This section provides details for each class and property defined by Metadata te
       <p>
          <strong>IRI:</strong> https://w3id.org/def/verification-tests#outputOfScenario</p>
       <div class="comment">
-         <span class="markdown">The expected output of a test scenario</span>
+         <span class="markdown">The expected ontology status (i.e., inconsistency, unsatisfiabile or consistent)  after the addition of the axioms of a test scenario</span>
       </div>
       <div class="description">
          <dl>
@@ -552,7 +555,7 @@ This section provides details for each class and property defined by Metadata te
          <dt>belongs to</dt>
          <dd>
             <a href="#TestResult"
-               title="https://w3id.org/def/verification-tests#TestResult">result of the test case</a>
+               title="https://w3id.org/def/verification-tests#TestResult">Result of the test case</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -590,7 +593,7 @@ This section provides details for each class and property defined by Metadata te
          <dt>belongs to</dt>
          <dd>
             <a href="#TestResult"
-               title="https://w3id.org/def/verification-tests#TestResult">result of the test case</a>
+               title="https://w3id.org/def/verification-tests#TestResult">Result of the test case</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -628,7 +631,7 @@ This section provides details for each class and property defined by Metadata te
          <dt>belongs to</dt>
          <dd>
             <a href="#TestResult"
-               title="https://w3id.org/def/verification-tests#TestResult">result of the test case</a>
+               title="https://w3id.org/def/verification-tests#TestResult">Result of the test case</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>

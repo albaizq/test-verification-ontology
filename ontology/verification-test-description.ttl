@@ -4,11 +4,15 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/def/verification-tests#> .
 
-<https://w3id.org/def/verification-tests#>        rdf:type owl:Ontology  ;
-                                                  owl:versionInfo "0.0.1" ;
-                                                  <http://purl.org/dc/elements/1.1/title> "Verification test description"@en ;
-                                                  rdfs:comment "Metadata test description for ontology verification" .
+<https://w3id.org/def/verification-tests#> rdf:type owl:Ontology ;
+                                            <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/verification-tests#"^^xsd:string ;
+                                            rdfs:comment "Metadata test description for ontology verification" ;
+                                            <http://purl.org/dc/elements/1.1/title> "Verification test description"@en ;
+                                            owl:versionInfo "0.0.1" ;
+                                            <http://purl.org/vocab/vann/preferredNamespacePrefix> "verif"^^xsd:string ;
+                                            <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
 
 #################################################################
 #    Annotation properties
@@ -34,11 +38,6 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#hasTestResult
-:hasTestResult rdf:type owl:ObjectProperty ;
-               rdfs:label "has test result" .
-
-
 ###  http://www.w3.org/2006/03/test-description#input
 <http://www.w3.org/2006/03/test-description#input> rdf:type owl:ObjectProperty ;
                                                    rdfs:domain <http://www.w3.org/2006/03/test-description#TestCase> ;
@@ -52,25 +51,17 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                                                           rdfs:label "status of review"@en .
 
 
-################################################################
+###  https://w3id.org/def/verification-tests#hasTestResult
+:hasTestResult rdf:type owl:ObjectProperty ;
+               rdfs:label "has test result" .
+
+
+#################################################################
 #    Data properties
-################################################################
+#################################################################
 
 ###  http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty .
-
-
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#outputOfScenario
-:outputOfScenario rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :TestScenario ;
-                  rdfs:comment "The expected output of a test scenario" ;
-                  rdfs:label "output of a test scenario" .
-
-
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#testAxioms
-:testAxioms rdf:type owl:DatatypeProperty ;
-            rdfs:comment "Temporary axioms added to the ontology to verify the ontology behaviour" ;
-            rdfs:label "test axioms" .
 
 
 ###  http://www.w3.org/2006/03/test-description#preCondition
@@ -96,37 +87,22 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                                                                     rdfs:label "reference in specification"@en .
 
 
+###  https://w3id.org/def/verification-tests#outputOfScenario
+:outputOfScenario rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :TestScenario ;
+                  rdfs:comment "The expected ontology status (i.e., inconsistency, unsatisfiabile or consistent)  after the addition of the axioms of a test scenario" ;
+                  rdfs:label "output of a test scenario" .
+
+
+###  https://w3id.org/def/verification-tests#testAxioms
+:testAxioms rdf:type owl:DatatypeProperty ;
+            rdfs:comment "Temporary axioms added to the ontology to verify the ontology behaviour" ;
+            rdfs:label "test axioms" .
+
+
 #################################################################
 #    Classes
 #################################################################
-
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#TestPreparation
-:TestPreparation rdf:type owl:Class ;
-                 rdfs:comment "Axioms to add auxiliary terms needed to carry out the tests" ;
-                 rdfs:label "Test preparation" .
-
-
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#TestResult
-:TestResult rdf:type owl:Class ;
-            rdfs:label "result of the test case" .
-
-
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#TestScenario
-:TestScenario rdf:type owl:Class ;
-              rdfs:comment "Each of the scenarios to validate the desired behaviour of a requirement" ;
-              rdfs:label "Test scenario" .
-
-
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#VerifTestCase
-:VerifTestCase rdf:type owl:Class ;
-               rdfs:subClassOf <http://www.w3.org/2006/03/test-description#TestCase> ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasTestResult ;
-                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                 owl:onClass :TestResult
-                               ] ;
-               rdfs:label "Verification test case" .
-
 
 ###  http://www.w3.org/2006/03/test-description#ReviewStatus
 <http://www.w3.org/2006/03/test-description#ReviewStatus> rdf:type owl:Class ;
@@ -182,27 +158,53 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 <http://www.w3.org/2006/gen/ont#InformationResource> rdf:type owl:Class .
 
 
+###  https://w3id.org/def/verification-tests#TestPreparation
+:TestPreparation rdf:type owl:Class ;
+                 rdfs:comment "Axioms to add auxiliary terms needed to carry out the tests" ;
+                 rdfs:label "Test preparation" .
+
+
+###  https://w3id.org/def/verification-tests#TestResult
+:TestResult rdf:type owl:Class ;
+            rdfs:comment "Result of the test case to indicate if the test is passed, not passed or undefined in the ontology" ;
+            rdfs:label "Result of the test case" .
+
+
+###  https://w3id.org/def/verification-tests#TestScenario
+:TestScenario rdf:type owl:Class ;
+              rdfs:comment "Each of the scenarios to validate the desired behaviour of a requirement" ;
+              rdfs:label "Test Scenario" .
+
+
+###  https://w3id.org/def/verification-tests#VerifTestCase
+:VerifTestCase rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.w3.org/2006/03/test-description#TestCase> ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://www.w3.org/2006/03/test-description#input> ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :TestScenario
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://www.w3.org/2006/03/test-description#input> ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :TestPreparation
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTestResult ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :TestResult
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://www.w3.org/2006/03/test-description#preCondition> ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ;
+               rdfs:comment "A Test Case for ontology verification. Each test has  test preparation a set of test scenarios, a precondition and a test result" ;
+               rdfs:label "A Verification Test Case" .
+
+
 #################################################################
 #    Individuals
 #################################################################
-
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#notPassed
-:notPassed rdf:type owl:NamedIndividual ,
-                    :TestResult ;
-           rdfs:comment "the ontology does not pass the tests but pass the preconditions" .
-
-
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#passed
-:passed rdf:type owl:NamedIndividual ,
-                 :TestResult ;
-        rdfs:comment "the ontology passed the test" .
-
-
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#undefined
-:undefined rdf:type owl:NamedIndividual ,
-                    :TestResult ;
-           rdfs:comment "The ontology does not pass the preconditions" .
-
 
 ###  http://www.w3.org/2006/03/test-description#accepted
 <http://www.w3.org/2006/03/test-description#accepted> rdf:type owl:NamedIndividual ,
@@ -246,8 +248,29 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                                                         rdfs:label "unreviewed"@en .
 
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+###  https://w3id.org/def/verification-tests#notPassed
+:notPassed rdf:type owl:NamedIndividual ,
+                    :TestResult ;
+           rdfs:comment "the ontology does not pass the tests but pass the preconditions" .
+
+
+###  https://w3id.org/def/verification-tests#passed
+:passed rdf:type owl:NamedIndividual ,
+                 :TestResult ;
+        rdfs:comment "the ontology passed the test" .
+
+
+###  https://w3id.org/def/verification-tests#undefined
+:undefined rdf:type owl:NamedIndividual ,
+                    :TestResult ;
+           rdfs:comment "The ontology does not pass the preconditions" .
+
+
+[ owl:minCardinality "1"^^xsd:nonNegativeInteger
 ] .
+
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
 
 [ owl:maxCardinality "1"^^xsd:nonNegativeInteger
  ] .
@@ -262,9 +285,6 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
  ] .
 
 [ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:minCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
 [ owl:minCardinality "1"^^xsd:nonNegativeInteger
