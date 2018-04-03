@@ -1,0 +1,9 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; ":ReviewStatus" ":SimpleReviewStatus" "base:VerifTestCase" ":SpecificationTestCase" ":TestCase" ; /*classes style*/
+	"base:VerifTestCase" -> ":TestCase" [ label = "rdfs:subClassOf" ];
+	":SpecificationTestCase" -> ":TestCase" [ label = "rdfs:subClassOf" ];
+	":SimpleReviewStatus" -> ":ReviewStatus" [ label = "rdfs:subClassOf" ];
+
+}
