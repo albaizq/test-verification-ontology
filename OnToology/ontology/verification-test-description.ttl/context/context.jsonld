@@ -9,6 +9,9 @@
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
     "testAxioms" : {
       "@id" : "https://w3id.org/def/verification-tests#testAxioms"
     },
@@ -51,6 +54,9 @@
     "SpecificationTestCase" : {
       "@id" : "http://www.w3.org/2006/03/test-description#SpecificationTestCase"
     },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
     "input" : {
       "@id" : "http://www.w3.org/2006/03/test-description#input",
       "@type" : "@id"
@@ -85,6 +91,9 @@
     },
     "description" : {
       "@id" : "http://purl.org/dc/terms/description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
     },
     "purpose" : {
       "@id" : "http://www.w3.org/2006/03/test-description#purpose",

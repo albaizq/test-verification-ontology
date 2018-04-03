@@ -2,13 +2,18 @@
 <rdf:RDF xmlns="https://w3id.org/def/verification-tests#"
      xml:base="https://w3id.org/def/verification-tests"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/def/verification-tests#">
         <dc:title xml:lang="en">Verification test description</dc:title>
+        <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verif</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/def/verification-tests#</vann:preferredNamespaceUri>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metadata test description for ontology verification</rdfs:comment>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.0.1</owl:versionInfo>
     </owl:Ontology>
@@ -156,7 +161,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/verification-tests#outputOfScenario">
         <rdfs:domain rdf:resource="https://w3id.org/def/verification-tests#TestScenario"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The expected output of a test scenario</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The expected ontology status (i.e., inconsistency, unsatisfiabile or consistent)  after the addition of the axioms of a test scenario</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">output of a test scenario</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -282,7 +287,8 @@
 
 
     <owl:Class rdf:about="https://w3id.org/def/verification-tests#TestResult">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">result of the test case</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Result of the test case to indicate if the test is passed, not passed or undefined in the ontology</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Result of the test case</rdfs:label>
     </owl:Class>
     
 
@@ -292,7 +298,7 @@
 
     <owl:Class rdf:about="https://w3id.org/def/verification-tests#TestScenario">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Each of the scenarios to validate the desired behaviour of a requirement</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Test scenario</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Test Scenario</rdfs:label>
     </owl:Class>
     
 
@@ -304,12 +310,33 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/03/test-description#TestCase"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/03/test-description#input"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/verification-tests#TestScenario"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/03/test-description#input"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/verification-tests#TestPreparation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/def/verification-tests#hasTestResult"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="https://w3id.org/def/verification-tests#TestResult"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verification test case</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/03/test-description#preCondition"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Test Case for ontology verification. Each test has  test preparation a set of test scenarios, a precondition and a test result</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Verification Test Case</rdfs:label>
     </owl:Class>
     
 
@@ -420,13 +447,16 @@
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ontology does not pass the preconditions</rdfs:comment>
     </owl:NamedIndividual>
     <rdf:Description>
-        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-    </rdf:Description>
-    <rdf:Description>
         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
     </rdf:Description>
     <rdf:Description>
         <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
     </rdf:Description>
     <rdf:Description>
         <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
@@ -442,9 +472,6 @@
     </rdf:Description>
     <rdf:Description>
         <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
     </rdf:Description>
     
 
