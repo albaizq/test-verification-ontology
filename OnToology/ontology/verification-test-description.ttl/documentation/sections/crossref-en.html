@@ -16,6 +16,10 @@ This section provides details for each class and property defined by Metadata te
             title="http://www.w3.org/2006/03/test-description#SpecificationTestCase">A Test Case based on a specification</a>
       </li>
       <li>
+         <a href="#VerifTestCase"
+            title="https://w3id.org/def/verification-tests#VerifTestCase">A Verification Test Case</a>
+      </li>
+      <li>
          <a href="#TestResult"
             title="https://w3id.org/def/verification-tests#TestResult">Result of the test case</a>
       </li>
@@ -25,15 +29,11 @@ This section provides details for each class and property defined by Metadata te
       </li>
       <li>
          <a href="#TestPreparation"
-            title="https://w3id.org/def/verification-tests#TestPreparation">A Test preparation</a>
+            title="https://w3id.org/def/verification-tests#TestPreparation">Test preparation</a>
       </li>
       <li>
          <a href="#TestScenario"
-            title="https://w3id.org/def/verification-tests#TestScenario">A Test scenario</a>
-      </li>
-      <li>
-         <a href="#VerifTestCase"
-            title="https://w3id.org/def/verification-tests#VerifTestCase">A Verification Test Case</a>
+            title="https://w3id.org/def/verification-tests#TestScenario">Test Scenario</a>
       </li>
    </ul>
    <div class="entity" id="http://www.w3.org/2006/03/test-description#SimpleReviewStatus">
@@ -132,6 +132,52 @@ This section provides details for each class and property defined by Metadata te
             <span class="logic">min</span> 1</dd>
       </dl>
    </div>
+   <div class="entity" id="VerifTestCase">
+      <h3>A Verification Test Case<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#VerifTestCase</p>
+      <div class="comment">
+         <span class="markdown">A Test Case for ontology verification. Each test has  test preparation a set of test scenarios, a precondition and a test result</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#TestCase"
+               title="http://www.w3.org/2006/03/test-description#TestCase">A Test Case</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#input" title="http://www.w3.org/2006/03/test-description#input">input</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1 <a href="#TestScenario"
+               title="https://w3id.org/def/verification-tests#TestScenario">Test Scenario</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#input" title="http://www.w3.org/2006/03/test-description#input">input</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#TestPreparation"
+               title="https://w3id.org/def/verification-tests#TestPreparation">Test preparation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasTestResult"
+               title="https://w3id.org/def/verification-tests#hasTestResult">has test result</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#TestResult"
+               title="https://w3id.org/def/verification-tests#TestResult">Result of the test case</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#preCondition"
+               title="http://www.w3.org/2006/03/test-description#preCondition">precondition</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">exactly</span> 1</dd>
+      </dl>
+   </div>
    <div class="entity" id="TestResult">
       <h3>Result of the test case<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -139,6 +185,9 @@ This section provides details for each class and property defined by Metadata te
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/verification-tests#TestResult</p>
+      <div class="comment">
+         <span class="markdown">Result of the test case to indicate if the test is passed, not passed or undefined in the ontology</span>
+      </div>
       <dl class="description">
          <dt>has members</dt>
          <dd>
@@ -204,7 +253,7 @@ This section provides details for each class and property defined by Metadata te
       </div>
    </div>
    <div class="entity" id="TestScenario">
-      <h3>Test scenario<sup class="type-c" title="class">c</sup>
+      <h3>Test Scenario<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -219,33 +268,6 @@ This section provides details for each class and property defined by Metadata te
             <a href="#outputOfScenario"
                title="https://w3id.org/def/verification-tests#outputOfScenario">output of a test scenario</a>
             <sup class="type-dp" title="data property">dp</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="VerifTestCase">
-      <h3>A Verification Test Case<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/verification-tests#VerifTestCase</p>
-          <div class="comment">
-             <span class="markdown">Test case for ontology verification. Each test has a set of test preparation, which add the auxiliary terms needed  to carry out the tests, and test scenarios, which add the axioms needed to  check the ontology behaviour</span>
-         </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#http://www.w3.org/2006/03/test-description#TestCase"
-               title="http://www.w3.org/2006/03/test-description#TestCase">A Test Case</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#hasTestResult"
-               title="https://w3id.org/def/verification-tests#hasTestResult">has test result</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">exactly</span> 1 <a href="#TestResult"
-               title="https://w3id.org/def/verification-tests#TestResult">Result of the test case</a>
-            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -350,7 +372,7 @@ This section provides details for each class and property defined by Metadata te
             <dt>has domain</dt>
             <dd>
                <a href="#TestScenario"
-                  title="https://w3id.org/def/verification-tests#TestScenario">Test scenario</a>
+                  title="https://w3id.org/def/verification-tests#TestScenario">Test Scenario</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>

@@ -8,6 +8,9 @@
 
 <https://w3id.org/def/verification-tests#> rdf:type owl:Ontology ;
                                             <http://purl.org/dc/elements/1.1/title> "Verification test description"@en ;
+                                            <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                            <http://purl.org/vocab/vann/preferredNamespacePrefix> "verif"^^xsd:string ;
+                                            <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/verification-tests#"^^xsd:string ;
                                             rdfs:comment "Metadata test description for ontology verification"^^xsd:string ;
                                             owl:versionInfo "0.0.1"^^xsd:string .
 
@@ -87,7 +90,7 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/def/verification-tests#outputOfScenario
 <https://w3id.org/def/verification-tests#outputOfScenario> rdf:type owl:DatatypeProperty ;
                                                            rdfs:domain <https://w3id.org/def/verification-tests#TestScenario> ;
-                                                           rdfs:comment "The expected output of a test scenario"^^xsd:string ;
+                                                           rdfs:comment "The expected ontology status (i.e., inconsistency, unsatisfiabile or consistent)  after the addition of the axioms of a test scenario"^^xsd:string ;
                                                            rdfs:label "output of a test scenario"^^xsd:string .
 
 
@@ -163,24 +166,40 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/def/verification-tests#TestResult
 <https://w3id.org/def/verification-tests#TestResult> rdf:type owl:Class ;
-                                                     rdfs:label "result of the test case"^^xsd:string .
+                                                     rdfs:comment "Result of the test case to indicate if the test is passed, not passed or undefined in the ontology"^^xsd:string ;
+                                                     rdfs:label "Result of the test case"^^xsd:string .
 
 
 ###  https://w3id.org/def/verification-tests#TestScenario
 <https://w3id.org/def/verification-tests#TestScenario> rdf:type owl:Class ;
                                                        rdfs:comment "Each of the scenarios to validate the desired behaviour of a requirement"^^xsd:string ;
-                                                       rdfs:label "Test scenario"^^xsd:string .
+                                                       rdfs:label "Test Scenario"^^xsd:string .
 
 
 ###  https://w3id.org/def/verification-tests#VerifTestCase
 <https://w3id.org/def/verification-tests#VerifTestCase> rdf:type owl:Class ;
                                                         rdfs:subClassOf <http://www.w3.org/2006/03/test-description#TestCase> ,
                                                                         [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.w3.org/2006/03/test-description#input> ;
+                                                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                          owl:onClass <https://w3id.org/def/verification-tests#TestScenario>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.w3.org/2006/03/test-description#input> ;
+                                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                          owl:onClass <https://w3id.org/def/verification-tests#TestPreparation>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
                                                                           owl:onProperty <https://w3id.org/def/verification-tests#hasTestResult> ;
                                                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                           owl:onClass <https://w3id.org/def/verification-tests#TestResult>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.w3.org/2006/03/test-description#preCondition> ;
+                                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
                                                                         ] ;
-                                                        rdfs:label "Verification test case"^^xsd:string .
+                                                        rdfs:comment "A Test Case for ontology verification. Each test has  test preparation a set of test scenarios, a precondition and a test result"^^xsd:string ;
+                                                        rdfs:label "A Verification Test Case"^^xsd:string .
 
 
 #################################################################
@@ -247,13 +266,16 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                                                     rdfs:comment "The ontology does not pass the preconditions"^^xsd:string .
 
 
-[ owl:minCardinality "1"^^xsd:nonNegativeInteger
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
 ] .
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+[ owl:minCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
 [ owl:minCardinality "1"^^xsd:nonNegativeInteger
@@ -269,9 +291,6 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
  ] .
 
 [ owl:minCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
 #################################################################
