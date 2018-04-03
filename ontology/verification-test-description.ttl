@@ -68,7 +68,7 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 
 ###  http://www.semanticweb.org/albafernandez/ontologies/2018/verif-test-description#testAxioms
 :testAxioms rdf:type owl:DatatypeProperty ;
-            rdfs:comment "Temporary axioms added to the ontology to verify ontology behaviour" ;
+            rdfs:comment "Temporary axioms added to the ontology to verify the ontology behaviour" ;
             rdfs:label "test axioms" .
 
 
