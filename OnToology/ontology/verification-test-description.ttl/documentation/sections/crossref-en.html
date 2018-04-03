@@ -1,0 +1,663 @@
+<h2  id="crossreference" class="list">Cross reference for Metadata test description for ontology verification classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Metadata test description for ontology verification.
+<div id="classes">
+   <h3 id="classes" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3.org/2006/03/test-description#SimpleReviewStatus"
+            title="http://www.w3.org/2006/03/test-description#SimpleReviewStatus">A status for a simple review process containing 6 possible stages</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/03/test-description#TestCase"
+            title="http://www.w3.org/2006/03/test-description#TestCase">A Test Case</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/03/test-description#SpecificationTestCase"
+            title="http://www.w3.org/2006/03/test-description#SpecificationTestCase">A Test Case based on a specification</a>
+      </li>
+      <li>
+         <a href="#TestResult"
+            title="https://w3id.org/def/verification-tests#TestResult">result of the test case</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/03/test-description#ReviewStatus"
+            title="http://www.w3.org/2006/03/test-description#ReviewStatus">Status in a review process</a>
+      </li>
+      <li>
+         <a href="#TestPreparation"
+            title="https://w3id.org/def/verification-tests#TestPreparation">Test preparation</a>
+      </li>
+      <li>
+         <a href="#TestScenario"
+            title="https://w3id.org/def/verification-tests#TestScenario">Test scenario</a>
+      </li>
+      <li>
+         <a href="#VerifTestCase"
+            title="https://w3id.org/def/verification-tests#VerifTestCase">Verification test case</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3.org/2006/03/test-description#SimpleReviewStatus">
+      <h3>A status for a simple review process containing 6 possible stages<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/03/test-description#SimpleReviewStatus</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>{ <a href="#http://www.w3.org/2006/03/test-description#accepted"
+               title="http://www.w3.org/2006/03/test-description#accepted">accepted</a> , <a href="#http://www.w3.org/2006/03/test-description#approved"
+               title="http://www.w3.org/2006/03/test-description#approved">approved</a> , <a href="#http://www.w3.org/2006/03/test-description#assigned"
+               title="http://www.w3.org/2006/03/test-description#assigned">assigned</a> , <a href="#http://www.w3.org/2006/03/test-description#onhold"
+               title="http://www.w3.org/2006/03/test-description#onhold">on hold</a> , <a href="#http://www.w3.org/2006/03/test-description#rejected"
+               title="http://www.w3.org/2006/03/test-description#rejected">rejected</a> , <a href="#http://www.w3.org/2006/03/test-description#unreviewed"
+               title="http://www.w3.org/2006/03/test-description#unreviewed">unreviewed</a> }</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#ReviewStatus"
+               title="http://www.w3.org/2006/03/test-description#ReviewStatus">Status in a review process</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/03/test-description#TestCase">
+      <h3>A Test Case<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/03/test-description#TestCase</p>
+      <div class="comment">
+         <span class="markdown">A set of test inputs, execution conditions, and expected results developed for a particular objective, such as to exercise a particular program path or to verify compliance with a specific requirement</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#reviewStatus"
+               title="http://www.w3.org/2006/03/test-description#reviewStatus">status of review</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">max</span> 1</dd>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#purpose"
+               title="http://www.w3.org/2006/03/test-description#purpose">purpose</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">min</span> 1</dd>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#purpose"
+               title="http://www.w3.org/2006/03/test-description#purpose">purpose</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">max</span> 1</dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#SpecificationTestCase"
+               title="http://www.w3.org/2006/03/test-description#SpecificationTestCase">A Test Case based on a specification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#VerifTestCase"
+               title="https://w3id.org/def/verification-tests#VerifTestCase">Verification test case</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#input" title="http://www.w3.org/2006/03/test-description#input">input</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2006/03/test-description#preCondition"
+               title="http://www.w3.org/2006/03/test-description#preCondition">precondition</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.w3.org/2006/03/test-description#purpose"
+               title="http://www.w3.org/2006/03/test-description#purpose">purpose</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.w3.org/2006/03/test-description#specificationReference"
+               title="http://www.w3.org/2006/03/test-description#specificationReference">reference in specification</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/03/test-description#SpecificationTestCase">
+      <h3>A Test Case based on a specification<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/03/test-description#SpecificationTestCase</p>
+      <div class="comment">
+         <span class="markdown">A test case which relates to a requirement set in a specification</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#TestCase"
+               title="http://www.w3.org/2006/03/test-description#TestCase">A Test Case</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#specificationReference"
+               title="http://www.w3.org/2006/03/test-description#specificationReference">reference in specification</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">min</span> 1</dd>
+      </dl>
+   </div>
+   <div class="entity" id="TestResult">
+      <h3>result of the test case<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#TestResult</p>
+      <dl class="description">
+         <dt>has members</dt>
+         <dd>
+            <a href="#notPassed"
+               title="https://w3id.org/def/verification-tests#notPassed">not passed</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#passed" title="https://w3id.org/def/verification-tests#passed">passed</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#undefined"
+               title="https://w3id.org/def/verification-tests#undefined">undefined</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/03/test-description#ReviewStatus">
+      <h3>Status in a review process<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/03/test-description#ReviewStatus</p>
+      <div class="comment">
+         <span class="markdown">A particular stage in a review process</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#SimpleReviewStatus"
+               title="http://www.w3.org/2006/03/test-description#SimpleReviewStatus">A status for a simple review process containing 6 possible stages</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#reviewStatus"
+               title="http://www.w3.org/2006/03/test-description#reviewStatus">status of review</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#accepted"
+               title="http://www.w3.org/2006/03/test-description#accepted">accepted</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2006/03/test-description#approved"
+               title="http://www.w3.org/2006/03/test-description#approved">approved</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2006/03/test-description#assigned"
+               title="http://www.w3.org/2006/03/test-description#assigned">assigned</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2006/03/test-description#onhold"
+               title="http://www.w3.org/2006/03/test-description#onhold">on hold</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2006/03/test-description#rejected"
+               title="http://www.w3.org/2006/03/test-description#rejected">rejected</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2006/03/test-description#unreviewed"
+               title="http://www.w3.org/2006/03/test-description#unreviewed">unreviewed</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TestPreparation">
+      <h3>Test preparation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#TestPreparation</p>
+      <div class="comment">
+         <span class="markdown">Axioms to add auxiliary terms needed to carry out the tests</span>
+      </div>
+   </div>
+   <div class="entity" id="TestScenario">
+      <h3>Test scenario<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#TestScenario</p>
+      <div class="comment">
+         <span class="markdown">Each of the scenarios to validate the desired behaviour of a requirement</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#outputOfScenario"
+               title="https://w3id.org/def/verification-tests#outputOfScenario">output of a test scenario</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VerifTestCase">
+      <h3>Verification test case<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#VerifTestCase</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#TestCase"
+               title="http://www.w3.org/2006/03/test-description#TestCase">A Test Case</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasTestResult"
+               title="https://w3id.org/def/verification-tests#hasTestResult">has test result</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#TestResult"
+               title="https://w3id.org/def/verification-tests#TestResult">result of the test case</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hasTestResult"
+            title="https://w3id.org/def/verification-tests#hasTestResult">has test result</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/03/test-description#input" title="http://www.w3.org/2006/03/test-description#input">input</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/03/test-description#reviewStatus"
+            title="http://www.w3.org/2006/03/test-description#reviewStatus">status of review</a>
+      </li>
+   </ul>
+   <div class="entity" id="hasTestResult">
+      <h3>has test result<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#hasTestResult</p>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/03/test-description#input">
+      <h3>input<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/03/test-description#input</p>
+      <div class="comment">
+         <span class="markdown">Parameters or data that are needed for the test execution.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3.org/2006/03/test-description#TestCase"
+                  title="http://www.w3.org/2006/03/test-description#TestCase">A Test Case</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/03/test-description#reviewStatus">
+      <h3>status of review<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/03/test-description#reviewStatus</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3.org/2006/03/test-description#ReviewStatus"
+                  title="http://www.w3.org/2006/03/test-description#ReviewStatus">Status in a review process</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#outputOfScenario"
+            title="https://w3id.org/def/verification-tests#outputOfScenario">output of a test scenario</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/03/test-description#preCondition"
+            title="http://www.w3.org/2006/03/test-description#preCondition">precondition</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/03/test-description#purpose"
+            title="http://www.w3.org/2006/03/test-description#purpose">purpose</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/03/test-description#specificationReference"
+            title="http://www.w3.org/2006/03/test-description#specificationReference">reference in specification</a>
+      </li>
+      <li>
+         <a href="#testAxioms"
+            title="https://w3id.org/def/verification-tests#testAxioms">test axioms</a>
+      </li>
+   </ul>
+   <div class="entity" id="outputOfScenario">
+      <h3>output of a test scenario<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#outputOfScenario</p>
+      <div class="comment">
+         <span class="markdown">The expected output of a test scenario</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#TestScenario"
+                  title="https://w3id.org/def/verification-tests#TestScenario">Test scenario</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/03/test-description#preCondition">
+      <h3>precondition<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/03/test-description#preCondition</p>
+      <div class="comment">
+         <span class="markdown">a condition that must be met before the test is executed</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3.org/2006/03/test-description#TestCase"
+                  title="http://www.w3.org/2006/03/test-description#TestCase">A Test Case</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/03/test-description#purpose">
+      <h3>purpose<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/03/test-description#purpose</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3.org/2006/03/test-description#TestCase"
+                  title="http://www.w3.org/2006/03/test-description#TestCase">A Test Case</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/03/test-description#specificationReference">
+      <h3>reference in specification<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/03/test-description#specificationReference</p>
+      <div class="comment">
+         <span class="markdown">a description or a link of what part of which specification lead to the creation of this test case</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3.org/2006/03/test-description#TestCase"
+                  title="http://www.w3.org/2006/03/test-description#TestCase">A Test Case</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="testAxioms">
+      <h3>test axioms<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#testAxioms</p>
+      <div class="comment">
+         <span class="markdown">Temporary axioms added to the ontology to verify the ontology behaviour</span>
+      </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3.org/2006/03/test-description#accepted"
+            title="http://www.w3.org/2006/03/test-description#accepted">accepted</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/03/test-description#approved"
+            title="http://www.w3.org/2006/03/test-description#approved">approved</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/03/test-description#assigned"
+            title="http://www.w3.org/2006/03/test-description#assigned">assigned</a>
+      </li>
+      <li>
+         <a href="#notPassed"
+            title="https://w3id.org/def/verification-tests#notPassed">
+            <span>not passed</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/03/test-description#onhold"
+            title="http://www.w3.org/2006/03/test-description#onhold">on hold</a>
+      </li>
+      <li>
+         <a href="#passed" title="https://w3id.org/def/verification-tests#passed">
+            <span>passed</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/03/test-description#rejected"
+            title="http://www.w3.org/2006/03/test-description#rejected">rejected</a>
+      </li>
+      <li>
+         <a href="#undefined"
+            title="https://w3id.org/def/verification-tests#undefined">
+            <span>undefined</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/03/test-description#unreviewed"
+            title="http://www.w3.org/2006/03/test-description#unreviewed">unreviewed</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3.org/2006/03/test-description#accepted">
+      <h3>accepted<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/03/test-description#accepted</p>
+      <div class="comment">
+         <span class="markdown">the item has gone through a first review, which shows it as valid for further processing</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#ReviewStatus"
+               title="http://www.w3.org/2006/03/test-description#ReviewStatus">Status in a review process</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/03/test-description#approved">
+      <h3>approved<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/03/test-description#approved</p>
+      <div class="comment">
+         <span class="markdown">the item has gone through the review process and was approved</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#ReviewStatus"
+               title="http://www.w3.org/2006/03/test-description#ReviewStatus">Status in a review process</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/03/test-description#assigned">
+      <h3>assigned<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/03/test-description#assigned</p>
+      <div class="comment">
+         <span class="markdown">a more specific review of the item has been assigned to someone</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#ReviewStatus"
+               title="http://www.w3.org/2006/03/test-description#ReviewStatus">Status in a review process</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="notPassed">
+      <h3>not passed<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#notPassed</p>
+      <div class="comment">
+         <span class="markdown">the ontology does not pass the tests but pass the preconditions</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#TestResult"
+               title="https://w3id.org/def/verification-tests#TestResult">result of the test case</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/03/test-description#onhold">
+      <h3>on hold<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/03/test-description#onhold</p>
+      <div class="comment">
+         <span class="markdown">the item had already gone through the review process, but the results of the review need to be re-assessed due to new input</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#ReviewStatus"
+               title="http://www.w3.org/2006/03/test-description#ReviewStatus">Status in a review process</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="passed">
+      <h3>passed<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#passed</p>
+      <div class="comment">
+         <span class="markdown">the ontology passed the test</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#TestResult"
+               title="https://w3id.org/def/verification-tests#TestResult">result of the test case</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/03/test-description#rejected">
+      <h3>rejected<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/03/test-description#rejected</p>
+      <div class="comment">
+         <span class="markdown">the item has gone through the review process and was rejected</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#ReviewStatus"
+               title="http://www.w3.org/2006/03/test-description#ReviewStatus">Status in a review process</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="undefined">
+      <h3>undefined<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#undefined</p>
+      <div class="comment">
+         <span class="markdown">The ontology does not pass the preconditions</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#TestResult"
+               title="https://w3id.org/def/verification-tests#TestResult">result of the test case</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/03/test-description#unreviewed">
+      <h3>unreviewed<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/03/test-description#unreviewed</p>
+      <div class="comment">
+         <span class="markdown">the item has been proposed, but hasn't been reviewed (e.g. for completeness) yet</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/03/test-description#ReviewStatus"
+               title="http://www.w3.org/2006/03/test-description#ReviewStatus">Status in a review process</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
