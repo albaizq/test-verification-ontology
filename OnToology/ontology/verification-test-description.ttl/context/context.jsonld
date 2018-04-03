@@ -55,6 +55,9 @@
       "@id" : "http://www.w3.org/2006/03/test-description#input",
       "@type" : "@id"
     },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
     "outputOfScenario" : {
       "@id" : "https://w3id.org/def/verification-tests#outputOfScenario"
     },
