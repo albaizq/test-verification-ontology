@@ -105,11 +105,6 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/def/verification-tests#VerifTestCase
 <https://w3id.org/def/verification-tests#VerifTestCase> rdf:type owl:Class ;
                                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <https://w3id.org/def/verification-tests#hasTestResult> ;
-                                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                          owl:onClass <https://w3id.org/def/verification-tests#TestResult>
-                                                                        ] ,
-                                                                        [ rdf:type owl:Restriction ;
                                                                           owl:onProperty <http://purl.org/dc/terms/description> ;
                                                                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                           owl:onDataRange owl:rational
@@ -179,8 +174,11 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                                                     rdfs:comment "The ontology does not pass the preconditions"^^xsd:string .
 
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+[ owl:minCardinality "1"^^xsd:nonNegativeInteger
 ] .
+
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
 
 [ owl:maxCardinality "1"^^xsd:nonNegativeInteger
  ] .
@@ -188,16 +186,13 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 [ owl:minCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
 [ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:minCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
 [ owl:maxCardinality "1"^^xsd:nonNegativeInteger
