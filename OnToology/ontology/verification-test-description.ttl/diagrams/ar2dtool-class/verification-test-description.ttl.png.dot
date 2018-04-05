@@ -1,37 +1,16 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "c524db80cf22730108aae69a5cb82ed0" ":ReviewStatus" ":SimpleReviewStatus" "verif^^http://www.w3.org/2001/XMLSchema#string:TestPreparation" "verif^^http://www.w3.org/2001/XMLSchema#string:TestResult" "verif^^http://www.w3.org/2001/XMLSchema#string:TestScenario" ":TestCase" ; /*classes style*/
-	"http://www.w3.org/2006/03/test-description" -> "http://www.w3.org/TR/2005/NOTE-test-metadata-20050914/" [ label = "rdfs:seeAlso" ];
-	":SimpleReviewStatus" -> "c524db80cf22730108aae69a5cb82ed0" [ label = "owl:equivalentClass" ];
-	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:TestResult" [ label = "owl:onClass" ];
-	"NULL" -> ":preCondition" [ label = "owl:onProperty" ];
-	"NULL" -> ":assigned" [ label = "rdf:first" ];
-	"NULL" -> "3e42eaf:1628aa1046a:-7ff7" [ label = "rdf:rest" ];
-	"NULL" -> "3e42eaf:1628aa1046a:-7ffa" [ label = "rdf:rest" ];
-	"NULL" -> ":input" [ label = "owl:onProperty" ];
-	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:TestPreparation" [ label = "owl:onClass" ];
-	"NULL" -> "3e42eaf:1628aa1046a:-7ffc" [ label = "owl:oneOf" ];
-	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:TestScenario" [ label = "owl:onClass" ];
-	"NULL" -> ":accepted" [ label = "rdf:first" ];
-	"NULL" -> ":onhold" [ label = "rdf:first" ];
-	"NULL" -> ":purpose" [ label = "owl:onProperty" ];
-	"NULL" -> ":specificationReference" [ label = "owl:onProperty" ];
-	"NULL" -> "3e42eaf:1628aa1046a:-7ff9" [ label = "rdf:rest" ];
-	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
-	"NULL" -> ":approved" [ label = "rdf:first" ];
-	"NULL" -> ":unreviewed" [ label = "rdf:first" ];
-	"NULL" -> ":rejected" [ label = "rdf:first" ];
-	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:hasTestResult" [ label = "owl:onProperty" ];
-	"NULL" -> "3e42eaf:1628aa1046a:-7ff8" [ label = "rdf:rest" ];
-	"NULL" -> "3e42eaf:1628aa1046a:-7ffb" [ label = "rdf:rest" ];
-	"NULL" -> ":reviewStatus" [ label = "owl:onProperty" ];
+node [shape = rectangle, color="orange"]; "verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCase" "verif^^http://www.w3.org/2001/XMLSchema#string:TestPreparation" "verif^^http://www.w3.org/2001/XMLSchema#string:TestAssertion" ; /*classes style*/
 	"verif^^http://www.w3.org/2001/XMLSchema#string:" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
-	"verif^^http://www.w3.org/2001/XMLSchema#string:TestScenario" -> "owl:Thing" [ label = "verif^^http://www.w3.org/2001/XMLSchema#string:outputOfScenario" ];
-	":TestCase" -> "owl:Thing" [ label = ":input" ];
-	":TestCase" -> "rdfs:Literal" [ label = ":preCondition" ];
-	":TestCase" -> "rdfs:Literal" [ label = ":specificationReference" ];
-	":TestCase" -> "rdfs:Literal" [ label = ":purpose" ];
-	"owl:Thing" -> ":ReviewStatus" [ label = ":reviewStatus" ];
+	"NULL" -> ":description" [ label = "owl:onProperty" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:TestPreparation" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:outputOfScenario" [ label = "owl:onProperty" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:desiredBehaviour" [ label = "owl:onProperty" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:TestAssertion" [ label = "owl:onClass" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:hasInput" [ label = "owl:onProperty" ];
+	"NULL" -> "owl:rational" [ label = "owl:onDataRange" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:requirementIdentifier" [ label = "owl:onProperty" ];
+	"verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCase" -> "owl:Thing" [ label = "verif^^http://www.w3.org/2001/XMLSchema#string:hasInput" ];
 
 }
