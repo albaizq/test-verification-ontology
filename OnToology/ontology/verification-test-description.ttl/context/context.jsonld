@@ -3,9 +3,6 @@
     "TestPreparation" : {
       "@id" : "https://w3id.org/def/verification-tests#TestPreparation"
     },
-    "TestScenario" : {
-      "@id" : "https://w3id.org/def/verification-tests#TestScenario"
-    },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
@@ -15,22 +12,11 @@
     "testAxioms" : {
       "@id" : "https://w3id.org/def/verification-tests#testAxioms"
     },
-    "Thing" : {
-      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "VerifTestCaseDesign" : {
+      "@id" : "https://w3id.org/def/verification-tests#VerifTestCaseDesign"
     },
     "minCardinality" : {
       "@id" : "http://www.w3.org/2002/07/owl#minCardinality"
-    },
-    "preCondition" : {
-      "@id" : "http://www.w3.org/2006/03/test-description#preCondition",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "SimpleReviewStatus" : {
-      "@id" : "http://www.w3.org/2006/03/test-description#SimpleReviewStatus"
-    },
-    "reviewStatus" : {
-      "@id" : "http://www.w3.org/2006/03/test-description#reviewStatus",
-      "@type" : "@id"
     },
     "TestResult" : {
       "@id" : "https://w3id.org/def/verification-tests#TestResult"
@@ -51,15 +37,21 @@
     "qualifiedCardinality" : {
       "@id" : "http://www.w3.org/2002/07/owl#qualifiedCardinality"
     },
-    "SpecificationTestCase" : {
-      "@id" : "http://www.w3.org/2006/03/test-description#SpecificationTestCase"
+    "requirementIdentifier" : {
+      "@id" : "https://w3id.org/def/verification-tests#requirementIdentifier"
+    },
+    "VerifTestCaseResult" : {
+      "@id" : "https://w3id.org/def/verification-tests#VerifTestCaseResult"
+    },
+    "hasInput" : {
+      "@id" : "https://w3id.org/def/verification-tests#hasInput",
+      "@type" : "@id"
+    },
+    "VerifTestCaseImplementation" : {
+      "@id" : "https://w3id.org/def/verification-tests#VerifTestCaseImplementation"
     },
     "preferredNamespacePrefix" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
-    },
-    "input" : {
-      "@id" : "http://www.w3.org/2006/03/test-description#input",
-      "@type" : "@id"
     },
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
@@ -67,37 +59,26 @@
     "outputOfScenario" : {
       "@id" : "https://w3id.org/def/verification-tests#outputOfScenario"
     },
-    "ReviewStatus" : {
-      "@id" : "http://www.w3.org/2006/03/test-description#ReviewStatus"
-    },
     "minQualifiedCardinality" : {
       "@id" : "http://www.w3.org/2002/07/owl#minQualifiedCardinality"
     },
-    "seeAlso" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    "precondition" : {
+      "@id" : "https://w3id.org/def/verification-tests#precondition"
+    },
+    "desiredBehaviour" : {
+      "@id" : "https://w3id.org/def/verification-tests#desiredBehaviour"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
-    "InformationResource" : {
-      "@id" : "http://www.w3.org/2006/gen/ont#InformationResource"
-    },
-    "specificationReference" : {
-      "@id" : "http://www.w3.org/2006/03/test-description#specificationReference",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "TestCase" : {
-      "@id" : "http://www.w3.org/2006/03/test-description#TestCase"
+    "TestAssertion" : {
+      "@id" : "https://w3id.org/def/verification-tests#TestAssertion"
     },
     "description" : {
       "@id" : "http://purl.org/dc/terms/description"
     },
     "preferredNamespaceUri" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
-    },
-    "purpose" : {
-      "@id" : "http://www.w3.org/2006/03/test-description#purpose",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     }
   }
 }

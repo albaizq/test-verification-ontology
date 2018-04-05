@@ -1,20 +1,8 @@
-<h2 id="overv" class="list">Verification Test Description: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<h2 id="overv" class="list">Metadata test description for ontology verification: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
 <ul class="hlist">
-   <li>
-      <a href="#http://www.w3.org/2006/03/test-description#SimpleReviewStatus"
-         title="http://www.w3.org/2006/03/test-description#SimpleReviewStatus">A status for a simple review process containing 6 possible stages</a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2006/03/test-description#TestCase"
-         title="http://www.w3.org/2006/03/test-description#TestCase">A Test Case</a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2006/03/test-description#SpecificationTestCase"
-         title="http://www.w3.org/2006/03/test-description#SpecificationTestCase">A Test Case based on a specification</a>
-   </li>
    <li>
       <a href="#VerifTestCase"
          title="https://w3id.org/def/verification-tests#VerifTestCase">A Verification Test Case</a>
@@ -24,45 +12,45 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/def/verification-tests#TestResult">Result of the test case</a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2006/03/test-description#ReviewStatus"
-         title="http://www.w3.org/2006/03/test-description#ReviewStatus">Status in a review process</a>
+      <a href="#TestAssertion"
+         title="https://w3id.org/def/verification-tests#TestAssertion">Test Assertion</a>
    </li>
    <li>
       <a href="#TestPreparation"
          title="https://w3id.org/def/verification-tests#TestPreparation">Test preparation</a>
    </li>
    <li>
-      <a href="#TestScenario"
-         title="https://w3id.org/def/verification-tests#TestScenario">Test Scenario</a>
+      <a href="#VerifTestCaseDesign"
+         title="https://w3id.org/def/verification-tests#VerifTestCaseDesign">
+         <span>verif test case design</span>
+      </a>
+   </li>
+   <li>
+      <a href="#VerifTestCaseImplementation"
+         title="https://w3id.org/def/verification-tests#VerifTestCaseImplementation">
+         <span>verif test case implementation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#VerifTestCaseResult"
+         title="https://w3id.org/def/verification-tests#VerifTestCaseResult">
+         <span>verif test case result</span>
+      </a>
    </li>
 </ul><h4>Object Properties</h4><ul class="hlist">
+   <li>
+      <a href="#hasInput" title="https://w3id.org/def/verification-tests#hasInput">
+         <span>has input</span>
+      </a>
+   </li>
    <li>
       <a href="#hasTestResult"
          title="https://w3id.org/def/verification-tests#hasTestResult">has test result</a>
    </li>
-   <li>
-      <a href="#http://www.w3.org/2006/03/test-description#input" title="http://www.w3.org/2006/03/test-description#input">input</a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2006/03/test-description#reviewStatus"
-         title="http://www.w3.org/2006/03/test-description#reviewStatus">status of review</a>
-   </li>
 </ul><h4>Data Properties</h4><ul class="hlist">
    <li>
       <a href="#outputOfScenario"
-         title="https://w3id.org/def/verification-tests#outputOfScenario">output of a test scenario</a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2006/03/test-description#preCondition"
-         title="http://www.w3.org/2006/03/test-description#preCondition">precondition</a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2006/03/test-description#purpose"
-         title="http://www.w3.org/2006/03/test-description#purpose">purpose</a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2006/03/test-description#specificationReference"
-         title="http://www.w3.org/2006/03/test-description#specificationReference">reference in specification</a>
+         title="https://w3id.org/def/verification-tests#outputOfScenario">output of a test assertion</a>
    </li>
    <li>
       <a href="#testAxioms"
@@ -70,26 +58,10 @@ This ontology has the following classes and properties.</span>
    </li>
 </ul><h4>Named Individuals</h4><ul class="hlist">
    <li>
-      <a href="#http://www.w3.org/2006/03/test-description#accepted"
-         title="http://www.w3.org/2006/03/test-description#accepted">accepted</a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2006/03/test-description#approved"
-         title="http://www.w3.org/2006/03/test-description#approved">approved</a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2006/03/test-description#assigned"
-         title="http://www.w3.org/2006/03/test-description#assigned">assigned</a>
-   </li>
-   <li>
       <a href="#notPassed"
          title="https://w3id.org/def/verification-tests#notPassed">
          <span>not passed</span>
       </a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2006/03/test-description#onhold"
-         title="http://www.w3.org/2006/03/test-description#onhold">on hold</a>
    </li>
    <li>
       <a href="#passed" title="https://w3id.org/def/verification-tests#passed">
@@ -97,17 +69,9 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2006/03/test-description#rejected"
-         title="http://www.w3.org/2006/03/test-description#rejected">rejected</a>
-   </li>
-   <li>
       <a href="#undefined"
          title="https://w3id.org/def/verification-tests#undefined">
          <span>undefined</span>
       </a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2006/03/test-description#unreviewed"
-         title="http://www.w3.org/2006/03/test-description#unreviewed">unreviewed</a>
    </li>
 </ul>
