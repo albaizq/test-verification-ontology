@@ -1,9 +1,9 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; ":ReviewStatus" ":SimpleReviewStatus" "verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCase" ":SpecificationTestCase" ":TestCase" ; /*classes style*/
-	"verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCase" -> ":TestCase" [ label = "rdfs:subClassOf" ];
-	":SpecificationTestCase" -> ":TestCase" [ label = "rdfs:subClassOf" ];
-	":SimpleReviewStatus" -> ":ReviewStatus" [ label = "rdfs:subClassOf" ];
+node [shape = rectangle, color="black"]; "verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCaseResult" "verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCaseImplementation" "verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCaseDesign" "verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCase" ; /*classes style*/
+	"verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCaseImplementation" -> "verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCase" [ label = "rdfs:subClassOf" ];
+	"verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCaseResult" -> "verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCase" [ label = "rdfs:subClassOf" ];
+	"verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCaseDesign" -> "verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCase" [ label = "rdfs:subClassOf" ];
 
 }
