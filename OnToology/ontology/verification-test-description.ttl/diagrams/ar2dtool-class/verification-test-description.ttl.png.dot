@@ -1,16 +1,49 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCase" "verif^^http://www.w3.org/2001/XMLSchema#string:TestPreparation" "verif^^http://www.w3.org/2001/XMLSchema#string:TestAssertion" ; /*classes style*/
-	"verif^^http://www.w3.org/2001/XMLSchema#string:" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
-	"NULL" -> ":description" [ label = "owl:onProperty" ];
-	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:TestPreparation" [ label = "owl:someValuesFrom" ];
-	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:outputOfScenario" [ label = "owl:onProperty" ];
-	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:desiredBehaviour" [ label = "owl:onProperty" ];
+node [shape = rectangle, color="orange"]; "verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseResult" "verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseDesign" "97c6a69dcf5316fb0e8981a7e4d9f088" "verif^^http://www.w3.org/2001/XMLSchema#string:TestAssertion" "verif^^http://www.w3.org/2001/XMLSchema#string:Execution" "verif^^http://www.w3.org/2001/XMLSchema#string:TestPreparation" "verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseImplementation" "5c80b9d92fc165a67c5109e6e0a4fa70" "verif^^http://www.w3.org/2001/XMLSchema#string:TestResult" "verif^^http://www.w3.org/2001/XMLSchema#string:AssertionResult" ; /*classes style*/
+	"verif^^http://www.w3.org/2001/XMLSchema#string:TestResult" -> "97c6a69dcf5316fb0e8981a7e4d9f088" [ label = "owl:equivalentClass" ];
+	"verif^^http://www.w3.org/2001/XMLSchema#string:AssertionResult" -> "5c80b9d92fc165a67c5109e6e0a4fa70" [ label = "owl:equivalentClass" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:hasAssertionResult" [ label = "owl:onProperty" ];
 	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:TestAssertion" [ label = "owl:onClass" ];
-	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:hasInput" [ label = "owl:onProperty" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:executedOn" [ label = "owl:onProperty" ];
+	"NULL" -> "-7d8b6aaa:1629ba5bf98:-7ff9" [ label = "owl:oneOf" ];
+	"NULL" -> "-7d8b6aaa:1629ba5bf98:-7ffa" [ label = "rdf:rest" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:isRelatedToImplementation" [ label = "owl:onProperty" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:hasPreparation" [ label = "owl:onProperty" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:testAxioms" [ label = "owl:onProperty" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:TestPreparation" [ label = "owl:onClass" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:Undefined" [ label = "rdf:first" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:hasExecution" [ label = "owl:onProperty" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:Execution" [ label = "owl:onClass" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:isRelatedToDesign" [ label = "owl:onProperty" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseImplementation" [ label = "owl:onClass" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:Unsatisfiable" [ label = "rdf:first" ];
 	"NULL" -> "owl:rational" [ label = "owl:onDataRange" ];
-	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:requirementIdentifier" [ label = "owl:onProperty" ];
-	"verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCase" -> "owl:Thing" [ label = "verif^^http://www.w3.org/2001/XMLSchema#string:hasInput" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:desiredBehaviour" [ label = "owl:onProperty" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "-7d8b6aaa:1629ba5bf98:-7ff8" [ label = "rdf:rest" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:Inconsistent" [ label = "rdf:first" ];
+	"NULL" -> ":description" [ label = "owl:onProperty" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:isRelatedToRequirement" [ label = "owl:onProperty" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:Passed" [ label = "rdf:first" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:AssertionResult" [ label = "owl:onClass" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:precondition" [ label = "owl:onProperty" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:NotPassed" [ label = "rdf:first" ];
+	"NULL" -> "-7d8b6aaa:1629ba5bf98:-7ffb" [ label = "rdf:rest" ];
+	"NULL" -> "-7d8b6aaa:1629ba5bf98:-7ffc" [ label = "owl:oneOf" ];
+	"NULL" -> "xsd:anyURI" [ label = "owl:onDataRange" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:Consistent" [ label = "rdf:first" ];
+	"NULL" -> "-7d8b6aaa:1629ba5bf98:-7ff7" [ label = "rdf:rest" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseDesign" [ label = "owl:onClass" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseResult" [ label = "owl:onClass" ];
+	"NULL" -> "verif^^http://www.w3.org/2001/XMLSchema#string:hasAssertion" [ label = "owl:onProperty" ];
+	"verif^^http://www.w3.org/2001/XMLSchema#string:hasAssertionResult" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"verif^^http://www.w3.org/2001/XMLSchema#string:" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
+	"owl:Thing" -> "verif^^http://www.w3.org/2001/XMLSchema#string:TestAssertion" [ label = "verif^^http://www.w3.org/2001/XMLSchema#string:hasAssertion" ];
+	"owl:Thing" -> "verif^^http://www.w3.org/2001/XMLSchema#string:AssertionResult" [ label = "verif^^http://www.w3.org/2001/XMLSchema#string:hasAssertionResult" ];
+	"owl:Thing" -> "xsd:anyURI" [ label = "verif^^http://www.w3.org/2001/XMLSchema#string:executedOn" ];
+	"owl:Thing" -> "xsd:anyURI" [ label = "verif^^http://www.w3.org/2001/XMLSchema#string:isRelatedToRequirement" ];
+	"owl:Thing" -> "verif^^http://www.w3.org/2001/XMLSchema#string:TestPreparation" [ label = "verif^^http://www.w3.org/2001/XMLSchema#string:hasPreparation" ];
 
 }

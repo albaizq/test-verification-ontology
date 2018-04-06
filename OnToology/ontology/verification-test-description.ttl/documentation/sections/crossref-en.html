@@ -4,8 +4,19 @@ This section provides details for each class and property defined by Metadata te
    <h3 id="classes" class="list">Classes</h3>
    <ul class="hlist">
       <li>
-         <a href="#VerifTestCase"
-            title="https://w3id.org/def/verification-tests#VerifTestCase">A Verification Test Case</a>
+         <a href="#TestCase" title="https://w3id.org/def/verification-tests#TestCase">A Verification Test Case</a>
+      </li>
+      <li>
+         <a href="#AssertionResult"
+            title="https://w3id.org/def/verification-tests#AssertionResult">
+            <span>assertion result</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Execution"
+            title="https://w3id.org/def/verification-tests#Execution">
+            <span>execution</span>
+         </a>
       </li>
       <li>
          <a href="#TestResult"
@@ -16,37 +27,37 @@ This section provides details for each class and property defined by Metadata te
             title="https://w3id.org/def/verification-tests#TestAssertion">Test Assertion</a>
       </li>
       <li>
+         <a href="#TestCaseDesign"
+            title="https://w3id.org/def/verification-tests#TestCaseDesign">
+            <span>test case design</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TestCaseImplementation"
+            title="https://w3id.org/def/verification-tests#TestCaseImplementation">
+            <span>test case implementation</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TestCaseResult"
+            title="https://w3id.org/def/verification-tests#TestCaseResult">
+            <span>test case result</span>
+         </a>
+      </li>
+      <li>
          <a href="#TestPreparation"
             title="https://w3id.org/def/verification-tests#TestPreparation">Test preparation</a>
       </li>
-      <li>
-         <a href="#VerifTestCaseDesign"
-            title="https://w3id.org/def/verification-tests#VerifTestCaseDesign">
-            <span>verif test case design</span>
-         </a>
-      </li>
-      <li>
-         <a href="#VerifTestCaseImplementation"
-            title="https://w3id.org/def/verification-tests#VerifTestCaseImplementation">
-            <span>verif test case implementation</span>
-         </a>
-      </li>
-      <li>
-         <a href="#VerifTestCaseResult"
-            title="https://w3id.org/def/verification-tests#VerifTestCaseResult">
-            <span>verif test case result</span>
-         </a>
-      </li>
    </ul>
-   <div class="entity" id="VerifTestCase">
+   <div class="entity" id="TestCase">
       <h3>A Verification Test Case<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/verification-tests#VerifTestCase</p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#TestCase</p>
       <div class="comment">
-         <span class="markdown">A Test Case for ontology verification</span>
+         <span class="markdown">A Test Case for ontology verification. Each test has  test preparation a set of test scenarios, a precondition and a test result</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -54,31 +65,71 @@ This section provides details for each class and property defined by Metadata te
             <span class="dotted" title="http://purl.org/dc/terms/description">description</span>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">min</span> 1</dd>
-         <dd>
-            <span class="dotted"
-                  title="https://w3id.org/def/verification-tests#desiredBehaviour">desired behaviour</span>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">min</span> 1</dd>
-         <dd>
-            <span class="dotted"
-                  title="https://w3id.org/def/verification-tests#requirementIdentifier">requirement identifier</span>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">exactly</span> 1</dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#VerifTestCaseDesign"
-               title="https://w3id.org/def/verification-tests#VerifTestCaseDesign">verif test case design</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#VerifTestCaseImplementation"
-               title="https://w3id.org/def/verification-tests#VerifTestCaseImplementation">verif test case implementation</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#VerifTestCaseResult"
-               title="https://w3id.org/def/verification-tests#VerifTestCaseResult">verif test case result</a>
+            <a href="#TestCaseDesign"
+               title="https://w3id.org/def/verification-tests#TestCaseDesign">test case design</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TestCaseImplementation"
+               title="https://w3id.org/def/verification-tests#TestCaseImplementation">test case implementation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TestCaseResult"
+               title="https://w3id.org/def/verification-tests#TestCaseResult">test case result</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in domain of</dt>
+      </dl>
+   </div>
+   <div class="entity" id="AssertionResult">
+      <h3>assertion result<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#AssertionResult</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>{ <a href="#Consistent"
+               title="https://w3id.org/def/verification-tests#Consistent">consistent</a> , <a href="#Inconsistent"
+               title="https://w3id.org/def/verification-tests#Inconsistent">inconsistent</a> , <a href="#Unsatisfiable"
+               title="https://w3id.org/def/verification-tests#Unsatisfiable">unsatisfiable</a> }</dd>
+         <dt>is in range of</dt>
          <dd>
-            <a href="#hasInput" title="https://w3id.org/def/verification-tests#hasInput">has input</a>
+            <a href="#hasAssertionResult"
+               title="https://w3id.org/def/verification-tests#hasAssertionResult">has assertion result</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Consistent"
+               title="https://w3id.org/def/verification-tests#Consistent">consistent</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Inconsistent"
+               title="https://w3id.org/def/verification-tests#Inconsistent">inconsistent</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Unsatisfiable"
+               title="https://w3id.org/def/verification-tests#Unsatisfiable">unsatisfiable</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Execution">
+      <h3>execution<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#Execution</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#isRelatedToImplementation"
+               title="https://w3id.org/def/verification-tests#isRelatedToImplementation">is related to implementation</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#TestCaseImplementation"
+               title="https://w3id.org/def/verification-tests#TestCaseImplementation">test case implementation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#executedOn"
+               title="https://w3id.org/def/verification-tests#executedOn">executed on</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">exactly</span> 1</dd>
       </dl>
    </div>
    <div class="entity" id="TestResult">
@@ -92,13 +143,17 @@ This section provides details for each class and property defined by Metadata te
          <span class="markdown">Result of the test case to indicate if the test is passed, not passed or undefined in the ontology</span>
       </div>
       <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>{ <a href="#NotPassed"
+               title="https://w3id.org/def/verification-tests#NotPassed">not passed</a> , <a href="#Passed" title="https://w3id.org/def/verification-tests#Passed">passed</a> , <a href="#Undefined"
+               title="https://w3id.org/def/verification-tests#Undefined">undefined</a> }</dd>
          <dt>has members</dt>
          <dd>
-            <a href="#notPassed"
-               title="https://w3id.org/def/verification-tests#notPassed">not passed</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#passed" title="https://w3id.org/def/verification-tests#passed">passed</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#undefined"
-               title="https://w3id.org/def/verification-tests#undefined">undefined</a>
+            <a href="#NotPassed"
+               title="https://w3id.org/def/verification-tests#NotPassed">not passed</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Passed" title="https://w3id.org/def/verification-tests#Passed">passed</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Undefined"
+               title="https://w3id.org/def/verification-tests#Undefined">undefined</a>
             <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
@@ -113,6 +168,128 @@ This section provides details for each class and property defined by Metadata te
       <div class="comment">
          <span class="markdown">Each of the assertions to validate the desired behaviour of a requirement</span>
       </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#hasAssertionResult"
+               title="https://w3id.org/def/verification-tests#hasAssertionResult">has assertion result</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#AssertionResult"
+               title="https://w3id.org/def/verification-tests#AssertionResult">assertion result</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#testAxioms"
+               title="https://w3id.org/def/verification-tests#testAxioms">test axioms</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">min</span> 1</dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasAssertion"
+               title="https://w3id.org/def/verification-tests#hasAssertion">has assertion</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TestCaseDesign">
+      <h3>test case design<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#TestCaseDesign</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#TestCase" title="https://w3id.org/def/verification-tests#TestCase">A Verification Test Case</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#desiredBehaviour"
+               title="https://w3id.org/def/verification-tests#desiredBehaviour">desired behaviour</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">min</span> 1</dd>
+         <dd>
+            <a href="#isRelatedToRequirement"
+               title="https://w3id.org/def/verification-tests#isRelatedToRequirement">is related to requirement</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">min</span> 1</dd>
+      </dl>
+   </div>
+   <div class="entity" id="TestCaseImplementation">
+      <h3>test case implementation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#TestCaseImplementation</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#TestCase" title="https://w3id.org/def/verification-tests#TestCase">A Verification Test Case</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasAssertion"
+               title="https://w3id.org/def/verification-tests#hasAssertion">has assertion</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1 <a href="#TestAssertion"
+               title="https://w3id.org/def/verification-tests#TestAssertion">Test Assertion</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasPreparation"
+               title="https://w3id.org/def/verification-tests#hasPreparation">has preparation</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1 <a href="#TestPreparation"
+               title="https://w3id.org/def/verification-tests#TestPreparation">Test preparation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#isRelatedToDesign"
+               title="https://w3id.org/def/verification-tests#isRelatedToDesign">is related to design</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#TestCaseDesign"
+               title="https://w3id.org/def/verification-tests#TestCaseDesign">test case design</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted"
+                  title="https://w3id.org/def/verification-tests#precondition">precondition</span>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">min</span> 1</dd>
+      </dl>
+   </div>
+   <div class="entity" id="TestCaseResult">
+      <h3>test case result<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#TestCaseResult</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#TestCase" title="https://w3id.org/def/verification-tests#TestCase">A Verification Test Case</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasAssertionResult"
+               title="https://w3id.org/def/verification-tests#hasAssertionResult">has assertion result</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1 <a href="#TestCaseResult"
+               title="https://w3id.org/def/verification-tests#TestCaseResult">test case result</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasExecution"
+               title="https://w3id.org/def/verification-tests#hasExecution">has execution</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#Execution"
+               title="https://w3id.org/def/verification-tests#Execution">execution</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="TestPreparation">
       <h3>Test preparation<sup class="type-c" title="class">c</sup>
@@ -124,78 +301,12 @@ This section provides details for each class and property defined by Metadata te
       <div class="comment">
          <span class="markdown">Axioms to add auxiliary terms needed to carry out the tests</span>
       </div>
-   </div>
-   <div class="entity" id="VerifTestCaseDesign">
-      <h3>verif test case design<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/verification-tests#VerifTestCaseDesign</p>
-      <div class="comment">
-         <span class="markdown">Test case design, which determines the desired behaviour which is going to be tested </span>
-      </div>
       <dl class="description">
-         <dt>has super-classes</dt>
+         <dt>is in range of</dt>
          <dd>
-            <a href="#VerifTestCase"
-               title="https://w3id.org/def/verification-tests#VerifTestCase">A Verification Test Case</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="VerifTestCaseImplementation">
-      <h3>verif test case implementation<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/verification-tests#VerifTestCaseImplementation</p>
-      <div class="comment">
-         <span class="markdown">Test case implementation, which has a precondition, a test preparation and a set of test assertions </span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#VerifTestCase"
-               title="https://w3id.org/def/verification-tests#VerifTestCase">A Verification Test Case</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#hasInput" title="https://w3id.org/def/verification-tests#hasInput">has input</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#TestPreparation"
-               title="https://w3id.org/def/verification-tests#TestPreparation">Test preparation</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#hasInput" title="https://w3id.org/def/verification-tests#hasInput">has input</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">min</span> 1 <a href="#TestAssertion"
-               title="https://w3id.org/def/verification-tests#TestAssertion">Test Assertion</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#outputOfScenario"
-               title="https://w3id.org/def/verification-tests#outputOfScenario">output of a test assertion</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">exactly</span> 1</dd>
-      </dl>
-   </div>
-   <div class="entity" id="VerifTestCaseResult">
-      <h3>verif test case result<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/verification-tests#VerifTestCaseResult</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#VerifTestCase"
-               title="https://w3id.org/def/verification-tests#VerifTestCase">A Verification Test Case</a>
-            <sup class="type-c" title="class">c</sup>
+            <a href="#hasPreparation"
+               title="https://w3id.org/def/verification-tests#hasPreparation">has preparation</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -203,28 +314,95 @@ This section provides details for each class and property defined by Metadata te
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#hasInput" title="https://w3id.org/def/verification-tests#hasInput">
-            <span>has input</span>
-         </a>
+         <a href="#hasAssertion"
+            title="https://w3id.org/def/verification-tests#hasAssertion">has assertion</a>
+      </li>
+      <li>
+         <a href="#hasAssertionResult"
+            title="https://w3id.org/def/verification-tests#hasAssertionResult">has assertion result</a>
+      </li>
+      <li>
+         <a href="#hasExecution"
+            title="https://w3id.org/def/verification-tests#hasExecution">has execution</a>
+      </li>
+      <li>
+         <a href="#hasPreparation"
+            title="https://w3id.org/def/verification-tests#hasPreparation">has preparation</a>
       </li>
       <li>
          <a href="#hasTestResult"
             title="https://w3id.org/def/verification-tests#hasTestResult">has test result</a>
       </li>
+      <li>
+         <a href="#isRelatedToDesign"
+            title="https://w3id.org/def/verification-tests#isRelatedToDesign">is related to design</a>
+      </li>
+      <li>
+         <a href="#isRelatedToImplementation"
+            title="https://w3id.org/def/verification-tests#isRelatedToImplementation">is related to implementation</a>
+      </li>
    </ul>
-   <div class="entity" id="hasInput">
-      <h3>has input<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="hasAssertion">
+      <h3>has assertion<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/verification-tests#hasInput</p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#hasAssertion</p>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
+            <dt>has range</dt>
             <dd>
-               <a href="#VerifTestCase"
-                  title="https://w3id.org/def/verification-tests#VerifTestCase">A Verification Test Case</a>
+               <a href="#TestAssertion"
+                  title="https://w3id.org/def/verification-tests#TestAssertion">Test Assertion</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasAssertionResult">
+      <h3>has assertion result<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#hasAssertionResult</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#AssertionResult"
+                  title="https://w3id.org/def/verification-tests#AssertionResult">assertion result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasExecution">
+      <h3>has execution<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#hasExecution</p>
+   </div>
+   <div class="entity" id="hasPreparation">
+      <h3>has preparation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#hasPreparation</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#TestPreparation"
+                  title="https://w3id.org/def/verification-tests#TestPreparation">Test preparation</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -238,9 +416,37 @@ This section provides details for each class and property defined by Metadata te
       <p>
          <strong>IRI:</strong> https://w3id.org/def/verification-tests#hasTestResult</p>
    </div>
+   <div class="entity" id="isRelatedToDesign">
+      <h3>is related to design<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#isRelatedToDesign</p>
+   </div>
+   <div class="entity" id="isRelatedToImplementation">
+      <h3>is related to implementation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#isRelatedToImplementation</p>
+   </div>
 </div><div id="dataproperties">
    <h3 id="dataproperties" class="list">Data Properties</h3>
    <ul class="hlist">
+      <li>
+         <a href="#desiredBehaviour"
+            title="https://w3id.org/def/verification-tests#desiredBehaviour">desired behaviour</a>
+      </li>
+      <li>
+         <a href="#executedOn"
+            title="https://w3id.org/def/verification-tests#executedOn">executed on</a>
+      </li>
+      <li>
+         <a href="#isRelatedToRequirement"
+            title="https://w3id.org/def/verification-tests#isRelatedToRequirement">is related to requirement</a>
+      </li>
       <li>
          <a href="#outputOfScenario"
             title="https://w3id.org/def/verification-tests#outputOfScenario">output of a test assertion</a>
@@ -250,6 +456,46 @@ This section provides details for each class and property defined by Metadata te
             title="https://w3id.org/def/verification-tests#testAxioms">test axioms</a>
       </li>
    </ul>
+   <div class="entity" id="desiredBehaviour">
+      <h3>desired behaviour<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#desiredBehaviour</p>
+   </div>
+   <div class="entity" id="executedOn">
+      <h3>executed on<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#executedOn</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isRelatedToRequirement">
+      <h3>is related to requirement<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#isRelatedToRequirement</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="outputOfScenario">
       <h3>output of a test assertion<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -276,32 +522,82 @@ This section provides details for each class and property defined by Metadata te
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
       <li>
-         <a href="#notPassed"
-            title="https://w3id.org/def/verification-tests#notPassed">
+         <a href="#Consistent"
+            title="https://w3id.org/def/verification-tests#Consistent">
+            <span>consistent</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Inconsistent"
+            title="https://w3id.org/def/verification-tests#Inconsistent">
+            <span>inconsistent</span>
+         </a>
+      </li>
+      <li>
+         <a href="#NotPassed"
+            title="https://w3id.org/def/verification-tests#NotPassed">
             <span>not passed</span>
          </a>
       </li>
       <li>
-         <a href="#passed" title="https://w3id.org/def/verification-tests#passed">
+         <a href="#Passed" title="https://w3id.org/def/verification-tests#Passed">
             <span>passed</span>
          </a>
       </li>
       <li>
-         <a href="#undefined"
-            title="https://w3id.org/def/verification-tests#undefined">
+         <a href="#Undefined"
+            title="https://w3id.org/def/verification-tests#Undefined">
             <span>undefined</span>
          </a>
       </li>
+      <li>
+         <a href="#Unsatisfiable"
+            title="https://w3id.org/def/verification-tests#Unsatisfiable">
+            <span>unsatisfiable</span>
+         </a>
+      </li>
    </ul>
-   <div class="entity" id="notPassed">
+   <div class="entity" id="Consistent">
+      <h3>consistent<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#Consistent</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#AssertionResult"
+               title="https://w3id.org/def/verification-tests#AssertionResult">assertion result</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Inconsistent">
+      <h3>inconsistent<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#Inconsistent</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#AssertionResult"
+               title="https://w3id.org/def/verification-tests#AssertionResult">assertion result</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NotPassed">
       <h3>not passed<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/verification-tests#notPassed</p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#NotPassed</p>
       <div class="comment">
-         <span class="markdown">The ontology does not pass the tests but pass the preconditions</span>
+         <span class="markdown">the ontology does not pass the tests but pass the preconditions</span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -312,15 +608,15 @@ This section provides details for each class and property defined by Metadata te
          </dd>
       </dl>
    </div>
-   <div class="entity" id="passed">
+   <div class="entity" id="Passed">
       <h3>passed<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/verification-tests#passed</p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#Passed</p>
       <div class="comment">
-         <span class="markdown">The ontology passed the test</span>
+         <span class="markdown">the ontology passed the test</span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -331,13 +627,13 @@ This section provides details for each class and property defined by Metadata te
          </dd>
       </dl>
    </div>
-   <div class="entity" id="undefined">
+   <div class="entity" id="Undefined">
       <h3>undefined<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/verification-tests#undefined</p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#Undefined</p>
       <div class="comment">
          <span class="markdown">The ontology does not pass the preconditions</span>
       </div>
@@ -346,6 +642,22 @@ This section provides details for each class and property defined by Metadata te
          <dd>
             <a href="#TestResult"
                title="https://w3id.org/def/verification-tests#TestResult">Result of the test case</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Unsatisfiable">
+      <h3>unsatisfiable<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/verification-tests#Unsatisfiable</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#AssertionResult"
+               title="https://w3id.org/def/verification-tests#AssertionResult">assertion result</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>

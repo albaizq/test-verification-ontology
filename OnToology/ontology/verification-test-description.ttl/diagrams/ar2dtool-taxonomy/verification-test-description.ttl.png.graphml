@@ -6,31 +6,31 @@
    <key attr.name="description" attr.type="string" for="edge" id="d3" />
    <key for="graphml" id="d4" yfiles.type="resources" />
    <graph edgedefault="directed" id="G" parse.edges="3" parse.nodes="4" parse.order="free">
-      <node id="nid_verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCaseImplementation">
+      <node id="nid_verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseDesign">
          <data key="d0">
             <y:ShapeNode>
-               <y:Geometry height="30.0" width="740.0" x="0.0" y="0.0" />
+               <y:Geometry height="30.0" width="610.0" x="0.0" y="0.0" />
                <y:Fill color="#000000" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCaseImplementation</y:NodeLabel>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseDesign</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
          <data key="d1" />
       </node>
-      <node id="nid_verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCase">
+      <node id="nid_verif^^http://www.w3.org/2001/XMLSchema#string:TestCase">
          <data key="d0">
             <y:ShapeNode>
-               <y:Geometry height="30.0" width="600.0" x="0.0" y="0.0" />
+               <y:Geometry height="30.0" width="550.0" x="0.0" y="0.0" />
                <y:Fill color="#000000" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCase</y:NodeLabel>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">verif^^http://www.w3.org/2001/XMLSchema#string:TestCase</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf0" source="nid_verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCaseImplementation" target="nid_verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCase">
+    <edge id="eid_rdfs:subClassOf0" source="nid_verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseDesign" target="nid_verif^^http://www.w3.org/2001/XMLSchema#string:TestCase">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -41,19 +41,19 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCaseResult">
+      <node id="nid_verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseResult">
          <data key="d0">
             <y:ShapeNode>
-               <y:Geometry height="30.0" width="660.0" x="0.0" y="0.0" />
+               <y:Geometry height="30.0" width="610.0" x="0.0" y="0.0" />
                <y:Fill color="#000000" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCaseResult</y:NodeLabel>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseResult</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf1" source="nid_verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCaseResult" target="nid_verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCase">
+    <edge id="eid_rdfs:subClassOf1" source="nid_verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseResult" target="nid_verif^^http://www.w3.org/2001/XMLSchema#string:TestCase">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -64,19 +64,19 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCaseDesign">
+      <node id="nid_verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseImplementation">
          <data key="d0">
             <y:ShapeNode>
-               <y:Geometry height="30.0" width="660.0" x="0.0" y="0.0" />
+               <y:Geometry height="30.0" width="690.0" x="0.0" y="0.0" />
                <y:Fill color="#000000" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCaseDesign</y:NodeLabel>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseImplementation</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf2" source="nid_verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCaseDesign" target="nid_verif^^http://www.w3.org/2001/XMLSchema#string:VerifTestCase">
+    <edge id="eid_rdfs:subClassOf2" source="nid_verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseImplementation" target="nid_verif^^http://www.w3.org/2001/XMLSchema#string:TestCase">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
