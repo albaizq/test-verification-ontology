@@ -239,6 +239,7 @@
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assertion result</rdfs:label>
     </owl:Class>
     
 
@@ -261,6 +262,7 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Execution</rdfs:label>
     </owl:Class>
     
 
@@ -325,6 +327,7 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Test case design</rdfs:label>
     </owl:Class>
     
 
@@ -362,6 +365,7 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Test case implementation</rdfs:label>
     </owl:Class>
     
 
@@ -385,6 +389,7 @@
                 <owl:onClass rdf:resource="https://w3id.org/def/verification-tests#Execution"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Test case execution</rdfs:label>
     </owl:Class>
     
 
@@ -488,13 +493,7 @@
         <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
     </rdf:Description>
     <rdf:Description>
-        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
     </rdf:Description>
     <rdf:Description>
         <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
@@ -509,7 +508,13 @@
         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
     </rdf:Description>
     <rdf:Description>
-        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
     </rdf:Description>
 </rdf:RDF>
 

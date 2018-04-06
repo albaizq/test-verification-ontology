@@ -129,6 +129,7 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/verification-tests#Unsatisfiable> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/def/verification-tests#AssertionResult> <http://www.w3.org/2000/01/rdf-schema#label> "Assertion result" .
 # 
 # https://w3id.org/def/verification-tests#Execution
 <https://w3id.org/def/verification-tests#Execution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -142,6 +143,7 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 _:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/verification-tests#executedOn> .
 _:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid6 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/def/verification-tests#Execution> <http://www.w3.org/2000/01/rdf-schema#label> "Execution" .
 # 
 # https://w3id.org/def/verification-tests#TestAssertion
 <https://w3id.org/def/verification-tests#TestAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -181,6 +183,7 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/verification-tests#isRelatedToRequirement> .
 _:genid11 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid11 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/def/verification-tests#TestCaseDesign> <http://www.w3.org/2000/01/rdf-schema#label> "Test case design" .
 # 
 # https://w3id.org/def/verification-tests#TestCaseImplementation
 <https://w3id.org/def/verification-tests#TestCaseImplementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -205,6 +208,7 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/verification-tests#precondition> .
 _:genid15 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid15 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+<https://w3id.org/def/verification-tests#TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#label> "Test case implementation" .
 # 
 # https://w3id.org/def/verification-tests#TestCaseResult
 <https://w3id.org/def/verification-tests#TestCaseResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -219,6 +223,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/verification-tests#hasExecution> .
 _:genid17 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid17 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/verification-tests#Execution> .
+<https://w3id.org/def/verification-tests#TestCaseResult> <http://www.w3.org/2000/01/rdf-schema#label> "Test case execution" .
 # 
 # https://w3id.org/def/verification-tests#TestPreparation
 <https://w3id.org/def/verification-tests#TestPreparation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -279,12 +284,12 @@ _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/def/verification-tests#Unsatisfiable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/verification-tests#AssertionResult> .
 # 
 _:genid22 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid23 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid24 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid25 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid26 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid27 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid28 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid29 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid30 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid23 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid24 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid25 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid26 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid27 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid28 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid29 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid30 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 # Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
