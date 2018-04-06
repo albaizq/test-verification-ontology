@@ -72,11 +72,42 @@
     
 
 
-    <!-- https://w3id.org/def/verification-tests#hasInput -->
+    <!-- https://w3id.org/def/verification-tests#hasAssertion -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/verification-tests#hasInput">
-        <rdfs:domain rdf:resource="https://w3id.org/def/verification-tests#VerifTestCase"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/verification-tests#hasAssertion">
+        <rdfs:range rdf:resource="https://w3id.org/def/verification-tests#TestAssertion"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has assertion</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/verification-tests#hasAssertionResult -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/verification-tests#hasAssertionResult">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/verification-tests#AssertionResult"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has assertion result</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/verification-tests#hasExecution -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/verification-tests#hasExecution">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has execution</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/verification-tests#hasPreparation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/verification-tests#hasPreparation">
+        <rdfs:range rdf:resource="https://w3id.org/def/verification-tests#TestPreparation"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has preparation</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -86,6 +117,24 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/verification-tests#hasTestResult">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has test result</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/verification-tests#isRelatedToDesign -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/verification-tests#isRelatedToDesign">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is related to design</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/verification-tests#isRelatedToImplementation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/verification-tests#isRelatedToImplementation">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is related to implementation</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -112,7 +161,29 @@
     <!-- https://w3id.org/def/verification-tests#desiredBehaviour -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/verification-tests#desiredBehaviour"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/verification-tests#desiredBehaviour">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">desired behaviour</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/verification-tests#executedOn -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/verification-tests#executedOn">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">executed on</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/verification-tests#isRelatedToRequirement -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/verification-tests#isRelatedToRequirement">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is related to requirement</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
@@ -130,13 +201,6 @@
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/verification-tests#precondition"/>
-    
-
-
-    <!-- https://w3id.org/def/verification-tests#requirementIdentifier -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/verification-tests#requirementIdentifier"/>
     
 
 
@@ -162,12 +226,165 @@
     
 
 
+    <!-- https://w3id.org/def/verification-tests#AssertionResult -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/verification-tests#AssertionResult">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/def/verification-tests#Consistent"/>
+                    <rdf:Description rdf:about="https://w3id.org/def/verification-tests#Inconsistent"/>
+                    <rdf:Description rdf:about="https://w3id.org/def/verification-tests#Unsatisfiable"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/verification-tests#Execution -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/verification-tests#Execution">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/verification-tests#isRelatedToImplementation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/verification-tests#TestCaseImplementation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/verification-tests#executedOn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/def/verification-tests#TestAssertion -->
 
 
     <owl:Class rdf:about="https://w3id.org/def/verification-tests#TestAssertion">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/verification-tests#hasAssertionResult"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/verification-tests#AssertionResult"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/verification-tests#testAxioms"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Each of the assertions to validate the desired behaviour of a requirement</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Test Assertion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/verification-tests#TestCase -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/verification-tests#TestCase">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Test Case for ontology verification. Each test has  test preparation a set of test scenarios, a precondition and a test result</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Verification Test Case</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/verification-tests#TestCaseDesign -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/verification-tests#TestCaseDesign">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/verification-tests#TestCase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/verification-tests#desiredBehaviour"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/verification-tests#isRelatedToRequirement"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/verification-tests#TestCaseImplementation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/verification-tests#TestCaseImplementation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/verification-tests#TestCase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/verification-tests#hasAssertion"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/verification-tests#TestAssertion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/verification-tests#hasPreparation"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/verification-tests#TestPreparation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/verification-tests#isRelatedToDesign"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/verification-tests#TestCaseDesign"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/verification-tests#precondition"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/verification-tests#TestCaseResult -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/verification-tests#TestCaseResult">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/verification-tests#TestCase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/verification-tests#hasAssertionResult"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/verification-tests#TestCaseResult"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/verification-tests#hasExecution"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/verification-tests#Execution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -186,86 +403,17 @@
 
 
     <owl:Class rdf:about="https://w3id.org/def/verification-tests#TestResult">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/def/verification-tests#NotPassed"/>
+                    <rdf:Description rdf:about="https://w3id.org/def/verification-tests#Passed"/>
+                    <rdf:Description rdf:about="https://w3id.org/def/verification-tests#Undefined"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Result of the test case to indicate if the test is passed, not passed or undefined in the ontology</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Result of the test case</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/verification-tests#VerifTestCase -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/verification-tests#VerifTestCase">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/verification-tests#desiredBehaviour"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/verification-tests#requirementIdentifier"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Test Case for ontology verification. Each test has  test preparation a set of test scenarios, a precondition and a test result</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Verification Test Case</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/verification-tests#VerifTestCaseDesign -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/verification-tests#VerifTestCaseDesign">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/verification-tests#VerifTestCase"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/verification-tests#VerifTestCaseImplementation -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/verification-tests#VerifTestCaseImplementation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/verification-tests#VerifTestCase"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/verification-tests#hasInput"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/def/verification-tests#TestPreparation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/verification-tests#hasInput"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/def/verification-tests#TestAssertion"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/verification-tests#outputOfScenario"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/verification-tests#VerifTestCaseResult -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/verification-tests#VerifTestCaseResult">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/verification-tests#VerifTestCase"/>
     </owl:Class>
     
 
@@ -282,32 +430,59 @@
     
 
 
-    <!-- https://w3id.org/def/verification-tests#notPassed -->
+    <!-- https://w3id.org/def/verification-tests#Consistent -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/def/verification-tests#notPassed">
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/verification-tests#Consistent">
+        <rdf:type rdf:resource="https://w3id.org/def/verification-tests#AssertionResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/verification-tests#Inconsistent -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/verification-tests#Inconsistent">
+        <rdf:type rdf:resource="https://w3id.org/def/verification-tests#AssertionResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/verification-tests#NotPassed -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/verification-tests#NotPassed">
         <rdf:type rdf:resource="https://w3id.org/def/verification-tests#TestResult"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the ontology does not pass the tests but pass the preconditions</rdfs:comment>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/def/verification-tests#passed -->
+    <!-- https://w3id.org/def/verification-tests#Passed -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/def/verification-tests#passed">
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/verification-tests#Passed">
         <rdf:type rdf:resource="https://w3id.org/def/verification-tests#TestResult"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the ontology passed the test</rdfs:comment>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/def/verification-tests#undefined -->
+    <!-- https://w3id.org/def/verification-tests#Undefined -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/def/verification-tests#undefined">
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/verification-tests#Undefined">
         <rdf:type rdf:resource="https://w3id.org/def/verification-tests#TestResult"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ontology does not pass the preconditions</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/verification-tests#Unsatisfiable -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/verification-tests#Unsatisfiable">
+        <rdf:type rdf:resource="https://w3id.org/def/verification-tests#AssertionResult"/>
     </owl:NamedIndividual>
     <rdf:Description>
         <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
@@ -316,25 +491,25 @@
         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
     </rdf:Description>
     <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
     </rdf:Description>
     <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    </rdf:Description>
-    <rdf:Description>
         <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
     </rdf:Description>
 </rdf:RDF>
 
