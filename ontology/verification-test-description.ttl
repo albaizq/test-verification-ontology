@@ -129,7 +129,8 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                                                                                             <https://w3id.org/def/verification-tests#Inconsistent>
                                                                                             <https://w3id.org/def/verification-tests#Unsatisfiable>
                                                                                           )
-                                                                              ] .
+                                                                              ] ;
+                                                          rdfs:label "Assertion result" .
 
 
 ###  https://w3id.org/def/verification-tests#Execution
@@ -143,7 +144,8 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                                                                       owl:onProperty <https://w3id.org/def/verification-tests#executedOn> ;
                                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                       owl:onDataRange xsd:anyURI
-                                                                    ] .
+                                                                    ] ;
+                                                    rdfs:label "Execution" .
 
 
 ###  https://w3id.org/def/verification-tests#TestAssertion
@@ -185,7 +187,8 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                                                                            owl:onProperty <https://w3id.org/def/verification-tests#isRelatedToRequirement> ;
                                                                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                            owl:onDataRange xsd:anyURI
-                                                                         ] .
+                                                                         ] ;
+                                                         rdfs:label "Test case design" .
 
 
 ###  https://w3id.org/def/verification-tests#TestCaseImplementation
@@ -210,7 +213,8 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                                                                                    owl:onProperty <https://w3id.org/def/verification-tests#precondition> ;
                                                                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                    owl:onDataRange owl:rational
-                                                                                 ] .
+                                                                                 ] ;
+                                                                 rdfs:label "Test case implementation" .
 
 
 ###  https://w3id.org/def/verification-tests#TestCaseResult
@@ -225,7 +229,8 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                                                                            owl:onProperty <https://w3id.org/def/verification-tests#hasExecution> ;
                                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                            owl:onClass <https://w3id.org/def/verification-tests#Execution>
-                                                                         ] .
+                                                                         ] ;
+                                                         rdfs:label "Test case execution" .
 
 
 ###  https://w3id.org/def/verification-tests#TestPreparation
@@ -260,12 +265,6 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                                                                 <https://w3id.org/def/verification-tests#AssertionResult> .
 
 
-###  https://w3id.org/def/verification-tests#Undefined
-<https://w3id.org/def/verification-tests#Undefined> rdf:type owl:NamedIndividual ,
-                                                             <https://w3id.org/def/verification-tests#TestResult> ;
-                                                    rdfs:comment "The ontology does not pass the preconditions"^^xsd:string .
-
-
 ###  https://w3id.org/def/verification-tests#NotPassed
 <https://w3id.org/def/verification-tests#NotPassed> rdf:type owl:NamedIndividual ,
                                                              <https://w3id.org/def/verification-tests#TestResult> ;
@@ -279,7 +278,9 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/def/verification-tests#Undefined
-<https://w3id.org/def/verification-tests#Undefined> rdf:type owl:NamedIndividual .
+<https://w3id.org/def/verification-tests#Undefined> rdf:type owl:NamedIndividual ,
+                                                             <https://w3id.org/def/verification-tests#TestResult> ;
+                                                    rdfs:comment "The ontology does not pass the preconditions"^^xsd:string .
 
 
 ###  https://w3id.org/def/verification-tests#Unsatisfiable
@@ -287,15 +288,9 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                                                                  <https://w3id.org/def/verification-tests#AssertionResult> .
 
 
-[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+[ owl:minCardinality "1"^^xsd:nonNegativeInteger
 ] .
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
 [ owl:minCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
@@ -308,7 +303,13 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 [ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
-[ owl:minCardinality "1"^^xsd:nonNegativeInteger
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
 [ owl:minCardinality "1"^^xsd:nonNegativeInteger
