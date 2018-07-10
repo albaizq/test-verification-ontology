@@ -1,12 +1,12 @@
-@prefix : <https://w3id.org/def/verification-tests##> .
+@prefix : <https://w3id.org/def/vtc##> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/def/verification-tests#> .
+@base <https://w3id.org/def/vtc#> .
 
-<https://w3id.org/def/verification-tests#> rdf:type owl:Ontology ;
+<https://w3id.org/def/vtc#> rdf:type owl:Ontology ;
                                             <http://purl.org/dc/elements/1.1/title> "Verification test description"@en ;
                                             <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "verif"^^xsd:string ;
