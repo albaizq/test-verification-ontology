@@ -1,10 +1,10 @@
-<https://w3id.org/def/verification-tests#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/def/verification-tests#> <http://purl.org/dc/elements/1.1/title> "Verification test description"@en .
-<https://w3id.org/def/verification-tests#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
-<https://w3id.org/def/verification-tests#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "verif" .
-<https://w3id.org/def/verification-tests#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/verification-tests#" .
-<https://w3id.org/def/verification-tests#> <http://www.w3.org/2000/01/rdf-schema#comment> "Metadata test description for ontology verification" .
-<https://w3id.org/def/verification-tests#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+<https://w3id.org/def/vtc#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/def/vtc#> <http://purl.org/dc/elements/1.1/title> "Verification test description"@en .
+<https://w3id.org/def/vtc#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+<https://w3id.org/def/vtc#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "verif" .
+<https://w3id.org/def/vtc#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/vtc#" .
+<https://w3id.org/def/vtc#> <http://www.w3.org/2000/01/rdf-schema#comment> "Metadata test description for ontology verification" .
+<https://w3id.org/def/vtc#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
 # 
 # 
 # #################################################################
@@ -35,37 +35,37 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/def/verification-tests#hasAssertion
-<https://w3id.org/def/verification-tests#hasAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/verification-tests#hasAssertion> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/verification-tests#TestAssertion> .
-<https://w3id.org/def/verification-tests#hasAssertion> <http://www.w3.org/2000/01/rdf-schema#label> "has assertion" .
+# https://w3id.org/def/vtc#hasAssertion
+<https://w3id.org/def/vtc#hasAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#hasAssertion> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtc#TestAssertion> .
+<https://w3id.org/def/vtc#hasAssertion> <http://www.w3.org/2000/01/rdf-schema#label> "has assertion" .
 # 
-# https://w3id.org/def/verification-tests#hasAssertionResult
-<https://w3id.org/def/verification-tests#hasAssertionResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/verification-tests#hasAssertionResult> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-<https://w3id.org/def/verification-tests#hasAssertionResult> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/verification-tests#AssertionResult> .
-<https://w3id.org/def/verification-tests#hasAssertionResult> <http://www.w3.org/2000/01/rdf-schema#label> "has assertion result" .
+# https://w3id.org/def/vtc#hasAssertionResult
+<https://w3id.org/def/vtc#hasAssertionResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#hasAssertionResult> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/def/vtc#hasAssertionResult> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtc#AssertionResult> .
+<https://w3id.org/def/vtc#hasAssertionResult> <http://www.w3.org/2000/01/rdf-schema#label> "has assertion result" .
 # 
-# https://w3id.org/def/verification-tests#hasExecution
-<https://w3id.org/def/verification-tests#hasExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/verification-tests#hasExecution> <http://www.w3.org/2000/01/rdf-schema#label> "has execution" .
+# https://w3id.org/def/vtc#hasExecution
+<https://w3id.org/def/vtc#hasExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#hasExecution> <http://www.w3.org/2000/01/rdf-schema#label> "has execution" .
 # 
-# https://w3id.org/def/verification-tests#hasPreparation
-<https://w3id.org/def/verification-tests#hasPreparation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/verification-tests#hasPreparation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/verification-tests#TestPreparation> .
-<https://w3id.org/def/verification-tests#hasPreparation> <http://www.w3.org/2000/01/rdf-schema#label> "has preparation" .
+# https://w3id.org/def/vtc#hasPreparation
+<https://w3id.org/def/vtc#hasPreparation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#hasPreparation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtc#TestPreparation> .
+<https://w3id.org/def/vtc#hasPreparation> <http://www.w3.org/2000/01/rdf-schema#label> "has preparation" .
 # 
-# https://w3id.org/def/verification-tests#hasTestResult
-<https://w3id.org/def/verification-tests#hasTestResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/verification-tests#hasTestResult> <http://www.w3.org/2000/01/rdf-schema#label> "has test result" .
+# https://w3id.org/def/vtc#hasTestResult
+<https://w3id.org/def/vtc#hasTestResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#hasTestResult> <http://www.w3.org/2000/01/rdf-schema#label> "has test result" .
 # 
-# https://w3id.org/def/verification-tests#isRelatedToDesign
-<https://w3id.org/def/verification-tests#isRelatedToDesign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/verification-tests#isRelatedToDesign> <http://www.w3.org/2000/01/rdf-schema#label> "is related to design" .
+# https://w3id.org/def/vtc#isRelatedToDesign
+<https://w3id.org/def/vtc#isRelatedToDesign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#isRelatedToDesign> <http://www.w3.org/2000/01/rdf-schema#label> "is related to design" .
 # 
-# https://w3id.org/def/verification-tests#isRelatedToImplementation
-<https://w3id.org/def/verification-tests#isRelatedToImplementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/verification-tests#isRelatedToImplementation> <http://www.w3.org/2000/01/rdf-schema#label> "is related to implementation" .
+# https://w3id.org/def/vtc#isRelatedToImplementation
+<https://w3id.org/def/vtc#isRelatedToImplementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#isRelatedToImplementation> <http://www.w3.org/2000/01/rdf-schema#label> "is related to implementation" .
 # 
 # 
 # 
@@ -79,32 +79,32 @@
 # http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 # 
-# https://w3id.org/def/verification-tests#desiredBehaviour
-<https://w3id.org/def/verification-tests#desiredBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/verification-tests#desiredBehaviour> <http://www.w3.org/2000/01/rdf-schema#label> "desired behaviour" .
+# https://w3id.org/def/vtc#desiredBehaviour
+<https://w3id.org/def/vtc#desiredBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtc#desiredBehaviour> <http://www.w3.org/2000/01/rdf-schema#label> "desired behaviour" .
 # 
-# https://w3id.org/def/verification-tests#executedOn
-<https://w3id.org/def/verification-tests#executedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/verification-tests#executedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<https://w3id.org/def/verification-tests#executedOn> <http://www.w3.org/2000/01/rdf-schema#label> "executed on" .
+# https://w3id.org/def/vtc#executedOn
+<https://w3id.org/def/vtc#executedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtc#executedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/def/vtc#executedOn> <http://www.w3.org/2000/01/rdf-schema#label> "executed on" .
 # 
-# https://w3id.org/def/verification-tests#isRelatedToRequirement
-<https://w3id.org/def/verification-tests#isRelatedToRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/verification-tests#isRelatedToRequirement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<https://w3id.org/def/verification-tests#isRelatedToRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "is related to requirement" .
+# https://w3id.org/def/vtc#isRelatedToRequirement
+<https://w3id.org/def/vtc#isRelatedToRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtc#isRelatedToRequirement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/def/vtc#isRelatedToRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "is related to requirement" .
 # 
-# https://w3id.org/def/verification-tests#outputOfScenario
-<https://w3id.org/def/verification-tests#outputOfScenario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/verification-tests#outputOfScenario> <http://www.w3.org/2000/01/rdf-schema#comment> "The expected ontology status (i.e., inconsistency, unsatisfiabile or consistent)  after the addition of the axioms of a test assertion" .
-<https://w3id.org/def/verification-tests#outputOfScenario> <http://www.w3.org/2000/01/rdf-schema#label> "output of a test assertion" .
+# https://w3id.org/def/vtc#outputOfScenario
+<https://w3id.org/def/vtc#outputOfScenario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtc#outputOfScenario> <http://www.w3.org/2000/01/rdf-schema#comment> "The expected ontology status (i.e., inconsistency, unsatisfiabile or consistent)  after the addition of the axioms of a test assertion" .
+<https://w3id.org/def/vtc#outputOfScenario> <http://www.w3.org/2000/01/rdf-schema#label> "output of a test assertion" .
 # 
-# https://w3id.org/def/verification-tests#precondition
-<https://w3id.org/def/verification-tests#precondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# https://w3id.org/def/vtc#precondition
+<https://w3id.org/def/vtc#precondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 # 
-# https://w3id.org/def/verification-tests#testAxioms
-<https://w3id.org/def/verification-tests#testAxioms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/verification-tests#testAxioms> <http://www.w3.org/2000/01/rdf-schema#comment> "Temporary axioms added to the ontology to verify the ontology behaviour" .
-<https://w3id.org/def/verification-tests#testAxioms> <http://www.w3.org/2000/01/rdf-schema#label> "test axioms" .
+# https://w3id.org/def/vtc#testAxioms
+<https://w3id.org/def/vtc#testAxioms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtc#testAxioms> <http://www.w3.org/2000/01/rdf-schema#comment> "Temporary axioms added to the ontology to verify the ontology behaviour" .
+<https://w3id.org/def/vtc#testAxioms> <http://www.w3.org/2000/01/rdf-schema#label> "test axioms" .
 # 
 # 
 # 
@@ -115,132 +115,132 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/def/verification-tests#AssertionResult
-<https://w3id.org/def/verification-tests#AssertionResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/verification-tests#AssertionResult> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
+# https://w3id.org/def/vtc#AssertionResult
+<https://w3id.org/def/vtc#AssertionResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtc#AssertionResult> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid1 <http://www.w3.org/2002/07/owl#oneOf> _:genid4 .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/verification-tests#Consistent> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/vtc#Consistent> .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/verification-tests#Inconsistent> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/vtc#Inconsistent> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/verification-tests#Unsatisfiable> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/vtc#Unsatisfiable> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-# https://w3id.org/def/verification-tests#Execution
-<https://w3id.org/def/verification-tests#Execution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/verification-tests#Execution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+# https://w3id.org/def/vtc#Execution
+<https://w3id.org/def/vtc#Execution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtc#Execution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/verification-tests#isRelatedToImplementation> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#isRelatedToImplementation> .
 _:genid5 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid5 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/verification-tests#TestCaseImplementation> .
-<https://w3id.org/def/verification-tests#Execution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid5 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/vtc#TestCaseImplementation> .
+<https://w3id.org/def/vtc#Execution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/verification-tests#executedOn> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#executedOn> .
 _:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid6 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#anyURI> .
 # 
-# https://w3id.org/def/verification-tests#TestAssertion
-<https://w3id.org/def/verification-tests#TestAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/verification-tests#TestAssertion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+# https://w3id.org/def/vtc#TestAssertion
+<https://w3id.org/def/vtc#TestAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtc#TestAssertion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/verification-tests#hasAssertionResult> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#hasAssertionResult> .
 _:genid7 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid7 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/verification-tests#AssertionResult> .
-<https://w3id.org/def/verification-tests#TestAssertion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid7 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/vtc#AssertionResult> .
+<https://w3id.org/def/vtc#TestAssertion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/verification-tests#testAxioms> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#testAxioms> .
 _:genid8 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid8 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<https://w3id.org/def/verification-tests#TestAssertion> <http://www.w3.org/2000/01/rdf-schema#comment> "Each of the assertions to validate the desired behaviour of a requirement" .
-<https://w3id.org/def/verification-tests#TestAssertion> <http://www.w3.org/2000/01/rdf-schema#label> "Test Assertion" .
+<https://w3id.org/def/vtc#TestAssertion> <http://www.w3.org/2000/01/rdf-schema#comment> "Each of the assertions to validate the desired behaviour of a requirement" .
+<https://w3id.org/def/vtc#TestAssertion> <http://www.w3.org/2000/01/rdf-schema#label> "Test Assertion" .
 # 
-# https://w3id.org/def/verification-tests#TestCase
-<https://w3id.org/def/verification-tests#TestCase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/verification-tests#TestCase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+# https://w3id.org/def/vtc#TestCase
+<https://w3id.org/def/vtc#TestCase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtc#TestCase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/description> .
 _:genid9 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid9 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
-<https://w3id.org/def/verification-tests#TestCase> <http://www.w3.org/2000/01/rdf-schema#comment> "A Test Case for ontology verification. Each test has  test preparation a set of test scenarios, a precondition and a test result" .
-<https://w3id.org/def/verification-tests#TestCase> <http://www.w3.org/2000/01/rdf-schema#label> "A Verification Test Case" .
+<https://w3id.org/def/vtc#TestCase> <http://www.w3.org/2000/01/rdf-schema#comment> "A Test Case for ontology verification. Each test has  test preparation a set of test scenarios, a precondition and a test result" .
+<https://w3id.org/def/vtc#TestCase> <http://www.w3.org/2000/01/rdf-schema#label> "A Verification Test Case" .
 # 
-# https://w3id.org/def/verification-tests#TestCaseDesign
-<https://w3id.org/def/verification-tests#TestCaseDesign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/verification-tests#TestCaseDesign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/verification-tests#TestCase> .
-<https://w3id.org/def/verification-tests#TestCaseDesign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+# https://w3id.org/def/vtc#TestCaseDesign
+<https://w3id.org/def/vtc#TestCaseDesign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtc#TestCaseDesign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/vtc#TestCase> .
+<https://w3id.org/def/vtc#TestCaseDesign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/verification-tests#desiredBehaviour> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#desiredBehaviour> .
 _:genid10 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
-<https://w3id.org/def/verification-tests#TestCaseDesign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+<https://w3id.org/def/vtc#TestCaseDesign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/verification-tests#isRelatedToRequirement> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#isRelatedToRequirement> .
 _:genid11 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid11 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#anyURI> .
 # 
-# https://w3id.org/def/verification-tests#TestCaseImplementation
-<https://w3id.org/def/verification-tests#TestCaseImplementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/verification-tests#TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/verification-tests#TestCase> .
-<https://w3id.org/def/verification-tests#TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+# https://w3id.org/def/vtc#TestCaseImplementation
+<https://w3id.org/def/vtc#TestCaseImplementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtc#TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/vtc#TestCase> .
+<https://w3id.org/def/vtc#TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/verification-tests#hasAssertion> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#hasAssertion> .
 _:genid12 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid12 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/verification-tests#TestAssertion> .
-<https://w3id.org/def/verification-tests#TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid12 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/vtc#TestAssertion> .
+<https://w3id.org/def/vtc#TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/verification-tests#hasPreparation> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#hasPreparation> .
 _:genid13 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid13 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/verification-tests#TestPreparation> .
-<https://w3id.org/def/verification-tests#TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid13 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/vtc#TestPreparation> .
+<https://w3id.org/def/vtc#TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/verification-tests#isRelatedToDesign> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#isRelatedToDesign> .
 _:genid14 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid14 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/verification-tests#TestCaseDesign> .
-<https://w3id.org/def/verification-tests#TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid14 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/vtc#TestCaseDesign> .
+<https://w3id.org/def/vtc#TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/verification-tests#precondition> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#precondition> .
 _:genid15 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid15 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
 # 
-# https://w3id.org/def/verification-tests#TestCaseResult
-<https://w3id.org/def/verification-tests#TestCaseResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/verification-tests#TestCaseResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/verification-tests#TestCase> .
-<https://w3id.org/def/verification-tests#TestCaseResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+# https://w3id.org/def/vtc#TestCaseResult
+<https://w3id.org/def/vtc#TestCaseResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtc#TestCaseResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/vtc#TestCase> .
+<https://w3id.org/def/vtc#TestCaseResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/verification-tests#hasAssertionResult> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#hasAssertionResult> .
 _:genid16 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid16 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/verification-tests#TestCaseResult> .
-<https://w3id.org/def/verification-tests#TestCaseResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid16 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/vtc#TestCaseResult> .
+<https://w3id.org/def/vtc#TestCaseResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/verification-tests#hasExecution> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#hasExecution> .
 _:genid17 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid17 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/verification-tests#Execution> .
+_:genid17 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/vtc#Execution> .
 # 
-# https://w3id.org/def/verification-tests#TestPreparation
-<https://w3id.org/def/verification-tests#TestPreparation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/verification-tests#TestPreparation> <http://www.w3.org/2000/01/rdf-schema#comment> "Axioms to add auxiliary terms needed to carry out the tests" .
-<https://w3id.org/def/verification-tests#TestPreparation> <http://www.w3.org/2000/01/rdf-schema#label> "Test preparation" .
+# https://w3id.org/def/vtc#TestPreparation
+<https://w3id.org/def/vtc#TestPreparation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtc#TestPreparation> <http://www.w3.org/2000/01/rdf-schema#comment> "Axioms to add auxiliary terms needed to carry out the tests" .
+<https://w3id.org/def/vtc#TestPreparation> <http://www.w3.org/2000/01/rdf-schema#label> "Test preparation" .
 # 
-# https://w3id.org/def/verification-tests#TestResult
-<https://w3id.org/def/verification-tests#TestResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/verification-tests#TestResult> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid18 .
+# https://w3id.org/def/vtc#TestResult
+<https://w3id.org/def/vtc#TestResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtc#TestResult> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid18 .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid18 <http://www.w3.org/2002/07/owl#oneOf> _:genid21 .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/verification-tests#NotPassed> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/vtc#NotPassed> .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/verification-tests#Passed> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/vtc#Passed> .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/verification-tests#Undefined> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/vtc#Undefined> .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/def/verification-tests#TestResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Result of the test case to indicate if the test is passed, not passed or undefined in the ontology" .
-<https://w3id.org/def/verification-tests#TestResult> <http://www.w3.org/2000/01/rdf-schema#label> "Result of the test case" .
+<https://w3id.org/def/vtc#TestResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Result of the test case to indicate if the test is passed, not passed or undefined in the ontology" .
+<https://w3id.org/def/vtc#TestResult> <http://www.w3.org/2000/01/rdf-schema#label> "Result of the test case" .
 # 
 # 
 # 
@@ -251,32 +251,32 @@ _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # #################################################################
 # 
 # 
-# https://w3id.org/def/verification-tests#Consistent
-<https://w3id.org/def/verification-tests#Consistent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/verification-tests#Consistent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/verification-tests#AssertionResult> .
+# https://w3id.org/def/vtc#Consistent
+<https://w3id.org/def/vtc#Consistent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtc#Consistent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#AssertionResult> .
 # 
-# https://w3id.org/def/verification-tests#Inconsistent
-<https://w3id.org/def/verification-tests#Inconsistent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/verification-tests#Inconsistent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/verification-tests#AssertionResult> .
+# https://w3id.org/def/vtc#Inconsistent
+<https://w3id.org/def/vtc#Inconsistent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtc#Inconsistent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#AssertionResult> .
 # 
-# https://w3id.org/def/verification-tests#NotPassed
-<https://w3id.org/def/verification-tests#NotPassed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/verification-tests#NotPassed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/verification-tests#TestResult> .
-<https://w3id.org/def/verification-tests#NotPassed> <http://www.w3.org/2000/01/rdf-schema#comment> "the ontology does not pass the tests but pass the preconditions" .
+# https://w3id.org/def/vtc#NotPassed
+<https://w3id.org/def/vtc#NotPassed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtc#NotPassed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestResult> .
+<https://w3id.org/def/vtc#NotPassed> <http://www.w3.org/2000/01/rdf-schema#comment> "the ontology does not pass the tests but pass the preconditions" .
 # 
-# https://w3id.org/def/verification-tests#Passed
-<https://w3id.org/def/verification-tests#Passed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/verification-tests#Passed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/verification-tests#TestResult> .
-<https://w3id.org/def/verification-tests#Passed> <http://www.w3.org/2000/01/rdf-schema#comment> "the ontology passed the test" .
+# https://w3id.org/def/vtc#Passed
+<https://w3id.org/def/vtc#Passed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtc#Passed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestResult> .
+<https://w3id.org/def/vtc#Passed> <http://www.w3.org/2000/01/rdf-schema#comment> "the ontology passed the test" .
 # 
-# https://w3id.org/def/verification-tests#Undefined
-<https://w3id.org/def/verification-tests#Undefined> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/verification-tests#Undefined> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/verification-tests#TestResult> .
-<https://w3id.org/def/verification-tests#Undefined> <http://www.w3.org/2000/01/rdf-schema#comment> "The ontology does not pass the preconditions" .
+# https://w3id.org/def/vtc#Undefined
+<https://w3id.org/def/vtc#Undefined> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtc#Undefined> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestResult> .
+<https://w3id.org/def/vtc#Undefined> <http://www.w3.org/2000/01/rdf-schema#comment> "The ontology does not pass the preconditions" .
 # 
-# https://w3id.org/def/verification-tests#Unsatisfiable
-<https://w3id.org/def/verification-tests#Unsatisfiable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/verification-tests#Unsatisfiable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/verification-tests#AssertionResult> .
+# https://w3id.org/def/vtc#Unsatisfiable
+<https://w3id.org/def/vtc#Unsatisfiable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtc#Unsatisfiable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#AssertionResult> .
 # 
 _:genid22 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid23 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
