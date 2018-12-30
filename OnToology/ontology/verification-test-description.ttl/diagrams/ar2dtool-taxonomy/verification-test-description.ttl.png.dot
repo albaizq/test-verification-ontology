@@ -1,9 +1,9 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseResult" "verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseDesign" "verif^^http://www.w3.org/2001/XMLSchema#string:TestCase" "verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseImplementation" ; /*classes style*/
-	"verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseDesign" -> "verif^^http://www.w3.org/2001/XMLSchema#string:TestCase" [ label = "rdfs:subClassOf" ];
-	"verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseResult" -> "verif^^http://www.w3.org/2001/XMLSchema#string:TestCase" [ label = "rdfs:subClassOf" ];
-	"verif^^http://www.w3.org/2001/XMLSchema#string:TestCaseImplementation" -> "verif^^http://www.w3.org/2001/XMLSchema#string:TestCase" [ label = "rdfs:subClassOf" ];
+node [shape = rectangle, color="black"]; "base:TestCaseResult" "base:TestCaseDesign" "base:TestCaseImplementation" "base:TestCase" ; /*classes style*/
+	"base:TestCaseDesign" -> "base:TestCase" [ label = "rdfs:subClassOf" ];
+	"base:TestCaseImplementation" -> "base:TestCase" [ label = "rdfs:subClassOf" ];
+	"base:TestCaseResult" -> "base:TestCase" [ label = "rdfs:subClassOf" ];
 
 }
