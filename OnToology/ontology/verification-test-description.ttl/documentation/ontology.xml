@@ -15,7 +15,7 @@
         <vann:preferredNamespacePrefix>vtc</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/def/vtc#</vann:preferredNamespaceUri>
         <rdfs:comment>Test description for ontology validation </rdfs:comment>
-        <owl:versionInfo>0.0.2</owl:versionInfo>
+        <owl:versionInfo>0.1.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -563,7 +563,10 @@
         <rdfs:comment>Ontology with unsatisfiable classes</rdfs:comment>
     </owl:NamedIndividual>
     <rdf:Description>
-        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
     </rdf:Description>
     <rdf:Description>
         <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
@@ -572,16 +575,13 @@
         <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
     </rdf:Description>
     <rdf:Description>
-        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
     </rdf:Description>
     <rdf:Description>
         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
     </rdf:Description>
     <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
     </rdf:Description>
     <rdf:Description>
         <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>

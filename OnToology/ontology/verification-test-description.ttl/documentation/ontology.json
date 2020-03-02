@@ -75,25 +75,25 @@
   } ]
 }, {
   "@id" : "_:genid16",
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ]
 }, {
   "@id" : "_:genid17",
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid18",
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ]
 }, {
+  "@id" : "_:genid18",
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
   "@id" : "_:genid19",
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ]
@@ -112,7 +112,7 @@
   } ]
 }, {
   "@id" : "_:genid20",
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ]
@@ -124,7 +124,7 @@
   } ]
 }, {
   "@id" : "_:genid22",
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ]
@@ -266,7 +266,7 @@
     "@value" : "Test description for ontology validation "
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.0.2"
+    "@value" : "0.1.1"
   } ]
 }, {
   "@id" : "https://w3id.org/def/vtc#%23Absent",
