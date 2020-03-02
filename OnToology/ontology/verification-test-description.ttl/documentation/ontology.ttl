@@ -12,7 +12,7 @@
                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "vtc" ;
                              <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/vtc#" ;
                              rdfs:comment "Test description for ontology validation " ;
-                             owl:versionInfo "0.0.2" .
+                             owl:versionInfo "0.1.1" .
 
 #################################################################
 #    Annotation properties
@@ -334,8 +334,11 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                                             rdfs:comment "Ontology with unsatisfiable classes" .
 
 
-[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
 ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
 
 [ owl:minCardinality "1"^^xsd:nonNegativeInteger
  ] .
@@ -343,16 +346,13 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 [ owl:maxCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
 [ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
 [ owl:minCardinality "1"^^xsd:nonNegativeInteger
