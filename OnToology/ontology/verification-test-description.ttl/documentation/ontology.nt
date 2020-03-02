@@ -3,7 +3,7 @@
 <https://w3id.org/def/vtc#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
 <https://w3id.org/def/vtc#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "vtc" .
 <https://w3id.org/def/vtc#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/vtc#" .
-<https://w3id.org/def/vtc#> <http://www.w3.org/2000/01/rdf-schema#comment> "Test description for ontology validation" .
+<https://w3id.org/def/vtc#> <http://www.w3.org/2000/01/rdf-schema#comment> "Test description for ontology validation " .
 <https://w3id.org/def/vtc#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.2" .
 # 
 # 
@@ -55,6 +55,7 @@
 # https://w3id.org/def/vtc#%23hasAssertion
 <https://w3id.org/def/vtc#%23hasAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/vtc#%23hasAssertion> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtc#%23TestAssertion> .
+<https://w3id.org/def/vtc#%23hasAssertion> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between the test case and the assertions" .
 <https://w3id.org/def/vtc#%23hasAssertion> <http://www.w3.org/2000/01/rdf-schema#label> "has assertion" .
 # 
 # https://w3id.org/def/vtc#%23hasAssertionResult
@@ -65,11 +66,13 @@
 # 
 # https://w3id.org/def/vtc#%23hasExecution
 <https://w3id.org/def/vtc#%23hasExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#%23hasExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the test result and its executions" .
 <https://w3id.org/def/vtc#%23hasExecution> <http://www.w3.org/2000/01/rdf-schema#label> "has execution" .
 # 
 # https://w3id.org/def/vtc#%23hasPreparation
 <https://w3id.org/def/vtc#%23hasPreparation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/vtc#%23hasPreparation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtc#%23TestPreparation> .
+<https://w3id.org/def/vtc#%23hasPreparation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the test implementation and its preparation axioms" .
 <https://w3id.org/def/vtc#%23hasPreparation> <http://www.w3.org/2000/01/rdf-schema#label> "has preparation" .
 # 
 # https://w3id.org/def/vtc#%23hasTest
@@ -79,14 +82,17 @@
 # 
 # https://w3id.org/def/vtc#%23hasTestResult
 <https://w3id.org/def/vtc#%23hasTestResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#%23hasTestResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the execution and its result" .
 <https://w3id.org/def/vtc#%23hasTestResult> <http://www.w3.org/2000/01/rdf-schema#label> "has test result" .
 # 
 # https://w3id.org/def/vtc#%23isRelatedToDesign
 <https://w3id.org/def/vtc#%23isRelatedToDesign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#%23isRelatedToDesign> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to the test design that specifies the requirement" .
 <https://w3id.org/def/vtc#%23isRelatedToDesign> <http://www.w3.org/2000/01/rdf-schema#label> "is related to design" .
 # 
 # https://w3id.org/def/vtc#%23isRelatedToImplementation
 <https://w3id.org/def/vtc#%23isRelatedToImplementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#%23isRelatedToImplementation> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to the implementation of a test" .
 <https://w3id.org/def/vtc#%23isRelatedToImplementation> <http://www.w3.org/2000/01/rdf-schema#label> "is related to implementation" .
 # 
 # 
@@ -108,11 +114,13 @@
 # https://w3id.org/def/vtc#%23executedOn
 <https://w3id.org/def/vtc#%23executedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/vtc#%23executedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/def/vtc#%23executedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "URI of the ontology in which a test implementation is executed" .
 <https://w3id.org/def/vtc#%23executedOn> <http://www.w3.org/2000/01/rdf-schema#label> "executed on" .
 # 
 # https://w3id.org/def/vtc#%23isRelatedToRequirement
 <https://w3id.org/def/vtc#%23isRelatedToRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/vtc#%23isRelatedToRequirement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/def/vtc#%23isRelatedToRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to the requirement from which the test is extracted" .
 <https://w3id.org/def/vtc#%23isRelatedToRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "is related to requirement" .
 # 
 # https://w3id.org/def/vtc#%23outputOfScenario
@@ -122,6 +130,8 @@
 # 
 # https://w3id.org/def/vtc#%23precondition
 <https://w3id.org/def/vtc#%23precondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtc#%23precondition> <http://www.w3.org/2000/01/rdf-schema#comment> "precondition" .
+<https://w3id.org/def/vtc#%23precondition> <http://www.w3.org/2000/01/rdf-schema#label> "Precondition that the ontology should pass in order to execute the test" .
 # 
 # https://w3id.org/def/vtc#%23testAxioms
 <https://w3id.org/def/vtc#%23testAxioms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -139,116 +149,105 @@
 # 
 # https://w3id.org/def/vtc#%23AssertionResult
 <https://w3id.org/def/vtc#%23AssertionResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/vtc#%23AssertionResult> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid1 <http://www.w3.org/2002/07/owl#oneOf> _:genid4 .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/vtc#%23Consistent> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/vtc#%23Inconsistent> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/vtc#%23Unsatisfiable> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/def/vtc#%23AssertionResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Result of the assertion added to the ontology" .
 <https://w3id.org/def/vtc#%23AssertionResult> <http://www.w3.org/2000/01/rdf-schema#label> "Assertion result" .
 # 
 # https://w3id.org/def/vtc#%23Execution
 <https://w3id.org/def/vtc#%23Execution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/vtc#%23Execution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23isRelatedToImplementation> .
-_:genid5 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid5 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/vtc#%23TestCaseImplementation> .
-<https://w3id.org/def/vtc#%23Execution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23executedOn> .
-_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid6 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/def/vtc#%23Execution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23hasAssertionResult> .
+_:genid1 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/vtc#%23TestCaseResult> .
+<https://w3id.org/def/vtc#%23Execution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23isRelatedToImplementation> .
+_:genid2 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/vtc#%23TestCaseImplementation> .
+<https://w3id.org/def/vtc#%23Execution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23executedOn> .
+_:genid3 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/def/vtc#%23Execution> <http://www.w3.org/2000/01/rdf-schema#comment> "Execution of an implementation of a test case on a particular ontology" .
 <https://w3id.org/def/vtc#%23Execution> <http://www.w3.org/2000/01/rdf-schema#label> "Execution" .
 # 
 # https://w3id.org/def/vtc#%23TestAssertion
 <https://w3id.org/def/vtc#%23TestAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/vtc#%23TestAssertion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23hasAssertionResult> .
-_:genid7 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid7 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/vtc#%23AssertionResult> .
-<https://w3id.org/def/vtc#%23TestAssertion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23testAxioms> .
-_:genid8 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid8 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/def/vtc#%23TestAssertion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23hasAssertionResult> .
+_:genid4 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/vtc#%23AssertionResult> .
+<https://w3id.org/def/vtc#%23TestAssertion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23testAxioms> .
+_:genid5 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://w3id.org/def/vtc#%23TestAssertion> <http://www.w3.org/2000/01/rdf-schema#comment> "Each of the assertions to validate the desired behaviour of a requirement" .
 <https://w3id.org/def/vtc#%23TestAssertion> <http://www.w3.org/2000/01/rdf-schema#label> "Test Assertion" .
 # 
 # https://w3id.org/def/vtc#%23TestCase
 <https://w3id.org/def/vtc#%23TestCase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/vtc#%23TestCase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23belongsTo> .
-_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/vtc#%23TestSuite> .
-<https://w3id.org/def/vtc#%23TestCase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/description> .
-_:genid10 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+<https://w3id.org/def/vtc#%23TestCase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23belongsTo> .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/vtc#%23TestSuite> .
+<https://w3id.org/def/vtc#%23TestCase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/description> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
 <https://w3id.org/def/vtc#%23TestCase> <http://www.w3.org/2000/01/rdf-schema#comment> "A Test Case for ontology verification. Each test has  test preparation a set of test scenarios, a precondition and a test result" .
 <https://w3id.org/def/vtc#%23TestCase> <http://www.w3.org/2000/01/rdf-schema#label> "A Verification Test Case" .
 # 
 # https://w3id.org/def/vtc#%23TestCaseDesign
 <https://w3id.org/def/vtc#%23TestCaseDesign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/vtc#%23TestCaseDesign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/vtc#%23TestCase> .
-<https://w3id.org/def/vtc#%23TestCaseDesign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23desiredBehaviour> .
-_:genid11 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid11 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
-<https://w3id.org/def/vtc#%23TestCaseDesign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23isRelatedToRequirement> .
-_:genid12 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid12 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/def/vtc#%23TestCaseDesign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23isRelatedToRequirement> .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/def/vtc#%23TestCaseDesign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23desiredBehaviour> .
+_:genid9 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
 <https://w3id.org/def/vtc#%23TestCaseDesign> <http://www.w3.org/2000/01/rdf-schema#label> "Test case design" .
 # 
 # https://w3id.org/def/vtc#%23TestCaseImplementation
 <https://w3id.org/def/vtc#%23TestCaseImplementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/vtc#%23TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/vtc#%23TestCase> .
+<https://w3id.org/def/vtc#%23TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23isRelatedToDesign> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/vtc#%23TestCaseDesign> .
+<https://w3id.org/def/vtc#%23TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23hasAssertion> .
+_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/vtc#%23TestAssertion> .
+<https://w3id.org/def/vtc#%23TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23hasPreparation> .
+_:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/vtc#%23TestPreparation> .
 <https://w3id.org/def/vtc#%23TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23hasAssertion> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23precondition> .
 _:genid13 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid13 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/vtc#%23TestAssertion> .
-<https://w3id.org/def/vtc#%23TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23hasPreparation> .
-_:genid14 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid14 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/vtc#%23TestPreparation> .
-<https://w3id.org/def/vtc#%23TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23isRelatedToDesign> .
-_:genid15 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid15 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/vtc#%23TestCaseDesign> .
-<https://w3id.org/def/vtc#%23TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23precondition> .
-_:genid16 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid16 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
+_:genid13 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2002/07/owl#rational> .
 <https://w3id.org/def/vtc#%23TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#label> "Test case implementation" .
 # 
 # https://w3id.org/def/vtc#%23TestCaseResult
 <https://w3id.org/def/vtc#%23TestCaseResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/vtc#%23TestCaseResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/vtc#%23TestCase> .
-<https://w3id.org/def/vtc#%23TestCaseResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23hasAssertionResult> .
-_:genid17 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid17 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/vtc#%23TestCaseResult> .
-<https://w3id.org/def/vtc#%23TestCaseResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23hasExecution> .
-_:genid18 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid18 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/vtc#%23Execution> .
+<https://w3id.org/def/vtc#%23TestCaseResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23isRelatedToDesign> .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/vtc#%23TestCaseDesign> .
+<https://w3id.org/def/vtc#%23TestCaseResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#%23hasExecution> .
+_:genid15 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/vtc#%23Execution> .
 <https://w3id.org/def/vtc#%23TestCaseResult> <http://www.w3.org/2000/01/rdf-schema#label> "Test case execution" .
 # 
 # https://w3id.org/def/vtc#%23TestPreparation
@@ -258,18 +257,6 @@ _:genid18 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/vtc#%23E
 # 
 # https://w3id.org/def/vtc#%23TestResult
 <https://w3id.org/def/vtc#%23TestResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/vtc#%23TestResult> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid19 .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid19 <http://www.w3.org/2002/07/owl#oneOf> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/vtc#%23NotPassed> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/vtc#%23Passed> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/vtc#%23Undefined> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://w3id.org/def/vtc#%23TestResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Result of the test case to indicate if the test is passed, not passed or undefined in the ontology" .
 <https://w3id.org/def/vtc#%23TestResult> <http://www.w3.org/2000/01/rdf-schema#label> "Result of the test case" .
 # 
@@ -287,18 +274,25 @@ _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # #################################################################
 # 
 # 
+# https://w3id.org/def/vtc#%23Absent
+<https://w3id.org/def/vtc#%23Absent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtc#%23Absent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#%23TestResult> .
+<https://w3id.org/def/vtc#%23Absent> <http://www.w3.org/2000/01/rdf-schema#comment> "The ontology defines the terms in the test but not the relations between them" .
+# 
+# https://w3id.org/def/vtc#%23Conflict
+<https://w3id.org/def/vtc#%23Conflict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtc#%23Conflict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#%23TestResult> .
+<https://w3id.org/def/vtc#%23Conflict> <http://www.w3.org/2000/01/rdf-schema#comment> "the requirement leads to a conflict in the ontology" .
+# 
 # https://w3id.org/def/vtc#%23Consistent
 <https://w3id.org/def/vtc#%23Consistent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/vtc#%23Consistent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#%23AssertionResult> .
+<https://w3id.org/def/vtc#%23Consistent> <http://www.w3.org/2000/01/rdf-schema#comment> "Consistent ontology" .
 # 
 # https://w3id.org/def/vtc#%23Inconsistent
 <https://w3id.org/def/vtc#%23Inconsistent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/vtc#%23Inconsistent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#%23AssertionResult> .
-# 
-# https://w3id.org/def/vtc#%23NotPassed
-<https://w3id.org/def/vtc#%23NotPassed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/vtc#%23NotPassed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#%23TestResult> .
-<https://w3id.org/def/vtc#%23NotPassed> <http://www.w3.org/2000/01/rdf-schema#comment> "the ontology does not pass the tests but pass the preconditions" .
+<https://w3id.org/def/vtc#%23Inconsistent> <http://www.w3.org/2000/01/rdf-schema#comment> "Inconsistent ontology" .
 # 
 # https://w3id.org/def/vtc#%23Passed
 <https://w3id.org/def/vtc#%23Passed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -308,19 +302,20 @@ _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # https://w3id.org/def/vtc#%23Undefined
 <https://w3id.org/def/vtc#%23Undefined> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/vtc#%23Undefined> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#%23TestResult> .
-<https://w3id.org/def/vtc#%23Undefined> <http://www.w3.org/2000/01/rdf-schema#comment> "The ontology does not pass the preconditions" .
+<https://w3id.org/def/vtc#%23Undefined> <http://www.w3.org/2000/01/rdf-schema#comment> "The ontology does not pass the preconditions, the terms in the tests are not defined in the ontology" .
 # 
 # https://w3id.org/def/vtc#%23Unsatisfiable
 <https://w3id.org/def/vtc#%23Unsatisfiable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/vtc#%23Unsatisfiable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#%23AssertionResult> .
+<https://w3id.org/def/vtc#%23Unsatisfiable> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontology with unsatisfiable classes" .
 # 
-_:genid23 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid17 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid20 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid21 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid22 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid23 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid24 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid25 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid26 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid27 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid28 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid29 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid30 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid31 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
+# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

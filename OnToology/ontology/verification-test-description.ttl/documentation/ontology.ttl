@@ -11,7 +11,7 @@
                              <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "vtc" ;
                              <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/vtc#" ;
-                             rdfs:comment "Test description for ontology validation" ;
+                             rdfs:comment "Test description for ontology validation " ;
                              owl:versionInfo "0.0.2" .
 
 #################################################################
@@ -63,6 +63,7 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/def/vtc#%23hasAssertion
 <https://w3id.org/def/vtc#%23hasAssertion> rdf:type owl:ObjectProperty ;
                                            rdfs:range <https://w3id.org/def/vtc#%23TestAssertion> ;
+                                           rdfs:comment "Relation between the test case and the assertions" ;
                                            rdfs:label "has assertion" .
 
 
@@ -75,12 +76,14 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/def/vtc#%23hasExecution
 <https://w3id.org/def/vtc#%23hasExecution> rdf:type owl:ObjectProperty ;
+                                           rdfs:comment "Relationship between the test result and its executions" ;
                                            rdfs:label "has execution" .
 
 
 ###  https://w3id.org/def/vtc#%23hasPreparation
 <https://w3id.org/def/vtc#%23hasPreparation> rdf:type owl:ObjectProperty ;
                                              rdfs:range <https://w3id.org/def/vtc#%23TestPreparation> ;
+                                             rdfs:comment "Relationship between the test implementation and its preparation axioms" ;
                                              rdfs:label "has preparation" .
 
 
@@ -92,16 +95,19 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/def/vtc#%23hasTestResult
 <https://w3id.org/def/vtc#%23hasTestResult> rdf:type owl:ObjectProperty ;
+                                            rdfs:comment "Relationship between the execution and its result" ;
                                             rdfs:label "has test result" .
 
 
 ###  https://w3id.org/def/vtc#%23isRelatedToDesign
 <https://w3id.org/def/vtc#%23isRelatedToDesign> rdf:type owl:ObjectProperty ;
+                                                rdfs:comment "Link to the test design that specifies the requirement" ;
                                                 rdfs:label "is related to design" .
 
 
 ###  https://w3id.org/def/vtc#%23isRelatedToImplementation
 <https://w3id.org/def/vtc#%23isRelatedToImplementation> rdf:type owl:ObjectProperty ;
+                                                        rdfs:comment "Link to the implementation of a test" ;
                                                         rdfs:label "is related to implementation" .
 
 
@@ -121,12 +127,14 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/def/vtc#%23executedOn
 <https://w3id.org/def/vtc#%23executedOn> rdf:type owl:DatatypeProperty ;
                                          rdfs:range xsd:anyURI ;
+                                         rdfs:comment "URI of the ontology in which a test implementation is executed" ;
                                          rdfs:label "executed on" .
 
 
 ###  https://w3id.org/def/vtc#%23isRelatedToRequirement
 <https://w3id.org/def/vtc#%23isRelatedToRequirement> rdf:type owl:DatatypeProperty ;
                                                      rdfs:range xsd:anyURI ;
+                                                     rdfs:comment "Link to the requirement from which the test is extracted" ;
                                                      rdfs:label "is related to requirement" .
 
 
@@ -137,7 +145,9 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/def/vtc#%23precondition
-<https://w3id.org/def/vtc#%23precondition> rdf:type owl:DatatypeProperty .
+<https://w3id.org/def/vtc#%23precondition> rdf:type owl:DatatypeProperty ;
+                                           rdfs:comment "precondition" ;
+                                           rdfs:label "Precondition that the ontology should pass in order to execute the test" .
 
 
 ###  https://w3id.org/def/vtc#%23testAxioms
@@ -152,18 +162,18 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/def/vtc#%23AssertionResult
 <https://w3id.org/def/vtc#%23AssertionResult> rdf:type owl:Class ;
-                                              owl:equivalentClass [ rdf:type owl:Class ;
-                                                                    owl:oneOf ( <https://w3id.org/def/vtc#%23Consistent>
-                                                                                <https://w3id.org/def/vtc#%23Inconsistent>
-                                                                                <https://w3id.org/def/vtc#%23Unsatisfiable>
-                                                                              )
-                                                                  ] ;
+                                              rdfs:comment "Result of the assertion added to the ontology" ;
                                               rdfs:label "Assertion result" .
 
 
 ###  https://w3id.org/def/vtc#%23Execution
 <https://w3id.org/def/vtc#%23Execution> rdf:type owl:Class ;
                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/def/vtc#%23hasAssertionResult> ;
+                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onClass <https://w3id.org/def/vtc#%23TestCaseResult>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
                                                           owl:onProperty <https://w3id.org/def/vtc#%23isRelatedToImplementation> ;
                                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                           owl:onClass <https://w3id.org/def/vtc#%23TestCaseImplementation>
@@ -173,6 +183,7 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                           owl:onDataRange xsd:anyURI
                                                         ] ;
+                                        rdfs:comment "Execution of an implementation of a test case on a particular ontology" ;
                                         rdfs:label "Execution" .
 
 
@@ -200,8 +211,7 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                                                        ] ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <http://purl.org/dc/terms/description> ;
-                                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                         owl:onDataRange owl:rational
+                                                         owl:someValuesFrom owl:rational
                                                        ] ;
                                        rdfs:comment "A Test Case for ontology verification. Each test has  test preparation a set of test scenarios, a precondition and a test result" ;
                                        rdfs:label "A Verification Test Case" .
@@ -211,14 +221,13 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 <https://w3id.org/def/vtc#%23TestCaseDesign> rdf:type owl:Class ;
                                              rdfs:subClassOf <https://w3id.org/def/vtc#%23TestCase> ,
                                                              [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <https://w3id.org/def/vtc#%23isRelatedToRequirement> ;
+                                                               owl:someValuesFrom xsd:anyURI
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
                                                                owl:onProperty <https://w3id.org/def/vtc#%23desiredBehaviour> ;
                                                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                owl:onDataRange owl:rational
-                                                             ] ,
-                                                             [ rdf:type owl:Restriction ;
-                                                               owl:onProperty <https://w3id.org/def/vtc#%23isRelatedToRequirement> ;
-                                                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                               owl:onDataRange xsd:anyURI
                                                              ] ;
                                              rdfs:label "Test case design" .
 
@@ -227,19 +236,16 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 <https://w3id.org/def/vtc#%23TestCaseImplementation> rdf:type owl:Class ;
                                                      rdfs:subClassOf <https://w3id.org/def/vtc#%23TestCase> ,
                                                                      [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <https://w3id.org/def/vtc#%23isRelatedToDesign> ;
+                                                                       owl:someValuesFrom <https://w3id.org/def/vtc#%23TestCaseDesign>
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
                                                                        owl:onProperty <https://w3id.org/def/vtc#%23hasAssertion> ;
-                                                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                       owl:onClass <https://w3id.org/def/vtc#%23TestAssertion>
+                                                                       owl:allValuesFrom <https://w3id.org/def/vtc#%23TestAssertion>
                                                                      ] ,
                                                                      [ rdf:type owl:Restriction ;
                                                                        owl:onProperty <https://w3id.org/def/vtc#%23hasPreparation> ;
-                                                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                       owl:onClass <https://w3id.org/def/vtc#%23TestPreparation>
-                                                                     ] ,
-                                                                     [ rdf:type owl:Restriction ;
-                                                                       owl:onProperty <https://w3id.org/def/vtc#%23isRelatedToDesign> ;
-                                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                       owl:onClass <https://w3id.org/def/vtc#%23TestCaseDesign>
+                                                                       owl:allValuesFrom <https://w3id.org/def/vtc#%23TestPreparation>
                                                                      ] ,
                                                                      [ rdf:type owl:Restriction ;
                                                                        owl:onProperty <https://w3id.org/def/vtc#%23precondition> ;
@@ -253,13 +259,12 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 <https://w3id.org/def/vtc#%23TestCaseResult> rdf:type owl:Class ;
                                              rdfs:subClassOf <https://w3id.org/def/vtc#%23TestCase> ,
                                                              [ rdf:type owl:Restriction ;
-                                                               owl:onProperty <https://w3id.org/def/vtc#%23hasAssertionResult> ;
-                                                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                               owl:onClass <https://w3id.org/def/vtc#%23TestCaseResult>
+                                                               owl:onProperty <https://w3id.org/def/vtc#%23isRelatedToDesign> ;
+                                                               owl:someValuesFrom <https://w3id.org/def/vtc#%23TestCaseDesign>
                                                              ] ,
                                                              [ rdf:type owl:Restriction ;
                                                                owl:onProperty <https://w3id.org/def/vtc#%23hasExecution> ;
-                                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                owl:onClass <https://w3id.org/def/vtc#%23Execution>
                                                              ] ;
                                              rdfs:label "Test case execution" .
@@ -273,12 +278,6 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/def/vtc#%23TestResult
 <https://w3id.org/def/vtc#%23TestResult> rdf:type owl:Class ;
-                                         owl:equivalentClass [ rdf:type owl:Class ;
-                                                               owl:oneOf ( <https://w3id.org/def/vtc#%23NotPassed>
-                                                                           <https://w3id.org/def/vtc#%23Passed>
-                                                                           <https://w3id.org/def/vtc#%23Undefined>
-                                                                         )
-                                                             ] ;
                                          rdfs:comment "Result of the test case to indicate if the test is passed, not passed or undefined in the ontology" ;
                                          rdfs:label "Result of the test case" .
 
@@ -293,20 +292,28 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 #    Individuals
 #################################################################
 
+###  https://w3id.org/def/vtc#%23Absent
+<https://w3id.org/def/vtc#%23Absent> rdf:type owl:NamedIndividual ,
+                                              <https://w3id.org/def/vtc#%23TestResult> ;
+                                     rdfs:comment "The ontology defines the terms in the test but not the relations between them" .
+
+
+###  https://w3id.org/def/vtc#%23Conflict
+<https://w3id.org/def/vtc#%23Conflict> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/def/vtc#%23TestResult> ;
+                                       rdfs:comment "the requirement leads to a conflict in the ontology" .
+
+
 ###  https://w3id.org/def/vtc#%23Consistent
 <https://w3id.org/def/vtc#%23Consistent> rdf:type owl:NamedIndividual ,
-                                                  <https://w3id.org/def/vtc#%23AssertionResult> .
+                                                  <https://w3id.org/def/vtc#%23AssertionResult> ;
+                                         rdfs:comment "Consistent ontology" .
 
 
 ###  https://w3id.org/def/vtc#%23Inconsistent
 <https://w3id.org/def/vtc#%23Inconsistent> rdf:type owl:NamedIndividual ,
-                                                    <https://w3id.org/def/vtc#%23AssertionResult> .
-
-
-###  https://w3id.org/def/vtc#%23NotPassed
-<https://w3id.org/def/vtc#%23NotPassed> rdf:type owl:NamedIndividual ,
-                                                 <https://w3id.org/def/vtc#%23TestResult> ;
-                                        rdfs:comment "the ontology does not pass the tests but pass the preconditions" .
+                                                    <https://w3id.org/def/vtc#%23AssertionResult> ;
+                                           rdfs:comment "Inconsistent ontology" .
 
 
 ###  https://w3id.org/def/vtc#%23Passed
@@ -318,21 +325,22 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/def/vtc#%23Undefined
 <https://w3id.org/def/vtc#%23Undefined> rdf:type owl:NamedIndividual ,
                                                  <https://w3id.org/def/vtc#%23TestResult> ;
-                                        rdfs:comment "The ontology does not pass the preconditions" .
+                                        rdfs:comment "The ontology does not pass the preconditions, the terms in the tests are not defined in the ontology" .
 
 
 ###  https://w3id.org/def/vtc#%23Unsatisfiable
 <https://w3id.org/def/vtc#%23Unsatisfiable> rdf:type owl:NamedIndividual ,
-                                                     <https://w3id.org/def/vtc#%23AssertionResult> .
+                                                     <https://w3id.org/def/vtc#%23AssertionResult> ;
+                                            rdfs:comment "Ontology with unsatisfiable classes" .
 
 
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
 ] .
 
 [ owl:minCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
-[ owl:minCardinality "1"^^xsd:nonNegativeInteger
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
 [ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
@@ -347,10 +355,10 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 [ owl:maxCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
-[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+[ owl:minCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
 [ owl:minCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
-###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
