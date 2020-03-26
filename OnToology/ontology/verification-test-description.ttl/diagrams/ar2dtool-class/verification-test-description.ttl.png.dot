@@ -23,9 +23,9 @@ node [shape = rectangle, color="orange"]; "vtc^^http://www.w3.org/2001/XMLSchema
 	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:Execution" [ label = "owl:onClass" ];
 	"NULL" -> ":description" [ label = "owl:onProperty" ];
 	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:hasAssertion" [ label = "owl:onProperty" ];
-	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:hasPreparation" [ label = "owl:onProperty" ];
 	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:AssertionResult" [ label = "owl:onClass" ];
 	"NULL" -> "xsd:anyURI" [ label = "owl:onDataRange" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:hasPreparation" [ label = "owl:onProperty" ];
 	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:TestAssertion" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:precondition" [ label = "owl:onProperty" ];
 	"vtc^^http://www.w3.org/2001/XMLSchema#string:" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];

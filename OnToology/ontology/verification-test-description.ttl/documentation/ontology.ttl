@@ -371,17 +371,8 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
                rdfs:comment "Ontology with unsatisfiable classes" .
 
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
-] .
-
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:minCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
 [ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
+] .
 
 [ owl:maxCardinality "1"^^xsd:nonNegativeInteger
  ] .
@@ -389,7 +380,16 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 [ owl:minCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
 [ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
 [ owl:minCardinality "1"^^xsd:nonNegativeInteger
