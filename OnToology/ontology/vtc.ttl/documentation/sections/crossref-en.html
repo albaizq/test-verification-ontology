@@ -13,6 +13,9 @@ This section provides details for each class and property defined by Metadata te
          <a href="#https://w3id.org/def/vtc#Execution" title="https://w3id.org/def/vtc#Execution">Execution</a>
       </li>
       <li>
+         <a href="#https://w3id.org/def/vtc#Requirement" title="https://w3id.org/def/vtc#Requirement">Requirement</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/def/vtc#TestResult" title="https://w3id.org/def/vtc#TestResult">Result of the test case</a>
       </li>
       <li>
@@ -25,8 +28,7 @@ This section provides details for each class and property defined by Metadata te
          <a href="#https://w3id.org/def/vtc#TestCaseResult" title="https://w3id.org/def/vtc#TestCaseResult">Test case execution</a>
       </li>
       <li>
-         <a href="#https://w3id.org/def/vtc#TestCaseImplementation"
-            title="https://w3id.org/def/vtc#TestCaseImplementation">Test case implementation</a>
+         <a href="#https://w3id.org/def/vtc#TestCaseImplementation" title="https://w3id.org/def/vtc#TestCaseImplementation">Test case implementation</a>
       </li>
       <li>
          <a href="#https://w3id.org/def/vtc#TestPreparation" title="https://w3id.org/def/vtc#TestPreparation">Test preparation</a>
@@ -52,9 +54,14 @@ This section provides details for each class and property defined by Metadata te
          <dd>
             <a href="#https://w3id.org/def/vtc#TestCaseDesign" title="https://w3id.org/def/vtc#TestCaseDesign">Test case design</a>
             <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/def/vtc#TestCaseResult" title="https://w3id.org/def/vtc#TestCaseResult">Test case execution</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/def/vtc#TestCaseImplementation"
-               title="https://w3id.org/def/vtc#TestCaseImplementation">Test case implementation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/def/vtc#TestCaseImplementation" title="https://w3id.org/def/vtc#TestCaseImplementation">Test case implementation</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/def/vtc#comesFromRequirement" title="https://w3id.org/def/vtc#comesFromRequirement">comes from requirement</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/def/vtc#testId" title="https://w3id.org/def/vtc#testId">test id</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
    </div>
@@ -76,9 +83,9 @@ This section provides details for each class and property defined by Metadata te
          </dd>
          <dt>has members</dt>
          <dd>
-            <a href="#https://w3id.org/def/vtc#Consistent" title="https://w3id.org/def/vtc#Consistent"> consistent</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/vtc#Inconsistent" title="https://w3id.org/def/vtc#Inconsistent"> inconsistent</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/vtc#Unsatisfiable" title="https://w3id.org/def/vtc#Unsatisfiable"> unsatisfiable</a>
+            <a href="#https://w3id.org/def/vtc#Consistent" title="https://w3id.org/def/vtc#Consistent">consistent</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/vtc#Inconsistent" title="https://w3id.org/def/vtc#Inconsistent">inconsistent</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/vtc#Unsatisfiable" title="https://w3id.org/def/vtc#Unsatisfiable">unsatisfiable</a>
             <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
@@ -98,6 +105,31 @@ This section provides details for each class and property defined by Metadata te
          <dd/>
       </dl>
    </div>
+   <div class="entity" id="https://w3id.org/def/vtc#Requirement">
+      <h3>Requirement<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#Requirement</p>
+      <div class="comment">
+         <span class="markdown">Ontology requirement from which a test can be extracted</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/def/vtc#requirementId" title="https://w3id.org/def/vtc#requirementId">requirement id</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/def/vtc#comesFromRequirement" title="https://w3id.org/def/vtc#comesFromRequirement">comes from requirement</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="https://w3id.org/def/vtc#TestResult">
       <h3>Result of the test case<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -111,10 +143,10 @@ This section provides details for each class and property defined by Metadata te
       <dl class="description">
          <dt>has members</dt>
          <dd>
-            <a href="#https://w3id.org/def/vtc#Absent" title="https://w3id.org/def/vtc#Absent"> absent</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/vtc#Conflict" title="https://w3id.org/def/vtc#Conflict"> conflict</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/vtc#Passed" title="https://w3id.org/def/vtc#Passed"> passed</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/vtc#Undefined" title="https://w3id.org/def/vtc#Undefined"> undefined</a>
+            <a href="#https://w3id.org/def/vtc#Absent" title="https://w3id.org/def/vtc#Absent">absent</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/vtc#Conflict" title="https://w3id.org/def/vtc#Conflict">conflict</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/vtc#Passed" title="https://w3id.org/def/vtc#Passed">passed</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/vtc#Undefined" title="https://w3id.org/def/vtc#Undefined">undefined</a>
             <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
@@ -220,6 +252,9 @@ This section provides details for each class and property defined by Metadata te
          <a href="#https://w3id.org/def/vtc#belongsTo" title="https://w3id.org/def/vtc#belongsTo">belongs to</a>
       </li>
       <li>
+         <a href="#https://w3id.org/def/vtc#comesFromRequirement" title="https://w3id.org/def/vtc#comesFromRequirement">comes from requirement</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/def/vtc#hasAssertion" title="https://w3id.org/def/vtc#hasAssertion">has assertion</a>
       </li>
       <li>
@@ -233,6 +268,9 @@ This section provides details for each class and property defined by Metadata te
       </li>
       <li>
          <a href="#https://w3id.org/def/vtc#hasTest" title="https://w3id.org/def/vtc#hasTest">has test</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#hasTestCase" title="https://w3id.org/def/vtc#hasTestCase">has test case</a>
       </li>
       <li>
          <a href="#https://w3id.org/def/vtc#hasTestResult" title="https://w3id.org/def/vtc#hasTestResult">has test result</a>
@@ -254,6 +292,36 @@ This section provides details for each class and property defined by Metadata te
          <strong>IRI:</strong> https://w3id.org/def/vtc#belongsTo</p>
       <div class="comment">
          <span class="markdown">Property that links each test case with the test suite in which it is stored</span>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#comesFromRequirement">
+      <h3>comes from requirement<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#comesFromRequirement</p>
+      <div class="comment">
+         <span class="markdown">Relationship between the test case and the requirement from which is extracted</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#TestCase" title="https://w3id.org/def/vtc#TestCase">A Verification Test Case</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#Requirement" title="https://w3id.org/def/vtc#Requirement">Requirement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#hasTestCase" title="https://w3id.org/def/vtc#hasTestCase">has test case</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="https://w3id.org/def/vtc#hasAssertion">
@@ -339,6 +407,26 @@ This section provides details for each class and property defined by Metadata te
          <span class="markdown">Property to determine the test case(s) that validates a resource</span>
       </div>
    </div>
+   <div class="entity" id="https://w3id.org/def/vtc#hasTestCase">
+      <h3>has test case<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#hasTestCase</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a requirement and a test case that verifies it</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#comesFromRequirement" title="https://w3id.org/def/vtc#comesFromRequirement">comes from requirement</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="https://w3id.org/def/vtc#hasTestResult">
       <h3>has test result<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -382,8 +470,7 @@ This section provides details for each class and property defined by Metadata te
          <a href="#https://w3id.org/def/vtc#executedOn" title="https://w3id.org/def/vtc#executedOn">executed on</a>
       </li>
       <li>
-         <a href="#https://w3id.org/def/vtc#isRelatedToRequirement"
-            title="https://w3id.org/def/vtc#isRelatedToRequirement">is related to requirement</a>
+         <a href="#https://w3id.org/def/vtc#isRelatedToRequirement" title="https://w3id.org/def/vtc#isRelatedToRequirement">is related to requirement</a>
       </li>
       <li>
          <a href="#https://w3id.org/def/vtc#outputOfScenario" title="https://w3id.org/def/vtc#outputOfScenario">output of a test assertion</a>
@@ -392,7 +479,17 @@ This section provides details for each class and property defined by Metadata te
          <a href="#https://w3id.org/def/vtc#precondition" title="https://w3id.org/def/vtc#precondition">Precondition that the ontology should pass in order to execute the test</a>
       </li>
       <li>
+         <a href="#https://w3id.org/def/vtc#requirementId" title="https://w3id.org/def/vtc#requirementId">
+            <span>requirement id</span>
+         </a>
+      </li>
+      <li>
          <a href="#https://w3id.org/def/vtc#testAxioms" title="https://w3id.org/def/vtc#testAxioms">test axioms</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#testId" title="https://w3id.org/def/vtc#testId">
+            <span>test id</span>
+         </a>
       </li>
    </ul>
    <div class="entity" id="https://w3id.org/def/vtc#desiredBehaviour">
@@ -463,6 +560,27 @@ This section provides details for each class and property defined by Metadata te
          <span class="markdown">precondition</span>
       </div>
    </div>
+   <div class="entity" id="https://w3id.org/def/vtc#requirementId">
+      <h3>requirement id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#requirementId</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#Requirement" title="https://w3id.org/def/vtc#Requirement">Requirement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="https://w3id.org/def/vtc#testAxioms">
       <h3>test axioms<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -474,47 +592,68 @@ This section provides details for each class and property defined by Metadata te
          <span class="markdown">Temporary axioms added to the ontology to verify the ontology behaviour</span>
       </div>
    </div>
+   <div class="entity" id="https://w3id.org/def/vtc#testId">
+      <h3>test id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#testId</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#TestCase" title="https://w3id.org/def/vtc#TestCase">A Verification Test Case</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
 </div><div id="namedindividuals">
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
       <li>
          <a href="#https://w3id.org/def/vtc#Absent" title="https://w3id.org/def/vtc#Absent">
-            <span> absent</span>
+            <span>absent</span>
          </a>
       </li>
       <li>
          <a href="#https://w3id.org/def/vtc#Conflict" title="https://w3id.org/def/vtc#Conflict">
-            <span> conflict</span>
+            <span>conflict</span>
          </a>
       </li>
       <li>
          <a href="#https://w3id.org/def/vtc#Consistent" title="https://w3id.org/def/vtc#Consistent">
-            <span> consistent</span>
+            <span>consistent</span>
          </a>
       </li>
       <li>
          <a href="#https://w3id.org/def/vtc#Inconsistent" title="https://w3id.org/def/vtc#Inconsistent">
-            <span> inconsistent</span>
+            <span>inconsistent</span>
          </a>
       </li>
       <li>
          <a href="#https://w3id.org/def/vtc#Passed" title="https://w3id.org/def/vtc#Passed">
-            <span> passed</span>
+            <span>passed</span>
          </a>
       </li>
       <li>
          <a href="#https://w3id.org/def/vtc#Undefined" title="https://w3id.org/def/vtc#Undefined">
-            <span> undefined</span>
+            <span>undefined</span>
          </a>
       </li>
       <li>
          <a href="#https://w3id.org/def/vtc#Unsatisfiable" title="https://w3id.org/def/vtc#Unsatisfiable">
-            <span> unsatisfiable</span>
+            <span>unsatisfiable</span>
          </a>
       </li>
    </ul>
    <div class="entity" id="https://w3id.org/def/vtc#Absent">
-      <h3> absent<sup class="type-ni" title="named individual">ni</sup>
+      <h3>absent<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
@@ -532,7 +671,7 @@ This section provides details for each class and property defined by Metadata te
       </dl>
    </div>
    <div class="entity" id="https://w3id.org/def/vtc#Conflict">
-      <h3> conflict<sup class="type-ni" title="named individual">ni</sup>
+      <h3>conflict<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
@@ -550,7 +689,7 @@ This section provides details for each class and property defined by Metadata te
       </dl>
    </div>
    <div class="entity" id="https://w3id.org/def/vtc#Consistent">
-      <h3> consistent<sup class="type-ni" title="named individual">ni</sup>
+      <h3>consistent<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
@@ -568,7 +707,7 @@ This section provides details for each class and property defined by Metadata te
       </dl>
    </div>
    <div class="entity" id="https://w3id.org/def/vtc#Inconsistent">
-      <h3> inconsistent<sup class="type-ni" title="named individual">ni</sup>
+      <h3>inconsistent<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
@@ -586,7 +725,7 @@ This section provides details for each class and property defined by Metadata te
       </dl>
    </div>
    <div class="entity" id="https://w3id.org/def/vtc#Passed">
-      <h3> passed<sup class="type-ni" title="named individual">ni</sup>
+      <h3>passed<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
@@ -604,7 +743,7 @@ This section provides details for each class and property defined by Metadata te
       </dl>
    </div>
    <div class="entity" id="https://w3id.org/def/vtc#Undefined">
-      <h3> undefined<sup class="type-ni" title="named individual">ni</sup>
+      <h3>undefined<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
@@ -622,7 +761,7 @@ This section provides details for each class and property defined by Metadata te
       </dl>
    </div>
    <div class="entity" id="https://w3id.org/def/vtc#Unsatisfiable">
-      <h3> unsatisfiable<sup class="type-ni" title="named individual">ni</sup>
+      <h3>unsatisfiable<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
