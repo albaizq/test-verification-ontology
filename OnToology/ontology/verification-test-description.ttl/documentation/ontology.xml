@@ -1,0 +1,641 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/def/vtc#"
+     xml:base="https://w3id.org/def/vtc"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/def/vtc#">
+        <dc:title xml:lang="en">Verification test description</dc:title>
+        <terms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
+        <terms:creator rdf:resource="https://www.linkedin.com/in/albafernandezizquierdo/"/>
+        <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+        <vann:preferredNamespacePrefix>vtc</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/def/vtc#</vann:preferredNamespaceUri>
+        <rdfs:comment>Test description for ontology validation </rdfs:comment>
+        <owl:versionInfo>0.2.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#maxCardinality -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#maxCardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#minCardinality -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#minCardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#minQualifiedCardinality -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#minQualifiedCardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/vtc#belongsTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtc#belongsTo">
+        <rdfs:comment>Property that links each test case with the test suite in which it is stored</rdfs:comment>
+        <rdfs:label>belongs to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtc#comesFromRequirement -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtc#comesFromRequirement">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtc#hasTestCase"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/vtc#Requirement"/>
+        <rdfs:comment>Relationship between the test case and the requirement from which is extracted</rdfs:comment>
+        <rdfs:label>comes from requirement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtc#hasAssertion -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtc#hasAssertion">
+        <rdfs:range rdf:resource="https://w3id.org/def/vtc#TestAssertion"/>
+        <rdfs:comment>Relation between the test case and the assertions</rdfs:comment>
+        <rdfs:label>has assertion</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtc#hasAssertionResult -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtc#hasAssertionResult">
+        <rdfs:range rdf:resource="https://w3id.org/def/vtc#TestAssertionResult"/>
+        <rdfs:comment>Result of the addition of a test assertion on an ontology</rdfs:comment>
+        <rdfs:label>has assertion result</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtc#hasExecution -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtc#hasExecution">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtc#isRelatedToImplementation"/>
+        <rdfs:comment>Relationship between the test implementation and its executions</rdfs:comment>
+        <rdfs:label>has execution</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtc#hasPreparation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtc#hasPreparation">
+        <rdfs:range rdf:resource="https://w3id.org/def/vtc#TestPreparation"/>
+        <rdfs:comment>Relationship between the test implementation and its preparation axioms</rdfs:comment>
+        <rdfs:label>has preparation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtc#hasTestCase -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtc#hasTestCase">
+        <rdfs:comment>Relationship between a requirement and a test case that verifies it</rdfs:comment>
+        <rdfs:label>has test case</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtc#hasTestResult -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtc#hasTestResult">
+        <rdfs:comment>Relationship between the execution and its result</rdfs:comment>
+        <rdfs:label>has test result</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtc#isImplementedAs -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtc#isImplementedAs">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/vtc#isRelatedToDesign"/>
+        <rdfs:comment>Relationship between a test design and its implementation</rdfs:comment>
+        <rdfs:label>is implemented as</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtc#isRelatedToDesign -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtc#isRelatedToDesign">
+        <rdfs:comment>Link to the test design that specifies the requirement</rdfs:comment>
+        <rdfs:label>is related to design</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtc#isRelatedToImplementation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/vtc#isRelatedToImplementation">
+        <rdfs:comment>Link to the implementation of a test</rdfs:comment>
+        <rdfs:label>is related to implementation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- https://w3id.org/def/vtc#category -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtc#category"/>
+    
+
+
+    <!-- https://w3id.org/def/vtc#desiredBehaviour -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtc#desiredBehaviour">
+        <rdfs:label>desired behaviour</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtc#isExecutedOnOntology -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtc#isExecutedOnOntology">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>URI of the ontology in which a test implementation is executed</rdfs:comment>
+        <rdfs:label>is executed on ontology</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtc#isRelatedToRequirement -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtc#isRelatedToRequirement">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>Link to the requirement from which the test is extracted</rdfs:comment>
+        <rdfs:label>is related to requirement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtc#precondition -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtc#precondition">
+        <rdfs:comment>precondition</rdfs:comment>
+        <rdfs:label>Precondition that the ontology should pass in order to execute the test</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtc#requirementId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtc#requirementId">
+        <rdfs:domain rdf:resource="https://w3id.org/def/vtc#Requirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Identifier of a requirement</rdfs:comment>
+        <rdfs:label>requirement ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/vtc#testAxioms -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/vtc#testAxioms">
+        <rdfs:comment>Temporary axioms added to the ontology to verify the ontology behaviour</rdfs:comment>
+        <rdfs:label>test axioms</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/vtc#Requirement -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vtc#Requirement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtc#category"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtc#requirementId"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Ontology requirement from which a test can be extracted</rdfs:comment>
+        <rdfs:label>Requirement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vtc#TestAssertion -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vtc#TestAssertion">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtc#hasAssertionResult"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/vtc#TestAssertionResult"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtc#testAxioms"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Each of the assertions to validate the desired behaviour of a requirement</rdfs:comment>
+        <rdfs:label>Test Assertion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vtc#TestAssertionResult -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vtc#TestAssertionResult">
+        <rdfs:comment>Result of the assertion added to the ontology</rdfs:comment>
+        <rdfs:label>Assertion result</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vtc#TestCaseDesign -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vtc#TestCaseDesign">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtc#belongsTo"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/vtc#TestSuite"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtc#comesFromRequirement"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/vtc#Requirement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtc#desiredBehaviour"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Test case design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vtc#TestCaseImplementation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vtc#TestCaseImplementation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtc#isRelatedToDesign"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtc#hasAssertion"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/vtc#TestAssertion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtc#hasPreparation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/vtc#TestPreparation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtc#precondition"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Test case implementation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vtc#TestExecution -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vtc#TestExecution">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtc#hasTestResult"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/vtc#TestResult"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtc#isRelatedToImplementation"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/vtc#TestCaseImplementation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtc#isExecutedOnOntology"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Execution of an implementation of a test case on a particular ontology</rdfs:comment>
+        <rdfs:label>Test execution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vtc#TestPreparation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vtc#TestPreparation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/vtc#testAxioms"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Axioms to add auxiliary terms needed to carry out the tests</rdfs:comment>
+        <rdfs:label>Test preparation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vtc#TestResult -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vtc#TestResult">
+        <rdfs:comment>Result of the test case to indicate if the test is passed, not passed or undefined in the ontology</rdfs:comment>
+        <rdfs:label>Result of the test case</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/vtc#TestSuite -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/vtc#TestSuite">
+        <rdfs:comment>A set of test cases</rdfs:comment>
+        <rdfs:label>Test suite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/vtc#Absent -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/vtc#Absent">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestResult"/>
+        <rdfs:comment>The ontology defines the terms in the test but not the relations between them</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/vtc#Conflict -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/vtc#Conflict">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestResult"/>
+        <rdfs:comment>the requirement leads to a conflict in the ontology</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/vtc#Consistent -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/vtc#Consistent">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestAssertionResult"/>
+        <rdfs:comment>Consistent ontology</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/vtc#Inconsistent -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/vtc#Inconsistent">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestAssertionResult"/>
+        <rdfs:comment>Inconsistent ontology</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/vtc#Passed -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/vtc#Passed">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestResult"/>
+        <rdfs:comment>the ontology passed the test</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/vtc#Undefined -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/vtc#Undefined">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestResult"/>
+        <rdfs:comment>The ontology does not pass the preconditions, the terms in the tests are not defined in the ontology</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/vtc#Unsatisfiable -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/vtc#Unsatisfiable">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestAssertionResult"/>
+        <rdfs:comment>Ontology with unsatisfiable classes</rdfs:comment>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

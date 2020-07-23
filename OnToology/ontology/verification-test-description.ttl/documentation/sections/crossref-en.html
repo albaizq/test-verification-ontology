@@ -1,0 +1,734 @@
+<h2 id="crossreference" class="list">Cross reference for Metadata test description for ontology verification classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Metadata test description for ontology verification.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://w3id.org/def/vtc#TestAssertionResult" title="https://w3id.org/def/vtc#TestAssertionResult">Assertion result</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#Requirement" title="https://w3id.org/def/vtc#Requirement">Requirement</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#TestResult" title="https://w3id.org/def/vtc#TestResult">Result of the test case</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#TestAssertion" title="https://w3id.org/def/vtc#TestAssertion">Test Assertion</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#TestCaseDesign" title="https://w3id.org/def/vtc#TestCaseDesign">Test case design</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#TestCaseImplementation" title="https://w3id.org/def/vtc#TestCaseImplementation">Test case implementation</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#TestExecution" title="https://w3id.org/def/vtc#TestExecution">Test execution</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#TestPreparation" title="https://w3id.org/def/vtc#TestPreparation">Test preparation</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#TestSuite" title="https://w3id.org/def/vtc#TestSuite">Test suite</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://w3id.org/def/vtc#TestAssertionResult">
+      <h3>Assertion result<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#TestAssertionResult</p>
+      <div class="comment">
+         <span class="markdown">Result of the assertion added to the ontology</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/def/vtc#hasAssertionResult" title="https://w3id.org/def/vtc#hasAssertionResult">has assertion result</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#https://w3id.org/def/vtc#Consistent" title="https://w3id.org/def/vtc#Consistent">consistent</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/vtc#Inconsistent" title="https://w3id.org/def/vtc#Inconsistent">inconsistent</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/vtc#Unsatisfiable" title="https://w3id.org/def/vtc#Unsatisfiable">unsatisfiable</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#Requirement">
+      <h3>Requirement<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#Requirement</p>
+      <div class="comment">
+         <span class="markdown">Ontology requirement from which a test can be extracted</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/def/vtc#requirementId" title="https://w3id.org/def/vtc#requirementId">requirement ID</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/def/vtc#comesFromRequirement" title="https://w3id.org/def/vtc#comesFromRequirement">comes from requirement</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#TestResult">
+      <h3>Result of the test case<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#TestResult</p>
+      <div class="comment">
+         <span class="markdown">Result of the test case to indicate if the test is passed, not passed or undefined in the ontology</span>
+      </div>
+      <dl class="description">
+         <dt>has members</dt>
+         <dd>
+            <a href="#https://w3id.org/def/vtc#Absent" title="https://w3id.org/def/vtc#Absent">absent</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/vtc#Conflict" title="https://w3id.org/def/vtc#Conflict">conflict</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/vtc#Passed" title="https://w3id.org/def/vtc#Passed">passed</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/vtc#Undefined" title="https://w3id.org/def/vtc#Undefined">undefined</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#TestAssertion">
+      <h3>Test Assertion<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#TestAssertion</p>
+      <div class="comment">
+         <span class="markdown">Each of the assertions to validate the desired behaviour of a requirement</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/def/vtc#hasAssertion" title="https://w3id.org/def/vtc#hasAssertion">has assertion</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#TestCaseDesign">
+      <h3>Test case design<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#TestCaseDesign</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#TestCaseImplementation">
+      <h3>Test case implementation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#TestCaseImplementation</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#TestExecution">
+      <h3>Test execution<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#TestExecution</p>
+      <div class="comment">
+         <span class="markdown">Execution of an implementation of a test case on a particular ontology</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#TestPreparation">
+      <h3>Test preparation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#TestPreparation</p>
+      <div class="comment">
+         <span class="markdown">Axioms to add auxiliary terms needed to carry out the tests</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/def/vtc#hasPreparation" title="https://w3id.org/def/vtc#hasPreparation">has preparation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#TestSuite">
+      <h3>Test suite<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#TestSuite</p>
+      <div class="comment">
+         <span class="markdown">A set of test cases</span>
+      </div>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://w3id.org/def/vtc#belongsTo" title="https://w3id.org/def/vtc#belongsTo">belongs to</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#comesFromRequirement" title="https://w3id.org/def/vtc#comesFromRequirement">comes from requirement</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#hasAssertion" title="https://w3id.org/def/vtc#hasAssertion">has assertion</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#hasAssertionResult" title="https://w3id.org/def/vtc#hasAssertionResult">has assertion result</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#hasExecution" title="https://w3id.org/def/vtc#hasExecution">has execution</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#hasPreparation" title="https://w3id.org/def/vtc#hasPreparation">has preparation</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#hasTestCase" title="https://w3id.org/def/vtc#hasTestCase">has test case</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#hasTestResult" title="https://w3id.org/def/vtc#hasTestResult">has test result</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#isImplementedAs" title="https://w3id.org/def/vtc#isImplementedAs">is implemented as</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#isRelatedToDesign" title="https://w3id.org/def/vtc#isRelatedToDesign">is related to design</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#isRelatedToImplementation"
+            title="https://w3id.org/def/vtc#isRelatedToImplementation">is related to implementation</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://w3id.org/def/vtc#belongsTo">
+      <h3>belongs to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#belongsTo</p>
+      <div class="comment">
+         <span class="markdown">Property that links each test case with the test suite in which it is stored</span>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#comesFromRequirement">
+      <h3>comes from requirement<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#comesFromRequirement</p>
+      <div class="comment">
+         <span class="markdown">Relationship between the test case and the requirement from which is extracted</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#Requirement" title="https://w3id.org/def/vtc#Requirement">Requirement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#hasTestCase" title="https://w3id.org/def/vtc#hasTestCase">has test case</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#hasAssertion">
+      <h3>has assertion<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#hasAssertion</p>
+      <div class="comment">
+         <span class="markdown">Relation between the test case and the assertions</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#TestAssertion" title="https://w3id.org/def/vtc#TestAssertion">Test Assertion</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#hasAssertionResult">
+      <h3>has assertion result<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#hasAssertionResult</p>
+      <div class="comment">
+         <span class="markdown">Result of the addition of a test assertion on an ontology</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#TestAssertionResult" title="https://w3id.org/def/vtc#TestAssertionResult">Assertion result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#hasExecution">
+      <h3>has execution<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#hasExecution</p>
+      <div class="comment">
+         <span class="markdown">Relationship between the test implementation and its executions</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#isRelatedToImplementation"
+                  title="https://w3id.org/def/vtc#isRelatedToImplementation">is related to implementation</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#hasPreparation">
+      <h3>has preparation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#hasPreparation</p>
+      <div class="comment">
+         <span class="markdown">Relationship between the test implementation and its preparation axioms</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#TestPreparation" title="https://w3id.org/def/vtc#TestPreparation">Test preparation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#hasTestCase">
+      <h3>has test case<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#hasTestCase</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a requirement and a test case that verifies it</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#comesFromRequirement" title="https://w3id.org/def/vtc#comesFromRequirement">comes from requirement</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#hasTestResult">
+      <h3>has test result<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#hasTestResult</p>
+      <div class="comment">
+         <span class="markdown">Relationship between the execution and its result</span>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#isImplementedAs">
+      <h3>is implemented as<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#isImplementedAs</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a test design and its implementation</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#isRelatedToDesign" title="https://w3id.org/def/vtc#isRelatedToDesign">is related to design</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#isRelatedToDesign">
+      <h3>is related to design<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#isRelatedToDesign</p>
+      <div class="comment">
+         <span class="markdown">Link to the test design that specifies the requirement</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#isImplementedAs" title="https://w3id.org/def/vtc#isImplementedAs">is implemented as</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#isRelatedToImplementation">
+      <h3>is related to implementation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#isRelatedToImplementation</p>
+      <div class="comment">
+         <span class="markdown">Link to the implementation of a test</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#hasExecution" title="https://w3id.org/def/vtc#hasExecution">has execution</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://w3id.org/def/vtc#desiredBehaviour" title="https://w3id.org/def/vtc#desiredBehaviour">desired behaviour</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#isExecutedOnOntology" title="https://w3id.org/def/vtc#isExecutedOnOntology">is executed on ontology</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#isRelatedToRequirement" title="https://w3id.org/def/vtc#isRelatedToRequirement">is related to requirement</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#precondition" title="https://w3id.org/def/vtc#precondition">Precondition that the ontology should pass in order to execute the test</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#requirementId" title="https://w3id.org/def/vtc#requirementId">requirement ID</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#testAxioms" title="https://w3id.org/def/vtc#testAxioms">test axioms</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://w3id.org/def/vtc#desiredBehaviour">
+      <h3>desired behaviour<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#desiredBehaviour</p>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#isExecutedOnOntology">
+      <h3>is executed on ontology<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#isExecutedOnOntology</p>
+      <div class="comment">
+         <span class="markdown">URI of the ontology in which a test implementation is executed</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#isRelatedToRequirement">
+      <h3>is related to requirement<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#isRelatedToRequirement</p>
+      <div class="comment">
+         <span class="markdown">Link to the requirement from which the test is extracted</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#precondition">
+      <h3>Precondition that the ontology should pass in order to execute the test<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#precondition</p>
+      <div class="comment">
+         <span class="markdown">precondition</span>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#requirementId">
+      <h3>requirement ID<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#requirementId</p>
+      <div class="comment">
+         <span class="markdown">Identifier of a requirement</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#Requirement" title="https://w3id.org/def/vtc#Requirement">Requirement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#testAxioms">
+      <h3>test axioms<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#testAxioms</p>
+      <div class="comment">
+         <span class="markdown">Temporary axioms added to the ontology to verify the ontology behaviour</span>
+      </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://w3id.org/def/vtc#Absent" title="https://w3id.org/def/vtc#Absent">
+            <span>absent</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#Conflict" title="https://w3id.org/def/vtc#Conflict">
+            <span>conflict</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#Consistent" title="https://w3id.org/def/vtc#Consistent">
+            <span>consistent</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#Inconsistent" title="https://w3id.org/def/vtc#Inconsistent">
+            <span>inconsistent</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#Passed" title="https://w3id.org/def/vtc#Passed">
+            <span>passed</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#Undefined" title="https://w3id.org/def/vtc#Undefined">
+            <span>undefined</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#Unsatisfiable" title="https://w3id.org/def/vtc#Unsatisfiable">
+            <span>unsatisfiable</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="https://w3id.org/def/vtc#Absent">
+      <h3>absent<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#Absent</p>
+      <div class="comment">
+         <span class="markdown">The ontology defines the terms in the test but not the relations between them</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/vtc#TestResult" title="https://w3id.org/def/vtc#TestResult">Result of the test case</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#Conflict">
+      <h3>conflict<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#Conflict</p>
+      <div class="comment">
+         <span class="markdown">the requirement leads to a conflict in the ontology</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/vtc#TestResult" title="https://w3id.org/def/vtc#TestResult">Result of the test case</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#Consistent">
+      <h3>consistent<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#Consistent</p>
+      <div class="comment">
+         <span class="markdown">Consistent ontology</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/vtc#TestAssertionResult" title="https://w3id.org/def/vtc#TestAssertionResult">Assertion result</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#Inconsistent">
+      <h3>inconsistent<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#Inconsistent</p>
+      <div class="comment">
+         <span class="markdown">Inconsistent ontology</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/vtc#TestAssertionResult" title="https://w3id.org/def/vtc#TestAssertionResult">Assertion result</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#Passed">
+      <h3>passed<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#Passed</p>
+      <div class="comment">
+         <span class="markdown">the ontology passed the test</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/vtc#TestResult" title="https://w3id.org/def/vtc#TestResult">Result of the test case</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#Undefined">
+      <h3>undefined<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#Undefined</p>
+      <div class="comment">
+         <span class="markdown">The ontology does not pass the preconditions, the terms in the tests are not defined in the ontology</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/vtc#TestResult" title="https://w3id.org/def/vtc#TestResult">Result of the test case</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#Unsatisfiable">
+      <h3>unsatisfiable<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#Unsatisfiable</p>
+      <div class="comment">
+         <span class="markdown">Ontology with unsatisfiable classes</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/vtc#TestAssertionResult" title="https://w3id.org/def/vtc#TestAssertionResult">Assertion result</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

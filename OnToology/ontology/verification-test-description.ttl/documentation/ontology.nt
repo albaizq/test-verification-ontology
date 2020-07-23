@@ -1,0 +1,345 @@
+<https://w3id.org/def/vtc#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/def/vtc#> <http://purl.org/dc/elements/1.1/title> "Verification test description"@en .
+<https://w3id.org/def/vtc#> <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> .
+<https://w3id.org/def/vtc#> <http://purl.org/dc/terms/creator> <https://www.linkedin.com/in/albafernandezizquierdo/> .
+<https://w3id.org/def/vtc#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+<https://w3id.org/def/vtc#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "vtc" .
+<https://w3id.org/def/vtc#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/vtc#" .
+<https://w3id.org/def/vtc#> <http://www.w3.org/2000/01/rdf-schema#comment> "Test description for ontology validation " .
+<https://w3id.org/def/vtc#> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#maxCardinality
+<http://www.w3.org/2002/07/owl#maxCardinality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#minCardinality
+<http://www.w3.org/2002/07/owl#minCardinality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#minQualifiedCardinality
+<http://www.w3.org/2002/07/owl#minQualifiedCardinality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#qualifiedCardinality
+<http://www.w3.org/2002/07/owl#qualifiedCardinality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/vtc#belongsTo
+<https://w3id.org/def/vtc#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#belongsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links each test case with the test suite in which it is stored" .
+<https://w3id.org/def/vtc#belongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to" .
+# 
+# https://w3id.org/def/vtc#comesFromRequirement
+<https://w3id.org/def/vtc#comesFromRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#comesFromRequirement> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtc#hasTestCase> .
+<https://w3id.org/def/vtc#comesFromRequirement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtc#Requirement> .
+<https://w3id.org/def/vtc#comesFromRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the test case and the requirement from which is extracted" .
+<https://w3id.org/def/vtc#comesFromRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "comes from requirement" .
+# 
+# https://w3id.org/def/vtc#hasAssertion
+<https://w3id.org/def/vtc#hasAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#hasAssertion> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtc#TestAssertion> .
+<https://w3id.org/def/vtc#hasAssertion> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between the test case and the assertions" .
+<https://w3id.org/def/vtc#hasAssertion> <http://www.w3.org/2000/01/rdf-schema#label> "has assertion" .
+# 
+# https://w3id.org/def/vtc#hasAssertionResult
+<https://w3id.org/def/vtc#hasAssertionResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#hasAssertionResult> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtc#TestAssertionResult> .
+<https://w3id.org/def/vtc#hasAssertionResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Result of the addition of a test assertion on an ontology" .
+<https://w3id.org/def/vtc#hasAssertionResult> <http://www.w3.org/2000/01/rdf-schema#label> "has assertion result" .
+# 
+# https://w3id.org/def/vtc#hasExecution
+<https://w3id.org/def/vtc#hasExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#hasExecution> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtc#isRelatedToImplementation> .
+<https://w3id.org/def/vtc#hasExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the test implementation and its executions" .
+<https://w3id.org/def/vtc#hasExecution> <http://www.w3.org/2000/01/rdf-schema#label> "has execution" .
+# 
+# https://w3id.org/def/vtc#hasPreparation
+<https://w3id.org/def/vtc#hasPreparation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#hasPreparation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/vtc#TestPreparation> .
+<https://w3id.org/def/vtc#hasPreparation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the test implementation and its preparation axioms" .
+<https://w3id.org/def/vtc#hasPreparation> <http://www.w3.org/2000/01/rdf-schema#label> "has preparation" .
+# 
+# https://w3id.org/def/vtc#hasTestCase
+<https://w3id.org/def/vtc#hasTestCase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#hasTestCase> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a requirement and a test case that verifies it" .
+<https://w3id.org/def/vtc#hasTestCase> <http://www.w3.org/2000/01/rdf-schema#label> "has test case" .
+# 
+# https://w3id.org/def/vtc#hasTestResult
+<https://w3id.org/def/vtc#hasTestResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#hasTestResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the execution and its result" .
+<https://w3id.org/def/vtc#hasTestResult> <http://www.w3.org/2000/01/rdf-schema#label> "has test result" .
+# 
+# https://w3id.org/def/vtc#isImplementedAs
+<https://w3id.org/def/vtc#isImplementedAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#isImplementedAs> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/vtc#isRelatedToDesign> .
+<https://w3id.org/def/vtc#isImplementedAs> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a test design and its implementation" .
+<https://w3id.org/def/vtc#isImplementedAs> <http://www.w3.org/2000/01/rdf-schema#label> "is implemented as" .
+# 
+# https://w3id.org/def/vtc#isRelatedToDesign
+<https://w3id.org/def/vtc#isRelatedToDesign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#isRelatedToDesign> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to the test design that specifies the requirement" .
+<https://w3id.org/def/vtc#isRelatedToDesign> <http://www.w3.org/2000/01/rdf-schema#label> "is related to design" .
+# 
+# https://w3id.org/def/vtc#isRelatedToImplementation
+<https://w3id.org/def/vtc#isRelatedToImplementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/vtc#isRelatedToImplementation> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to the implementation of a test" .
+<https://w3id.org/def/vtc#isRelatedToImplementation> <http://www.w3.org/2000/01/rdf-schema#label> "is related to implementation" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://w3id.org/def/vtc#category
+<https://w3id.org/def/vtc#category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://w3id.org/def/vtc#desiredBehaviour
+<https://w3id.org/def/vtc#desiredBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtc#desiredBehaviour> <http://www.w3.org/2000/01/rdf-schema#label> "desired behaviour" .
+# 
+# https://w3id.org/def/vtc#isExecutedOnOntology
+<https://w3id.org/def/vtc#isExecutedOnOntology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtc#isExecutedOnOntology> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/def/vtc#isExecutedOnOntology> <http://www.w3.org/2000/01/rdf-schema#comment> "URI of the ontology in which a test implementation is executed" .
+<https://w3id.org/def/vtc#isExecutedOnOntology> <http://www.w3.org/2000/01/rdf-schema#label> "is executed on ontology" .
+# 
+# https://w3id.org/def/vtc#isRelatedToRequirement
+<https://w3id.org/def/vtc#isRelatedToRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtc#isRelatedToRequirement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/def/vtc#isRelatedToRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to the requirement from which the test is extracted" .
+<https://w3id.org/def/vtc#isRelatedToRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "is related to requirement" .
+# 
+# https://w3id.org/def/vtc#precondition
+<https://w3id.org/def/vtc#precondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtc#precondition> <http://www.w3.org/2000/01/rdf-schema#comment> "precondition" .
+<https://w3id.org/def/vtc#precondition> <http://www.w3.org/2000/01/rdf-schema#label> "Precondition that the ontology should pass in order to execute the test" .
+# 
+# https://w3id.org/def/vtc#requirementId
+<https://w3id.org/def/vtc#requirementId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtc#requirementId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/vtc#Requirement> .
+<https://w3id.org/def/vtc#requirementId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vtc#requirementId> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier of a requirement" .
+<https://w3id.org/def/vtc#requirementId> <http://www.w3.org/2000/01/rdf-schema#label> "requirement ID" .
+# 
+# https://w3id.org/def/vtc#testAxioms
+<https://w3id.org/def/vtc#testAxioms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/vtc#testAxioms> <http://www.w3.org/2000/01/rdf-schema#comment> "Temporary axioms added to the ontology to verify the ontology behaviour" .
+<https://w3id.org/def/vtc#testAxioms> <http://www.w3.org/2000/01/rdf-schema#label> "test axioms" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/vtc#Requirement
+<https://w3id.org/def/vtc#Requirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtc#Requirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/description> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/vtc#Requirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#category> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/vtc#Requirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#requirementId> .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/vtc#Requirement> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontology requirement from which a test can be extracted" .
+<https://w3id.org/def/vtc#Requirement> <http://www.w3.org/2000/01/rdf-schema#label> "Requirement" .
+# 
+# https://w3id.org/def/vtc#TestAssertion
+<https://w3id.org/def/vtc#TestAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtc#TestAssertion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#hasAssertionResult> .
+_:genid4 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/vtc#TestAssertionResult> .
+<https://w3id.org/def/vtc#TestAssertion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/description> .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vtc#TestAssertion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#testAxioms> .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vtc#TestAssertion> <http://www.w3.org/2000/01/rdf-schema#comment> "Each of the assertions to validate the desired behaviour of a requirement" .
+<https://w3id.org/def/vtc#TestAssertion> <http://www.w3.org/2000/01/rdf-schema#label> "Test Assertion" .
+# 
+# https://w3id.org/def/vtc#TestAssertionResult
+<https://w3id.org/def/vtc#TestAssertionResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtc#TestAssertionResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Result of the assertion added to the ontology" .
+<https://w3id.org/def/vtc#TestAssertionResult> <http://www.w3.org/2000/01/rdf-schema#label> "Assertion result" .
+# 
+# https://w3id.org/def/vtc#TestCaseDesign
+<https://w3id.org/def/vtc#TestCaseDesign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtc#TestCaseDesign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#belongsTo> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/vtc#TestSuite> .
+<https://w3id.org/def/vtc#TestCaseDesign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#comesFromRequirement> .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/vtc#Requirement> .
+<https://w3id.org/def/vtc#TestCaseDesign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#desiredBehaviour> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
+<https://w3id.org/def/vtc#TestCaseDesign> <http://www.w3.org/2000/01/rdf-schema#label> "Test case design" .
+# 
+# https://w3id.org/def/vtc#TestCaseImplementation
+<https://w3id.org/def/vtc#TestCaseImplementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtc#TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#isRelatedToDesign> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/vtc#TestCaseDesign> .
+<https://w3id.org/def/vtc#TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#hasAssertion> .
+_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/vtc#TestAssertion> .
+<https://w3id.org/def/vtc#TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#hasPreparation> .
+_:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/vtc#TestPreparation> .
+<https://w3id.org/def/vtc#TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#precondition> .
+_:genid13 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vtc#TestCaseImplementation> <http://www.w3.org/2000/01/rdf-schema#label> "Test case implementation" .
+# 
+# https://w3id.org/def/vtc#TestExecution
+<https://w3id.org/def/vtc#TestExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtc#TestExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#hasTestResult> .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/vtc#TestResult> .
+<https://w3id.org/def/vtc#TestExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#isRelatedToImplementation> .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/vtc#TestCaseImplementation> .
+<https://w3id.org/def/vtc#TestExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#isExecutedOnOntology> .
+_:genid16 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/def/vtc#TestExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "Execution of an implementation of a test case on a particular ontology" .
+<https://w3id.org/def/vtc#TestExecution> <http://www.w3.org/2000/01/rdf-schema#label> "Test execution" .
+# 
+# https://w3id.org/def/vtc#TestPreparation
+<https://w3id.org/def/vtc#TestPreparation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtc#TestPreparation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/description> .
+_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vtc#TestPreparation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/vtc#testAxioms> .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/vtc#TestPreparation> <http://www.w3.org/2000/01/rdf-schema#comment> "Axioms to add auxiliary terms needed to carry out the tests" .
+<https://w3id.org/def/vtc#TestPreparation> <http://www.w3.org/2000/01/rdf-schema#label> "Test preparation" .
+# 
+# https://w3id.org/def/vtc#TestResult
+<https://w3id.org/def/vtc#TestResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtc#TestResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Result of the test case to indicate if the test is passed, not passed or undefined in the ontology" .
+<https://w3id.org/def/vtc#TestResult> <http://www.w3.org/2000/01/rdf-schema#label> "Result of the test case" .
+# 
+# https://w3id.org/def/vtc#TestSuite
+<https://w3id.org/def/vtc#TestSuite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/vtc#TestSuite> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of test cases" .
+<https://w3id.org/def/vtc#TestSuite> <http://www.w3.org/2000/01/rdf-schema#label> "Test suite" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/vtc#Absent
+<https://w3id.org/def/vtc#Absent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtc#Absent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestResult> .
+<https://w3id.org/def/vtc#Absent> <http://www.w3.org/2000/01/rdf-schema#comment> "The ontology defines the terms in the test but not the relations between them" .
+# 
+# https://w3id.org/def/vtc#Conflict
+<https://w3id.org/def/vtc#Conflict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtc#Conflict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestResult> .
+<https://w3id.org/def/vtc#Conflict> <http://www.w3.org/2000/01/rdf-schema#comment> "the requirement leads to a conflict in the ontology" .
+# 
+# https://w3id.org/def/vtc#Consistent
+<https://w3id.org/def/vtc#Consistent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtc#Consistent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestAssertionResult> .
+<https://w3id.org/def/vtc#Consistent> <http://www.w3.org/2000/01/rdf-schema#comment> "Consistent ontology" .
+# 
+# https://w3id.org/def/vtc#Inconsistent
+<https://w3id.org/def/vtc#Inconsistent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtc#Inconsistent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestAssertionResult> .
+<https://w3id.org/def/vtc#Inconsistent> <http://www.w3.org/2000/01/rdf-schema#comment> "Inconsistent ontology" .
+# 
+# https://w3id.org/def/vtc#Passed
+<https://w3id.org/def/vtc#Passed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtc#Passed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestResult> .
+<https://w3id.org/def/vtc#Passed> <http://www.w3.org/2000/01/rdf-schema#comment> "the ontology passed the test" .
+# 
+# https://w3id.org/def/vtc#Undefined
+<https://w3id.org/def/vtc#Undefined> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtc#Undefined> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestResult> .
+<https://w3id.org/def/vtc#Undefined> <http://www.w3.org/2000/01/rdf-schema#comment> "The ontology does not pass the preconditions, the terms in the tests are not defined in the ontology" .
+# 
+# https://w3id.org/def/vtc#Unsatisfiable
+<https://w3id.org/def/vtc#Unsatisfiable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/vtc#Unsatisfiable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestAssertionResult> .
+<https://w3id.org/def/vtc#Unsatisfiable> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontology with unsatisfiable classes" .
+# 
+_:genid19 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid20 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid21 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid22 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid23 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid24 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid25 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid26 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid27 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

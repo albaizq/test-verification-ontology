@@ -1,0 +1,138 @@
+{
+  "@context" : {
+    "belongsTo" : {
+      "@id" : "https://w3id.org/def/vtc#belongsTo",
+      "@type" : "@id"
+    },
+    "TestPreparation" : {
+      "@id" : "https://w3id.org/def/vtc#TestPreparation"
+    },
+    "hasAssertion" : {
+      "@id" : "https://w3id.org/def/vtc#hasAssertion",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "testAxioms" : {
+      "@id" : "https://w3id.org/def/vtc#testAxioms"
+    },
+    "minCardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#minCardinality"
+    },
+    "TestExecution" : {
+      "@id" : "https://w3id.org/def/vtc#TestExecution"
+    },
+    "TestResult" : {
+      "@id" : "https://w3id.org/def/vtc#TestResult"
+    },
+    "hasTestResult" : {
+      "@id" : "https://w3id.org/def/vtc#hasTestResult",
+      "@type" : "@id"
+    },
+    "maxCardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#maxCardinality"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "TestSuite" : {
+      "@id" : "https://w3id.org/def/vtc#TestSuite"
+    },
+    "qualifiedCardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#qualifiedCardinality"
+    },
+    "TestAssertionResult" : {
+      "@id" : "https://w3id.org/def/vtc#TestAssertionResult"
+    },
+    "isRelatedToDesign" : {
+      "@id" : "https://w3id.org/def/vtc#isRelatedToDesign",
+      "@type" : "@id"
+    },
+    "isRelatedToImplementation" : {
+      "@id" : "https://w3id.org/def/vtc#isRelatedToImplementation",
+      "@type" : "@id"
+    },
+    "hasAssertionResult" : {
+      "@id" : "https://w3id.org/def/vtc#hasAssertionResult",
+      "@type" : "@id"
+    },
+    "comesFromRequirement" : {
+      "@id" : "https://w3id.org/def/vtc#comesFromRequirement",
+      "@type" : "@id"
+    },
+    "hasTestCase" : {
+      "@id" : "https://w3id.org/def/vtc#hasTestCase",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "TestCaseDesign" : {
+      "@id" : "https://w3id.org/def/vtc#TestCaseDesign"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "hasPreparation" : {
+      "@id" : "https://w3id.org/def/vtc#hasPreparation",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "minQualifiedCardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#minQualifiedCardinality"
+    },
+    "precondition" : {
+      "@id" : "https://w3id.org/def/vtc#precondition"
+    },
+    "desiredBehaviour" : {
+      "@id" : "https://w3id.org/def/vtc#desiredBehaviour"
+    },
+    "isImplementedAs" : {
+      "@id" : "https://w3id.org/def/vtc#isImplementedAs",
+      "@type" : "@id"
+    },
+    "category" : {
+      "@id" : "https://w3id.org/def/vtc#category"
+    },
+    "isExecutedOnOntology" : {
+      "@id" : "https://w3id.org/def/vtc#isExecutedOnOntology",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "requirementId" : {
+      "@id" : "https://w3id.org/def/vtc#requirementId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Requirement" : {
+      "@id" : "https://w3id.org/def/vtc#Requirement"
+    },
+    "hasExecution" : {
+      "@id" : "https://w3id.org/def/vtc#hasExecution",
+      "@type" : "@id"
+    },
+    "TestAssertion" : {
+      "@id" : "https://w3id.org/def/vtc#TestAssertion"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "TestCaseImplementation" : {
+      "@id" : "https://w3id.org/def/vtc#TestCaseImplementation"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "isRelatedToRequirement" : {
+      "@id" : "https://w3id.org/def/vtc#isRelatedToRequirement",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    }
+  }
+}

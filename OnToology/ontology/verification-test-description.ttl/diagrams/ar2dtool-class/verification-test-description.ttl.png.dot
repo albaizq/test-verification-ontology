@@ -1,0 +1,44 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "vtc^^http://www.w3.org/2001/XMLSchema#string:TestSuite" "vtc^^http://www.w3.org/2001/XMLSchema#string:TestResult" "vtc^^http://www.w3.org/2001/XMLSchema#string:TestPreparation" "vtc^^http://www.w3.org/2001/XMLSchema#string:TestCaseImplementation" "vtc^^http://www.w3.org/2001/XMLSchema#string:TestCaseDesign" "vtc^^http://www.w3.org/2001/XMLSchema#string:TestAssertionResult" "vtc^^http://www.w3.org/2001/XMLSchema#string:TestAssertion" "vtc^^http://www.w3.org/2001/XMLSchema#string:Requirement" ; /*classes style*/
+	"NULL" -> "xsd:string" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:TestPreparation" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:belongsTo" [ label = "owl:onProperty" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:comesFromRequirement" [ label = "owl:onProperty" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:TestCaseImplementation" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:hasTestResult" [ label = "owl:onProperty" ];
+	"NULL" -> "owl:rational" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:TestResult" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:category" [ label = "owl:onProperty" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:isRelatedToDesign" [ label = "owl:onProperty" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:Requirement" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:hasAssertionResult" [ label = "owl:onProperty" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:TestSuite" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:testAxioms" [ label = "owl:onProperty" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:TestCaseDesign" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:isRelatedToImplementation" [ label = "owl:onProperty" ];
+	"NULL" -> "rdfs:Literal" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "xsd:string" [ label = "owl:onDataRange" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:desiredBehaviour" [ label = "owl:onProperty" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:requirementId" [ label = "owl:onProperty" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:TestAssertionResult" [ label = "owl:onClass" ];
+	"NULL" -> ":description" [ label = "owl:onProperty" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:hasAssertion" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:anyURI" [ label = "owl:onDataRange" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:hasPreparation" [ label = "owl:onProperty" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:isExecutedOnOntology" [ label = "owl:onProperty" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:TestAssertion" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:precondition" [ label = "owl:onProperty" ];
+	"vtc^^http://www.w3.org/2001/XMLSchema#string:" -> "https://www.linkedin.com/in/albafernandezizquierdo/" [ label = ":creator" ];
+	"vtc^^http://www.w3.org/2001/XMLSchema#string:" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
+	"vtc^^http://www.w3.org/2001/XMLSchema#string:" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = ":creator" ];
+	"vtc^^http://www.w3.org/2001/XMLSchema#string:Requirement" -> "xsd:string" [ label = "vtc^^http://www.w3.org/2001/XMLSchema#string:requirementId" ];
+	"owl:Thing" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:TestAssertionResult" [ label = "vtc^^http://www.w3.org/2001/XMLSchema#string:hasAssertionResult" ];
+	"owl:Thing" -> "xsd:anyURI" [ label = "vtc^^http://www.w3.org/2001/XMLSchema#string:isExecutedOnOntology" ];
+	"owl:Thing" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:TestAssertion" [ label = "vtc^^http://www.w3.org/2001/XMLSchema#string:hasAssertion" ];
+	"owl:Thing" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:Requirement" [ label = "vtc^^http://www.w3.org/2001/XMLSchema#string:comesFromRequirement" ];
+	"owl:Thing" -> "xsd:anyURI" [ label = "vtc^^http://www.w3.org/2001/XMLSchema#string:isRelatedToRequirement" ];
+	"owl:Thing" -> "vtc^^http://www.w3.org/2001/XMLSchema#string:TestPreparation" [ label = "vtc^^http://www.w3.org/2001/XMLSchema#string:hasPreparation" ];
+
+}
