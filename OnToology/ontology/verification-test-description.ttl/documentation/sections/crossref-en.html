@@ -1,16 +1,10 @@
-<html><h2 id="crossreference" class="list">Cross reference for Metadata test description for ontology verification classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<h2 id="crossreference" class="list">Cross reference for Metadata test description for ontology verification classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by Metadata test description for ontology verification.
 <div id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
-         <a href="#https://w3id.org/def/vtc#TestCase" title="https://w3id.org/def/vtc#TestCase">A Verification Test Case</a>
-      </li>
-      <li>
-         <a href="#https://w3id.org/def/vtc#AssertionResult" title="https://w3id.org/def/vtc#AssertionResult">Assertion result</a>
-      </li>
-      <li>
-         <a href="#https://w3id.org/def/vtc#Execution" title="https://w3id.org/def/vtc#Execution">Execution</a>
+         <a href="#https://w3id.org/def/vtc#TestAssertionResult" title="https://w3id.org/def/vtc#TestAssertionResult">Assertion result</a>
       </li>
       <li>
          <a href="#https://w3id.org/def/vtc#Requirement" title="https://w3id.org/def/vtc#Requirement">Requirement</a>
@@ -25,10 +19,10 @@ This section provides details for each class and property defined by Metadata te
          <a href="#https://w3id.org/def/vtc#TestCaseDesign" title="https://w3id.org/def/vtc#TestCaseDesign">Test case design</a>
       </li>
       <li>
-         <a href="#https://w3id.org/def/vtc#TestCaseResult" title="https://w3id.org/def/vtc#TestCaseResult">Test case execution</a>
+         <a href="#https://w3id.org/def/vtc#TestCaseImplementation" title="https://w3id.org/def/vtc#TestCaseImplementation">Test case implementation</a>
       </li>
       <li>
-         <a href="#https://w3id.org/def/vtc#TestCaseImplementation" title="https://w3id.org/def/vtc#TestCaseImplementation">Test case implementation</a>
+         <a href="#https://w3id.org/def/vtc#TestExecution" title="https://w3id.org/def/vtc#TestExecution">Test execution</a>
       </li>
       <li>
          <a href="#https://w3id.org/def/vtc#TestPreparation" title="https://w3id.org/def/vtc#TestPreparation">Test preparation</a>
@@ -37,41 +31,13 @@ This section provides details for each class and property defined by Metadata te
          <a href="#https://w3id.org/def/vtc#TestSuite" title="https://w3id.org/def/vtc#TestSuite">Test suite</a>
       </li>
    </ul>
-   <div class="entity" id="https://w3id.org/def/vtc#TestCase">
-      <h3>A Verification Test Case<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/vtc#TestCase</p>
-      <div class="comment">
-         <span class="markdown">A Test Case for ontology verification. Each test has  test preparation a set of test scenarios, a precondition and a test result</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd/>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#https://w3id.org/def/vtc#TestCaseDesign" title="https://w3id.org/def/vtc#TestCaseDesign">Test case design</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/def/vtc#TestCaseResult" title="https://w3id.org/def/vtc#TestCaseResult">Test case execution</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/def/vtc#TestCaseImplementation" title="https://w3id.org/def/vtc#TestCaseImplementation">Test case implementation</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#https://w3id.org/def/vtc#comesFromRequirement" title="https://w3id.org/def/vtc#comesFromRequirement">comes from requirement</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/def/vtc#testId" title="https://w3id.org/def/vtc#testId">test id</a>
-            <sup class="type-dp" title="data property">dp</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="https://w3id.org/def/vtc#AssertionResult">
+   <div class="entity" id="https://w3id.org/def/vtc#TestAssertionResult">
       <h3>Assertion result<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/vtc#AssertionResult</p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#TestAssertionResult</p>
       <div class="comment">
          <span class="markdown">Result of the assertion added to the ontology</span>
       </div>
@@ -90,21 +56,6 @@ This section provides details for each class and property defined by Metadata te
          </dd>
       </dl>
    </div>
-   <div class="entity" id="https://w3id.org/def/vtc#Execution">
-      <h3>Execution<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/vtc#Execution</p>
-      <div class="comment">
-         <span class="markdown">Execution of an implementation of a test case on a particular ontology</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd/>
-      </dl>
-   </div>
    <div class="entity" id="https://w3id.org/def/vtc#Requirement">
       <h3>Requirement<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -120,7 +71,7 @@ This section provides details for each class and property defined by Metadata te
          <dd/>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#https://w3id.org/def/vtc#requirementId" title="https://w3id.org/def/vtc#requirementId">requirement id</a>
+            <a href="#https://w3id.org/def/vtc#requirementId" title="https://w3id.org/def/vtc#requirementId">requirement ID</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
@@ -180,25 +131,7 @@ This section provides details for each class and property defined by Metadata te
          <strong>IRI:</strong> https://w3id.org/def/vtc#TestCaseDesign</p>
       <dl class="description">
          <dt>has super-classes</dt>
-         <dd>
-            <a href="#https://w3id.org/def/vtc#TestCase" title="https://w3id.org/def/vtc#TestCase">A Verification Test Case</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="https://w3id.org/def/vtc#TestCaseResult">
-      <h3>Test case execution<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/vtc#TestCaseResult</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#https://w3id.org/def/vtc#TestCase" title="https://w3id.org/def/vtc#TestCase">A Verification Test Case</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
+         <dd/>
       </dl>
    </div>
    <div class="entity" id="https://w3id.org/def/vtc#TestCaseImplementation">
@@ -210,10 +143,22 @@ This section provides details for each class and property defined by Metadata te
          <strong>IRI:</strong> https://w3id.org/def/vtc#TestCaseImplementation</p>
       <dl class="description">
          <dt>has super-classes</dt>
-         <dd>
-            <a href="#https://w3id.org/def/vtc#TestCase" title="https://w3id.org/def/vtc#TestCase">A Verification Test Case</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/vtc#TestExecution">
+      <h3>Test execution<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#TestExecution</p>
+      <div class="comment">
+         <span class="markdown">Execution of an implementation of a test case on a particular ontology</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
       </dl>
    </div>
    <div class="entity" id="https://w3id.org/def/vtc#TestPreparation">
@@ -227,6 +172,8 @@ This section provides details for each class and property defined by Metadata te
          <span class="markdown">Axioms to add auxiliary terms needed to carry out the tests</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
          <dt>is in range of</dt>
          <dd>
             <a href="#https://w3id.org/def/vtc#hasPreparation" title="https://w3id.org/def/vtc#hasPreparation">has preparation</a>
@@ -267,13 +214,13 @@ This section provides details for each class and property defined by Metadata te
          <a href="#https://w3id.org/def/vtc#hasPreparation" title="https://w3id.org/def/vtc#hasPreparation">has preparation</a>
       </li>
       <li>
-         <a href="#https://w3id.org/def/vtc#hasTest" title="https://w3id.org/def/vtc#hasTest">has test</a>
-      </li>
-      <li>
          <a href="#https://w3id.org/def/vtc#hasTestCase" title="https://w3id.org/def/vtc#hasTestCase">has test case</a>
       </li>
       <li>
          <a href="#https://w3id.org/def/vtc#hasTestResult" title="https://w3id.org/def/vtc#hasTestResult">has test result</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/vtc#isImplementedAs" title="https://w3id.org/def/vtc#isImplementedAs">is implemented as</a>
       </li>
       <li>
          <a href="#https://w3id.org/def/vtc#isRelatedToDesign" title="https://w3id.org/def/vtc#isRelatedToDesign">is related to design</a>
@@ -306,11 +253,6 @@ This section provides details for each class and property defined by Metadata te
       </div>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/def/vtc#TestCase" title="https://w3id.org/def/vtc#TestCase">A Verification Test Case</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#https://w3id.org/def/vtc#Requirement" title="https://w3id.org/def/vtc#Requirement">Requirement</a>
@@ -351,15 +293,14 @@ This section provides details for each class and property defined by Metadata te
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/vtc#hasAssertionResult</p>
+      <div class="comment">
+         <span class="markdown">Result of the addition of a test assertion on an ontology</span>
+      </div>
       <div class="description">
          <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
-            </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#https://w3id.org/def/vtc#AssertionResult" title="https://w3id.org/def/vtc#AssertionResult">Assertion result</a>
+               <a href="#https://w3id.org/def/vtc#TestAssertionResult" title="https://w3id.org/def/vtc#TestAssertionResult">Assertion result</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -373,7 +314,17 @@ This section provides details for each class and property defined by Metadata te
       <p>
          <strong>IRI:</strong> https://w3id.org/def/vtc#hasExecution</p>
       <div class="comment">
-         <span class="markdown">Relationship between the test result and its executions</span>
+         <span class="markdown">Relationship between the test implementation and its executions</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#isRelatedToImplementation"
+                  title="https://w3id.org/def/vtc#isRelatedToImplementation">is related to implementation</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="https://w3id.org/def/vtc#hasPreparation">
@@ -394,17 +345,6 @@ This section provides details for each class and property defined by Metadata te
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
-      </div>
-   </div>
-   <div class="entity" id="https://w3id.org/def/vtc#hasTest">
-      <h3>has test<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/vtc#hasTest</p>
-      <div class="comment">
-         <span class="markdown">Property to determine the test case(s) that validates a resource</span>
       </div>
    </div>
    <div class="entity" id="https://w3id.org/def/vtc#hasTestCase">
@@ -438,6 +378,26 @@ This section provides details for each class and property defined by Metadata te
          <span class="markdown">Relationship between the execution and its result</span>
       </div>
    </div>
+   <div class="entity" id="https://w3id.org/def/vtc#isImplementedAs">
+      <h3>is implemented as<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#isImplementedAs</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a test design and its implementation</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#isRelatedToDesign" title="https://w3id.org/def/vtc#isRelatedToDesign">is related to design</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="https://w3id.org/def/vtc#isRelatedToDesign">
       <h3>is related to design<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -447,6 +407,15 @@ This section provides details for each class and property defined by Metadata te
          <strong>IRI:</strong> https://w3id.org/def/vtc#isRelatedToDesign</p>
       <div class="comment">
          <span class="markdown">Link to the test design that specifies the requirement</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#isImplementedAs" title="https://w3id.org/def/vtc#isImplementedAs">is implemented as</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="https://w3id.org/def/vtc#isRelatedToImplementation">
@@ -459,6 +428,15 @@ This section provides details for each class and property defined by Metadata te
       <div class="comment">
          <span class="markdown">Link to the implementation of a test</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/def/vtc#hasExecution" title="https://w3id.org/def/vtc#hasExecution">has execution</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
 </div><div id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
@@ -467,29 +445,19 @@ This section provides details for each class and property defined by Metadata te
          <a href="#https://w3id.org/def/vtc#desiredBehaviour" title="https://w3id.org/def/vtc#desiredBehaviour">desired behaviour</a>
       </li>
       <li>
-         <a href="#https://w3id.org/def/vtc#executedOn" title="https://w3id.org/def/vtc#executedOn">executed on</a>
+         <a href="#https://w3id.org/def/vtc#isExecutedOnOntology" title="https://w3id.org/def/vtc#isExecutedOnOntology">is executed on ontology</a>
       </li>
       <li>
          <a href="#https://w3id.org/def/vtc#isRelatedToRequirement" title="https://w3id.org/def/vtc#isRelatedToRequirement">is related to requirement</a>
       </li>
       <li>
-         <a href="#https://w3id.org/def/vtc#outputOfScenario" title="https://w3id.org/def/vtc#outputOfScenario">output of a test assertion</a>
-      </li>
-      <li>
          <a href="#https://w3id.org/def/vtc#precondition" title="https://w3id.org/def/vtc#precondition">Precondition that the ontology should pass in order to execute the test</a>
       </li>
       <li>
-         <a href="#https://w3id.org/def/vtc#requirementId" title="https://w3id.org/def/vtc#requirementId">
-            <span>requirement id</span>
-         </a>
+         <a href="#https://w3id.org/def/vtc#requirementId" title="https://w3id.org/def/vtc#requirementId">requirement ID</a>
       </li>
       <li>
          <a href="#https://w3id.org/def/vtc#testAxioms" title="https://w3id.org/def/vtc#testAxioms">test axioms</a>
-      </li>
-      <li>
-         <a href="#https://w3id.org/def/vtc#testId" title="https://w3id.org/def/vtc#testId">
-            <span>test id</span>
-         </a>
       </li>
    </ul>
    <div class="entity" id="https://w3id.org/def/vtc#desiredBehaviour">
@@ -500,13 +468,13 @@ This section provides details for each class and property defined by Metadata te
       <p>
          <strong>IRI:</strong> https://w3id.org/def/vtc#desiredBehaviour</p>
    </div>
-   <div class="entity" id="https://w3id.org/def/vtc#executedOn">
-      <h3>executed on<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="https://w3id.org/def/vtc#isExecutedOnOntology">
+      <h3>is executed on ontology<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/vtc#executedOn</p>
+         <strong>IRI:</strong> https://w3id.org/def/vtc#isExecutedOnOntology</p>
       <div class="comment">
          <span class="markdown">URI of the ontology in which a test implementation is executed</span>
       </div>
@@ -514,7 +482,9 @@ This section provides details for each class and property defined by Metadata te
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</a>
             </dd>
          </dl>
       </div>
@@ -533,20 +503,11 @@ This section provides details for each class and property defined by Metadata te
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</a>
             </dd>
          </dl>
-      </div>
-   </div>
-   <div class="entity" id="https://w3id.org/def/vtc#outputOfScenario">
-      <h3>output of a test assertion<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/vtc#outputOfScenario</p>
-      <div class="comment">
-         <span class="markdown">The expected ontology status (i.e., inconsistency, unsatisfiabile or consistent)  after the addition of the axioms of a test assertion</span>
       </div>
    </div>
    <div class="entity" id="https://w3id.org/def/vtc#precondition">
@@ -561,12 +522,15 @@ This section provides details for each class and property defined by Metadata te
       </div>
    </div>
    <div class="entity" id="https://w3id.org/def/vtc#requirementId">
-      <h3>requirement id<sup class="type-dp" title="data property">dp</sup>
+      <h3>requirement ID<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/vtc#requirementId</p>
+      <div class="comment">
+         <span class="markdown">Identifier of a requirement</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -576,7 +540,9 @@ This section provides details for each class and property defined by Metadata te
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -590,27 +556,6 @@ This section provides details for each class and property defined by Metadata te
          <strong>IRI:</strong> https://w3id.org/def/vtc#testAxioms</p>
       <div class="comment">
          <span class="markdown">Temporary axioms added to the ontology to verify the ontology behaviour</span>
-      </div>
-   </div>
-   <div class="entity" id="https://w3id.org/def/vtc#testId">
-      <h3>test id<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/vtc#testId</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/def/vtc#TestCase" title="https://w3id.org/def/vtc#TestCase">A Verification Test Case</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
       </div>
    </div>
 </div><div id="namedindividuals">
@@ -701,7 +646,7 @@ This section provides details for each class and property defined by Metadata te
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://w3id.org/def/vtc#AssertionResult" title="https://w3id.org/def/vtc#AssertionResult">Assertion result</a>
+            <a href="#https://w3id.org/def/vtc#TestAssertionResult" title="https://w3id.org/def/vtc#TestAssertionResult">Assertion result</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -719,7 +664,7 @@ This section provides details for each class and property defined by Metadata te
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://w3id.org/def/vtc#AssertionResult" title="https://w3id.org/def/vtc#AssertionResult">Assertion result</a>
+            <a href="#https://w3id.org/def/vtc#TestAssertionResult" title="https://w3id.org/def/vtc#TestAssertionResult">Assertion result</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -773,7 +718,7 @@ This section provides details for each class and property defined by Metadata te
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://w3id.org/def/vtc#AssertionResult" title="https://w3id.org/def/vtc#AssertionResult">Assertion result</a>
+            <a href="#https://w3id.org/def/vtc#TestAssertionResult" title="https://w3id.org/def/vtc#TestAssertionResult">Assertion result</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -787,4 +732,3 @@ This section provides details for each class and property defined by Metadata te
 <sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
 </div>
 </div>
-</html>
