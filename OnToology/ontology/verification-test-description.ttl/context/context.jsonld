@@ -14,29 +14,17 @@
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
-    "hasTest" : {
-      "@id" : "https://w3id.org/def/vtc#hasTest",
-      "@type" : "@id"
-    },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license"
-    },
-    "executedOn" : {
-      "@id" : "https://w3id.org/def/vtc#executedOn",
-      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
     },
     "testAxioms" : {
       "@id" : "https://w3id.org/def/vtc#testAxioms"
     },
-    "Execution" : {
-      "@id" : "https://w3id.org/def/vtc#Execution"
-    },
-    "testId" : {
-      "@id" : "https://w3id.org/def/vtc#testId",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
     "minCardinality" : {
       "@id" : "http://www.w3.org/2002/07/owl#minCardinality"
+    },
+    "TestExecution" : {
+      "@id" : "https://w3id.org/def/vtc#TestExecution"
     },
     "TestResult" : {
       "@id" : "https://w3id.org/def/vtc#TestResult"
@@ -57,8 +45,8 @@
     "qualifiedCardinality" : {
       "@id" : "http://www.w3.org/2002/07/owl#qualifiedCardinality"
     },
-    "TestCaseResult" : {
-      "@id" : "https://w3id.org/def/vtc#TestCaseResult"
+    "TestAssertionResult" : {
+      "@id" : "https://w3id.org/def/vtc#TestAssertionResult"
     },
     "isRelatedToDesign" : {
       "@id" : "https://w3id.org/def/vtc#isRelatedToDesign",
@@ -80,12 +68,11 @@
       "@id" : "https://w3id.org/def/vtc#hasTestCase",
       "@type" : "@id"
     },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
     "TestCaseDesign" : {
       "@id" : "https://w3id.org/def/vtc#TestCaseDesign"
-    },
-    "topObjectProperty" : {
-      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
-      "@type" : "@id"
     },
     "preferredNamespacePrefix" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
@@ -97,9 +84,6 @@
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
     },
-    "outputOfScenario" : {
-      "@id" : "https://w3id.org/def/vtc#outputOfScenario"
-    },
     "minQualifiedCardinality" : {
       "@id" : "http://www.w3.org/2002/07/owl#minQualifiedCardinality"
     },
@@ -109,8 +93,16 @@
     "desiredBehaviour" : {
       "@id" : "https://w3id.org/def/vtc#desiredBehaviour"
     },
-    "AssertionResult" : {
-      "@id" : "https://w3id.org/def/vtc#AssertionResult"
+    "isImplementedAs" : {
+      "@id" : "https://w3id.org/def/vtc#isImplementedAs",
+      "@type" : "@id"
+    },
+    "category" : {
+      "@id" : "https://w3id.org/def/vtc#category"
+    },
+    "isExecutedOnOntology" : {
+      "@id" : "https://w3id.org/def/vtc#isExecutedOnOntology",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
@@ -128,9 +120,6 @@
     },
     "TestAssertion" : {
       "@id" : "https://w3id.org/def/vtc#TestAssertion"
-    },
-    "TestCase" : {
-      "@id" : "https://w3id.org/def/vtc#TestCase"
     },
     "description" : {
       "@id" : "http://purl.org/dc/terms/description"

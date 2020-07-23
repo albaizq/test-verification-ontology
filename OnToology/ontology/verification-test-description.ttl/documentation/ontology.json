@@ -1,31 +1,14 @@
 [ {
   "@id" : "_:genid1",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://w3id.org/def/vtc#TestCaseResult"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/vtc#hasAssertionResult"
+    "@id" : "http://purl.org/dc/terms/description"
   } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
   "@id" : "_:genid10",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#rational"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/vtc#desiredBehaviour"
-  } ]
-}, {
-  "@id" : "_:genid11",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/vtc#isRelatedToDesign"
@@ -34,7 +17,7 @@
     "@id" : "https://w3id.org/def/vtc#TestCaseDesign"
   } ]
 }, {
-  "@id" : "_:genid12",
+  "@id" : "_:genid11",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/def/vtc#TestAssertion"
@@ -43,7 +26,7 @@
     "@id" : "https://w3id.org/def/vtc#hasAssertion"
   } ]
 }, {
-  "@id" : "_:genid13",
+  "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/def/vtc#TestPreparation"
@@ -52,74 +35,85 @@
     "@id" : "https://w3id.org/def/vtc#hasPreparation"
   } ]
 }, {
-  "@id" : "_:genid14",
+  "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#rational"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/vtc#precondition"
   } ]
 }, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/vtc#hasTestResult"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/vtc#TestResult"
+  } ]
+}, {
   "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/vtc#isRelatedToDesign"
+    "@id" : "https://w3id.org/def/vtc#isRelatedToImplementation"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/def/vtc#TestCaseDesign"
+    "@id" : "https://w3id.org/def/vtc#TestCaseImplementation"
   } ]
 }, {
   "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://w3id.org/def/vtc#Execution"
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/vtc#hasExecution"
+    "@id" : "https://w3id.org/def/vtc#isExecutedOnOntology"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ]
 }, {
   "@id" : "_:genid17",
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/dc/terms/description"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "_:genid18",
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/vtc#testAxioms"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "_:genid19",
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ]
 }, {
   "@id" : "_:genid2",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://w3id.org/def/vtc#TestCaseImplementation"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/vtc#isRelatedToImplementation"
+    "@id" : "https://w3id.org/def/vtc#category"
   } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
   "@id" : "_:genid20",
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ]
@@ -137,7 +131,7 @@
   } ]
 }, {
   "@id" : "_:genid23",
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ]
@@ -149,37 +143,36 @@
   } ]
 }, {
   "@id" : "_:genid25",
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ]
 }, {
   "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/vtc#executedOn"
+    "@id" : "https://w3id.org/def/vtc#requirementId"
   } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
   "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/dc/terms/description"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#rational"
-  } ]
-}, {
-  "@id" : "_:genid5",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://w3id.org/def/vtc#AssertionResult"
+    "@id" : "https://w3id.org/def/vtc#TestAssertionResult"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/vtc#hasAssertionResult"
@@ -189,17 +182,22 @@
     "@value" : "1"
   } ]
 }, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/dc/terms/description"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/vtc#testAxioms"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "_:genid7",
@@ -214,22 +212,25 @@
   "@id" : "_:genid8",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/dc/terms/description"
+    "@id" : "https://w3id.org/def/vtc#comesFromRequirement"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#rational"
+    "@id" : "https://w3id.org/def/vtc#Requirement"
   } ]
 }, {
   "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/vtc#isRelatedToRequirement"
+    "@id" : "https://w3id.org/def/vtc#desiredBehaviour"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    "@id" : "http://www.w3.org/2002/07/owl#rational"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/description",
@@ -262,6 +263,11 @@
     "@language" : "en",
     "@value" : "Verification test description"
   } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "http://www.garcia-castro.com/foaf.rdf#me"
+  }, {
+    "@id" : "https://www.linkedin.com/in/albafernandezizquierdo/"
+  } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "http://purl.org/NET/rdflicense/cc-by4.0"
   } ],
@@ -275,22 +281,13 @@
     "@value" : "Test description for ontology validation "
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.1.2"
+    "@value" : "0.2.0"
   } ]
 }, {
   "@id" : "https://w3id.org/def/vtc#Absent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/vtc#TestResult" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The ontology defines the terms in the test but not the relations between them"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/vtc#AssertionResult",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Result of the assertion added to the ontology"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Assertion result"
   } ]
 }, {
   "@id" : "https://w3id.org/def/vtc#Conflict",
@@ -300,29 +297,13 @@
   } ]
 }, {
   "@id" : "https://w3id.org/def/vtc#Consistent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/vtc#AssertionResult" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/vtc#TestAssertionResult" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Consistent ontology"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/vtc#Execution",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Execution of an implementation of a test case on a particular ontology"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Execution"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid1"
-  }, {
-    "@id" : "_:genid2"
-  }, {
-    "@id" : "_:genid3"
-  } ]
-}, {
   "@id" : "https://w3id.org/def/vtc#Inconsistent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/vtc#AssertionResult" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/vtc#TestAssertionResult" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Inconsistent ontology"
   } ]
@@ -342,7 +323,11 @@
     "@value" : "Requirement"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid4"
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
+  }, {
+    "@id" : "_:genid3"
   } ]
 }, {
   "@id" : "https://w3id.org/def/vtc#TestAssertion",
@@ -354,23 +339,20 @@
     "@value" : "Test Assertion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid4"
+  }, {
     "@id" : "_:genid5"
   }, {
     "@id" : "_:genid6"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/vtc#TestCase",
+  "@id" : "https://w3id.org/def/vtc#TestAssertionResult",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A Test Case for ontology verification. Each test has  test preparation a set of test scenarios, a precondition and a test result"
+    "@value" : "Result of the assertion added to the ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "A Verification Test Case"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid7"
-  }, {
-    "@id" : "_:genid8"
+    "@value" : "Assertion result"
   } ]
 }, {
   "@id" : "https://w3id.org/def/vtc#TestCaseDesign",
@@ -379,11 +361,11 @@
     "@value" : "Test case design"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/def/vtc#TestCase"
+    "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid8"
   }, {
     "@id" : "_:genid9"
-  }, {
-    "@id" : "_:genid10"
   } ]
 }, {
   "@id" : "https://w3id.org/def/vtc#TestCaseImplementation",
@@ -392,24 +374,25 @@
     "@value" : "Test case implementation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/def/vtc#TestCase"
+    "@id" : "_:genid10"
   }, {
     "@id" : "_:genid11"
   }, {
     "@id" : "_:genid12"
   }, {
     "@id" : "_:genid13"
-  }, {
-    "@id" : "_:genid14"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/vtc#TestCaseResult",
+  "@id" : "https://w3id.org/def/vtc#TestExecution",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Execution of an implementation of a test case on a particular ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Test case execution"
+    "@value" : "Test execution"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/def/vtc#TestCase"
+    "@id" : "_:genid14"
   }, {
     "@id" : "_:genid15"
   }, {
@@ -423,6 +406,11 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Test preparation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid17"
+  }, {
+    "@id" : "_:genid18"
   } ]
 }, {
   "@id" : "https://w3id.org/def/vtc#TestResult",
@@ -450,7 +438,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/def/vtc#Unsatisfiable",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/vtc#AssertionResult" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/def/vtc#TestAssertionResult" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Ontology with unsatisfiable classes"
   } ]
@@ -464,13 +452,13 @@
     "@value" : "belongs to"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/vtc#category",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
   "@id" : "https://w3id.org/def/vtc#comesFromRequirement",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Relationship between the test case and the requirement from which is extracted"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/def/vtc#TestCase"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "comes from requirement"
@@ -488,18 +476,6 @@
     "@value" : "desired behaviour"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/vtc#executedOn",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "URI of the ontology in which a test implementation is executed"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "executed on"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
-  } ]
-}, {
   "@id" : "https://w3id.org/def/vtc#hasAssertion",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -514,23 +490,26 @@
 }, {
   "@id" : "https://w3id.org/def/vtc#hasAssertionResult",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Result of the addition of a test assertion on an ontology"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has assertion result"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/def/vtc#AssertionResult"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+    "@id" : "https://w3id.org/def/vtc#TestAssertionResult"
   } ]
 }, {
   "@id" : "https://w3id.org/def/vtc#hasExecution",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Relationship between the test result and its executions"
+    "@value" : "Relationship between the test implementation and its executions"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has execution"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/def/vtc#isRelatedToImplementation"
   } ]
 }, {
   "@id" : "https://w3id.org/def/vtc#hasPreparation",
@@ -543,15 +522,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/def/vtc#TestPreparation"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/vtc#hasTest",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Property to determine the test case(s) that validates a resource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has test"
   } ]
 }, {
   "@id" : "https://w3id.org/def/vtc#hasTestCase",
@@ -570,6 +540,30 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has test result"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/vtc#isExecutedOnOntology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "URI of the ontology in which a test implementation is executed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is executed on ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/vtc#isImplementedAs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between a test design and its implementation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is implemented as"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/def/vtc#isRelatedToDesign"
   } ]
 }, {
   "@id" : "https://w3id.org/def/vtc#isRelatedToDesign",
@@ -602,15 +596,6 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/vtc#outputOfScenario",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The expected ontology status (i.e., inconsistency, unsatisfiabile or consistent)  after the addition of the axioms of a test assertion"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "output of a test assertion"
-  } ]
-}, {
   "@id" : "https://w3id.org/def/vtc#precondition",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -622,8 +607,14 @@
 }, {
   "@id" : "https://w3id.org/def/vtc#requirementId",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Identifier of a requirement"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/vtc#Requirement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "requirement ID"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -636,14 +627,5 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "test axioms"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/vtc#testId",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/def/vtc#TestCase"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 } ]
